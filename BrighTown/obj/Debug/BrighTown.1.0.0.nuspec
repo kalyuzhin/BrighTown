@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BrighTown</id>
+    <version>1.0.0</version>
+    <authors>BrighTown</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0-android33.0">
+        <dependency id="Microsoft.Extensions.Configuration" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Graphics" version="7.0.92" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Android.Glide" version="4.13.2.2" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Browser" version="1.4.0.3" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Legacy.Support.V4" version="1.0.0.15" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.LiveData" version="2.5.1.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Navigation.Common" version="2.5.2.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Navigation.Fragment" version="2.5.2.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Navigation.Runtime" version="2.5.2.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Navigation.UI" version="2.5.2.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Security.SecurityCrypto" version="1.1.0-alpha03" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Google.Android.Material" version="1.7.0" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Google.Crypto.Tink.Android" version="1.7.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net7.0-ios16.1">
+        <dependency id="Microsoft.Extensions.Configuration" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Graphics" version="7.0.92" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net7.0-maccatalyst16.1">
+        <dependency id="Microsoft.Extensions.Configuration" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Graphics" version="7.0.92" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net7.0-windows10.0.19041">
+        <dependency id="Microsoft.Extensions.Configuration" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Graphics" version="7.0.92" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Graphics.Win2D.WinUI.Desktop" version="7.0.92" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.WindowsAppSDK" version="1.2.221209.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\TestApp\BrighTown\bin\Debug\net7.0-android\BrighTown.runtimeconfig.json" target="lib\net7.0-android33.0\BrighTown.runtimeconfig.json" />
+    <file src="D:\TestApp\BrighTown\bin\Debug\net7.0-android\BrighTown.dll" target="lib\net7.0-android33.0\BrighTown.dll" />
+    <file src="D:\TestApp\BrighTown\bin\Debug\net7.0-android\BrighTown.xml" target="lib\net7.0-android33.0\BrighTown.xml" />
+    <file src="D:\TestApp\BrighTown\bin\Debug\net7.0-ios\iossimulator-x64\BrighTown.runtimeconfig.json" target="lib\net7.0-ios16.1\BrighTown.runtimeconfig.json" />
+    <file src="D:\TestApp\BrighTown\bin\Debug\net7.0-ios\iossimulator-x64\BrighTown.dll" target="lib\net7.0-ios16.1\BrighTown.dll" />
+    <file src="D:\TestApp\BrighTown\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\BrighTown.runtimeconfig.json" target="lib\net7.0-maccatalyst16.1\BrighTown.runtimeconfig.json" />
+    <file src="D:\TestApp\BrighTown\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\BrighTown.dll" target="lib\net7.0-maccatalyst16.1\BrighTown.dll" />
+    <file src="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.runtimeconfig.json" target="lib\net7.0-windows10.0.19041\BrighTown.runtimeconfig.json" />
+    <file src="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.dll" target="lib\net7.0-windows10.0.19041\BrighTown.dll" />
+    <file src="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri" target="lib\net7.0-windows10.0.19041\resources.pri" />
+  </files>
+</package>

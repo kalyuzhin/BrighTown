@@ -1,4 +1,8 @@
 ﻿obj\Debug\net7.0-android\resizetizer\r\drawable\button.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\favouritesbutton.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\friendsbutton.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\mapbutton.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\profilebutton.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\button.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\splash.png

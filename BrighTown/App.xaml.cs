@@ -1,4 +1,5 @@
-﻿namespace BrighTown
+﻿using BrighTown.Pages;
+namespace BrighTown
 {
     public partial class App : Application
     {
@@ -6,7 +7,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new MapPage();
         }
     }
 }

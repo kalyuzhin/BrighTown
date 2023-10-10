@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            
+             x:Class="BrighTown.Pages.FriendsPage"
+             Title="FriendsPage">
+
+
+    <Grid ColumnDefinitions="*,*,*,*"
+      Background="#232D4D"
+      ColumnSpacing="5"
+      RowDefinitions="*,Auto"
+      Padding="5"
+      RowSpacing="10">
+
+    
+        
+        
+        <ImageButton
+        Source ="mapbutton.png"
+        x:Name="MapButton"
+        HeightRequest="50"
+        WidthRequest="50"
+        Clicked="ClickOnMapButton"
+        Margin="8"
+        Grid.Row="1"
+        Grid.Column="0"
+        HorizontalOptions="Center" />
+
+        <ImageButton
+        Source ="favouritesbutton.png"
+        x:Name="FavouriteButton"
+        HeightRequest="50"
+        WidthRequest="50"
+        Clicked="ClickOnFavouritesButton"
+        Grid.Row="1"
+        Grid.Column="1"
+        HorizontalOptions="Center" />
+
+        <ImageButton
+        Source ="friendsbutton.png"
+        x:Name="FriendsButton"
+        HeightRequest="50"
+        WidthRequest="50"
+        Clicked="ClickOnFriendButton"
+        Grid.Row="1"
+        Grid.Column="2"
+        HorizontalOptions="Center" />
+
+        <ImageButton
+        Source ="profilebutton.png"
+        x:Name="ProfileButton"
+        HeightRequest="50"
+        WidthRequest="50"
+        Clicked="ClickOnFriendButton"
+        Grid.Column="3"
+        Grid.Row="1"
+        HorizontalOptions="Center" />
+
+
+    </Grid>
+
+
+
+
+
+
+
+
+</ContentPage>

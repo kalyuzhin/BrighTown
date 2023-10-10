@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-10T15:29:42.163</Modified>
+      <Modified>2023-10-10T19:05:33.238</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-10T15:29:40.937</Modified>
+      <Modified>2023-10-10T19:04:27.050</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.runtimeconfig.json">
       <PackagePath>BrighTown.runtimeconfig.json</PackagePath>
@@ -44,15 +44,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.dll">
       <PackagePath>BrighTown.dll</PackagePath>
-      <Modified>2023-10-10T15:29:36.666</Modified>
+      <Modified>2023-10-10T19:05:31.276</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>BrighTown.exe</PackagePath>
-      <Modified>2023-10-10T15:29:36.702</Modified>
+      <Modified>2023-10-10T19:05:31.292</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.deps.json">
       <PackagePath>BrighTown.deps.json</PackagePath>
-      <Modified>2023-10-10T14:36:59.563</Modified>
+      <Modified>2023-10-10T18:08:36.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lyzhn\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.11\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

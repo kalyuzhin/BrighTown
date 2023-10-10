@@ -271,3 +271,7 @@ D:\TestApp\BrighTown\obj\Debug\net7.0-ios\iossimulator-x64\refint\BrighTown.dll
 D:\TestApp\BrighTown\obj\Debug\net7.0-ios\iossimulator-x64\BrighTown.pdb
 D:\TestApp\BrighTown\obj\Debug\net7.0-ios\iossimulator-x64\BrighTown.genruntimeconfig.cache
 D:\TestApp\BrighTown\obj\Debug\net7.0-ios\iossimulator-x64\ref\BrighTown.dll
+D:\TestApp\BrighTown\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\favouritesbutton.png
+D:\TestApp\BrighTown\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\friendsbutton.png
+D:\TestApp\BrighTown\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\mapbutton.png
+D:\TestApp\BrighTown\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\profilebutton.png

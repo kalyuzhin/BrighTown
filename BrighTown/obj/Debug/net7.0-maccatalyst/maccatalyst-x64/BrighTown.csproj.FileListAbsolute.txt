@@ -229,13 +229,6 @@ D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\
 D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
-D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\button.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\button.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\button@2x.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\button@3x.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
 D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist
 D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\mauifont.stamp
@@ -265,3 +258,4 @@ D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\
 D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\friendsbutton.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\mapbutton.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\profilebutton.png
+D:\TestApp\BrighTown\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\f\Rounds.ttf

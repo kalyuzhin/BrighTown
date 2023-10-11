@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-10T19:05:33.238</Modified>
+      <Modified>2023-10-11T15:55:52.176</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-10T19:04:27.050</Modified>
+      <Modified>2023-10-11T15:29:29.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.runtimeconfig.json">
       <PackagePath>BrighTown.runtimeconfig.json</PackagePath>
@@ -44,15 +44,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.dll">
       <PackagePath>BrighTown.dll</PackagePath>
-      <Modified>2023-10-10T19:05:31.276</Modified>
+      <Modified>2023-10-11T15:55:49.775</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>BrighTown.exe</PackagePath>
-      <Modified>2023-10-10T19:05:31.292</Modified>
+      <Modified>2023-10-11T15:55:49.876</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.deps.json">
       <PackagePath>BrighTown.deps.json</PackagePath>
-      <Modified>2023-10-10T18:08:36.148</Modified>
+      <Modified>2023-10-11T15:29:28.681</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lyzhn\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.11\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -965,6 +965,10 @@
     <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
       <Modified>2023-10-06T16:44:23.098</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Rounds.ttf">
+      <PackagePath>Rounds.ttf</PackagePath>
+      <Modified>2023-10-03T16:27:16.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>

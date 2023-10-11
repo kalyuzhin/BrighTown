@@ -724,6 +724,9 @@
     <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Rounds.ttf">
+      <PackagePath>Rounds.ttf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
     </AppxPackagedFile>
@@ -861,36 +864,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\button.scale-100.png">
-      <PackagePath>button.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\button.scale-125.png">
-      <PackagePath>button.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\button.scale-150.png">
-      <PackagePath>button.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\button.scale-200.png">
-      <PackagePath>button.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\button.scale-400.png">
-      <PackagePath>button.scale-400.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
-      <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
-      <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
-      <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
-      <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
-      <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\favouritesbutton.scale-100.png">
       <PackagePath>favouritesbutton.scale-100.png</PackagePath>

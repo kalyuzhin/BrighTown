@@ -1,5 +1,6 @@
 OpenSans-Regular.ttf
 OpenSans-Semibold.ttf
+Rounds.ttf
 appicon.ico
 appiconLargeTile.scale-100.png
 appiconLargeTile.scale-125.png
@@ -46,16 +47,6 @@ appiconWideTile.scale-125.png
 appiconWideTile.scale-150.png
 appiconWideTile.scale-200.png
 appiconWideTile.scale-400.png
-button.scale-100.png
-button.scale-125.png
-button.scale-150.png
-button.scale-200.png
-button.scale-400.png
-dotnet_bot.scale-100.png
-dotnet_bot.scale-125.png
-dotnet_bot.scale-150.png
-dotnet_bot.scale-200.png
-dotnet_bot.scale-400.png
 favouritesbutton.scale-100.png
 friendsbutton.scale-100.png
 mapbutton.scale-100.png

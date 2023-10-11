@@ -20,6 +20,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
+[D:/TestApp/BrighTown/Pages/FavouritesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.FavouritesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\FavouritesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\FavouritesPage.xaml
+
 [D:/TestApp/BrighTown/Pages/FriendsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.FriendsPage.xaml
@@ -31,6 +37,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.MapPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\MapPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\MapPage.xaml
+
+[D:/TestApp/BrighTown/Pages/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ProfilePage.xaml
 
 [D:/TestApp/BrighTown/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

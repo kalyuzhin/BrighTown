@@ -290,11 +290,6 @@ D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.AssemblyInfoInputs.cache
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.AssemblyInfo.cs
@@ -322,12 +317,8 @@ D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.t
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
-D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\button.scale-100.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\button.scale-125.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\button.scale-150.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\button.scale-200.png
-D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\button.scale-400.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mapbutton.scale-100.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\favouritesbutton.scale-100.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\friendsbutton.scale-100.png
 D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\profilebutton.scale-100.png
+D:\TestApp\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Rounds.ttf

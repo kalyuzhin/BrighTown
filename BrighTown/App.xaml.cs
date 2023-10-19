@@ -7,7 +7,7 @@ namespace BrighTown
         {
             InitializeComponent();
 
-            MainPage = new MapPage();
+            MainPage = new RegisterPage();
         }
     }
 }

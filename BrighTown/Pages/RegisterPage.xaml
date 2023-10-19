@@ -3,8 +3,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrighTown.Pages.RegisterPage"
-             Title="RegisterPage">
-    <ContentPage.Content>
+             Title="RegisterPage"
+             BackgroundColor="#2c3e54">
+    <Grid
+        RowDefinitions="Auto,*,Auto"
+        >
+    
+        <Label
+            Grid.Row="0"
+            Margin="0,10,0,0"
+            HorizontalTextAlignment="Center"
+            Text="brightown"
+            FontFamily="Rounds"
+            FontSize="48"
+            TextColor="#FFF"
+            TextTransform="Uppercase"
+            />
+        <StackLayout
+            Grid.Row="1">
+            <Image
+                BackgroundColor="Black"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                HeightRequest="100"
+                WidthRequest="100"
+                />
+        </StackLayout>
+        <StackLayout
+            Grid.Row="2">
+            <Button
+                Margin="25,50,25,25"
+                x:Name="RegisterButton"
+                BackgroundColor="#FFA435"
+                HeightRequest="50"
+                Text="Регистрация"
+            />
         
-    </ContentPage.Content>
+            <Button
+                Margin="25,0,25,25"
+                BackgroundColor="#FFA435"
+                HeightRequest="50"
+                x:Name="LogInButton"
+                Text="Вход"
+            />
+
+        </StackLayout>
+            
+        
+    </Grid>
+    
 </ContentPage>

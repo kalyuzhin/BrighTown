@@ -59,14 +59,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qX+TeZZIVOEuj54R/2xjMOngzC0ICfEYqxExllWM7Ak=
+			X55gQh48DRzfeco1h8/TYCSCk5OFvAx03WIgsLVzhw0=
 			</data>
 		</dict>
 		<key>MonoBundle/BrighTown.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VviiLa2RcCU/+WSod/Li1qwZLYPq2SshzmWCJKTxsQw=
+			XyMyZOamGmuquFMR6ZoShDjXplsor9cK1n66Vc37g5A=
+			</data>
+		</dict>
+		<key>MonoBundle/CommunityToolkit.Mvvm.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kITXcDSliPRPBl82y/lmv46MR+knIamF5JmRNbcKO18=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.CSharp.dll</key>

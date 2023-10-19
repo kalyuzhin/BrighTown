@@ -1,0 +1,6 @@
+File=Resources/Images/favouritesbutton.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources/Images/friendsbutton.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources/Images/mapbutton.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources/Images/profilebutton.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources/AppIcon/appicon.svg;Link=;BaseSize=;Resize=;TintColor=;Color=white;IsAppIcon=True;ForegroundScale=;ForegroundFile=Resources/AppIcon/appiconfg.svg
+File=Resources/AppIcon/appiconfg.svg;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=True;ForegroundScale=;ForegroundFile=

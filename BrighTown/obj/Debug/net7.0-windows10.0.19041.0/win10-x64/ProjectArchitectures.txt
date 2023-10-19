@@ -1,1 +1,0 @@
-D:\TestApp\BrighTown\BrighTown.csproj;x64

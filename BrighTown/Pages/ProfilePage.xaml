@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrighTown.Pages.ProfilePage"
-             Title="ProfilePage">
+             Title="ProfilePage"
+             BackgroundColor="#2c3e54">
 
     <Grid ColumnDefinitions="*,*,*,*"
-      Background="#2c3e54"
       ColumnSpacing="5"
       RowDefinitions="*,Auto"
       Padding="5"

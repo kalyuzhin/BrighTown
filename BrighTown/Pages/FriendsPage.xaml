@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             
              x:Class="BrighTown.Pages.FriendsPage"
-             Title="FriendsPage">
+             Title="FriendsPage"
+             BackgroundColor="#2c3e54">
 
 
     <Grid ColumnDefinitions="*,*,*,*"
-      Background="#2c3e54"
+      
       ColumnSpacing="5"
       RowDefinitions="*,Auto"
       Padding="5"

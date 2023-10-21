@@ -11,12 +11,30 @@ public partial class RegisterPage : ContentPage
         //BindingContext = viewModel;
     }
 
-    public void RegisterPopUpFunc(object sender, EventArgs e)
+    public void PressRegisterButton(object sender, EventArgs e)
     {
         // if (Connectivity.Current != NetworkAccess.Internet)
         // {
         //     return;
         // }
+
+        if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
+        {
+            this.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...","Повторить попытку");
+            return;
+        }
+        
         this.ShowPopup(new RegisterPopUp());
     } 
+    
+    public void PressLoginButton(object sender, EventArgs e)
+    {
+        if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
+        {
+            this.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...","Повторить попытку");
+            return;
+        }
+        
+        this.ShowPopup(new LoginPopUp());
+    }
 }

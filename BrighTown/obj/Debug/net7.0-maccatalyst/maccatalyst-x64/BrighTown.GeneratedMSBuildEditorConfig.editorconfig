@@ -28,6 +28,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.FriendsPag
 build_metadata.AdditionalFiles.TargetPath = Pages/FriendsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/FriendsPage.xaml
 
+[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Pages/LoginPopUp.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.LoginPopUp.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/LoginPopUp.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/LoginPopUp.xaml
+
 [/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Pages/MapPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.MapPage.xaml

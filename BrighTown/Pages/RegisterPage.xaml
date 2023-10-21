@@ -39,7 +39,7 @@
             <!-- Command="{Binding RegisterPopUpCommand}" -->
             <Button
                 x:Name="RegisterButton"
-                Clicked="RegisterPopUpFunc"
+                Clicked="PressRegisterButton"
                 BackgroundColor="#FFA435"
                 HeightRequest="50"
                 CornerRadius="20"
@@ -54,6 +54,7 @@
                 HeightRequest="50"
                 CornerRadius="20"
                 TextColor="#FFF"
+                Clicked="PressLoginButton"
                 BorderWidth="1"
                 BorderColor="#000"
                 x:Name="LogInButton"

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "zmmvGA2iMvKt6m3nM1JuezpYVe8gpKB7xK0mkGEO6cuuV+FHztn7KixNSNyBCW42ecodlfMveSP1rYf9IYTWOw==",
+  "dgSpecHash": "E0lzqrn0WxcupXLXaoDWhfBLmFEK4KNZ1W4qkplPJqiUdT2rfL5jnBuQHd8641fZ9roYyN2WOgxHBezNpX/Nhw==",
   "success": true,
   "projectFilePath": "/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/BrighTown.csproj",
   "expectedPackageFiles": [
+    "/Users/kalyuzhin/.nuget/packages/communitytoolkit.maui/6.0.0/communitytoolkit.maui.6.0.0.nupkg.sha512",
+    "/Users/kalyuzhin/.nuget/packages/communitytoolkit.maui.core/6.0.0/communitytoolkit.maui.core.6.0.0.nupkg.sha512",
     "/Users/kalyuzhin/.nuget/packages/communitytoolkit.mvvm/8.2.1/communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "/Users/kalyuzhin/.nuget/packages/googlegson/2.9.1.1/googlegson.2.9.1.1.nupkg.sha512",
     "/Users/kalyuzhin/.nuget/packages/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg.sha512",

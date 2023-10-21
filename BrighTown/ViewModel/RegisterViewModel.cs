@@ -1,4 +1,7 @@
+using BrighTown.Pages;
+using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace BrighTown.ViewModel;
 
@@ -10,14 +13,19 @@ public partial class RegisterViewModel : ObservableObject
     {
         this._connectivity = connectivity;
     }
-
-    async Task Register()
+    
+    
+    [RelayCommand]
+    async Task RegisterPopUp()
     {
         if (_connectivity.NetworkAccess != NetworkAccess.Internet)
         {
             await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...","Повторить попытку");
             return;
         }
+
+        var popup = new RegisterPopUp();
+        Shell.Current.CurrentPage.ShowPopup(popup);
     }
     
     

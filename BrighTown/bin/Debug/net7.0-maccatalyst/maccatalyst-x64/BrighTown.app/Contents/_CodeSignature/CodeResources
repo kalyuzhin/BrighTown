@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		tPrpyZ3tYVdO1BZxmOr8JTbrQfw=
+		H+XejJKhPwNq7GUhHT/71njr8EY=
 		</data>
 		<key>Resources/MauiInfo.plist</key>
 		<data>
@@ -59,14 +59,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X55gQh48DRzfeco1h8/TYCSCk5OFvAx03WIgsLVzhw0=
+			SzVl3sEa93ONCF5txz8JYn2nWXp5bFVeB1dmROsdreE=
 			</data>
 		</dict>
 		<key>MonoBundle/BrighTown.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XyMyZOamGmuquFMR6ZoShDjXplsor9cK1n66Vc37g5A=
+			vM/MoqR0fxFi8NlrMkMgur/zCTOyPIrfo0IBTlr2P8w=
+			</data>
+		</dict>
+		<key>MonoBundle/CommunityToolkit.Maui.Core.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			p2i+uvcIHHmfVlloai0Gj03QoHhFlrIoYFM2X0exOyI=
+			</data>
+		</dict>
+		<key>MonoBundle/CommunityToolkit.Maui.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5RBEMFs4VkygP8nTMYLUUe2ZI8Q7IbafUgypfsGSUiQ=
 			</data>
 		</dict>
 		<key>MonoBundle/CommunityToolkit.Mvvm.dll</key>
@@ -1438,7 +1452,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fi2ilCaxJWiSiU4dKGRqfACmd5GTEdjjFs/A/UIAZdM=
+			cTK+7XCI/Ghfv2Q8dahWkTFroXrglfHBbMDO1XdfIAs=
 			</data>
 		</dict>
 		<key>Resources/MauiInfo.plist</key>

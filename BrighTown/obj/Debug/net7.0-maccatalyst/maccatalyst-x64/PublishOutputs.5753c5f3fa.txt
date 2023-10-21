@@ -1,4 +1,6 @@
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../BrighTown.app/Contents/MonoBundle/icudt.dat
+/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../BrighTown.app/Contents/MonoBundle/CommunityToolkit.Maui.dll
+/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../BrighTown.app/Contents/MonoBundle/CommunityToolkit.Maui.Core.dll
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../BrighTown.app/Contents/MonoBundle/CommunityToolkit.Mvvm.dll
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../BrighTown.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.dll
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../BrighTown.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.Abstractions.dll

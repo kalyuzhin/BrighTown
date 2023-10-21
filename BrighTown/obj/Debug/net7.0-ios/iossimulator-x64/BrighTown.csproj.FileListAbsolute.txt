@@ -1,6 +1,8 @@
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/BrighTown.runtimeconfig.json
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/BrighTown.dll
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/BrighTown.pdb
+/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/CommunityToolkit.Maui.dll
+/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/CommunityToolkit.Maui.Core.dll
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/CommunityToolkit.Mvvm.dll
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/Microsoft.Extensions.Configuration.dll
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/Microsoft.Extensions.Configuration.Abstractions.dll
@@ -282,6 +284,8 @@
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/obj/Debug/net7.0-ios/iossimulator-x64/BrighTown.pdb
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/obj/Debug/net7.0-ios/iossimulator-x64/BrighTown.genruntimeconfig.cache
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/obj/Debug/net7.0-ios/iossimulator-x64/ref/BrighTown.dll
+/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/obj/Debug/net7.0-ios/iossimulator-x64/resourcestamps/CommunityToolkit.Maui.Core.stamp
+/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/obj/Debug/net7.0-ios/iossimulator-x64/resourcestamps/CommunityToolkit.Maui.stamp
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/obj/Debug/net7.0-ios/iossimulator-x64/resourcestamps/CommunityToolkit.Mvvm.stamp
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/obj/Debug/net7.0-ios/iossimulator-x64/resourcestamps/Microsoft.CSharp.stamp
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/obj/Debug/net7.0-ios/iossimulator-x64/resourcestamps/Microsoft.Extensions.Configuration.Abstractions.stamp

@@ -50,6 +50,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.RegisterPa
 build_metadata.AdditionalFiles.TargetPath = Pages/RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/RegisterPage.xaml
 
+[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Pages/RegisterPopUp.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.RegisterPopUp.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/RegisterPopUp.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/RegisterPopUp.xaml
+
 [/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Resources.Styles.Colors.xaml

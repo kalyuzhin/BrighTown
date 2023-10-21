@@ -3,10 +3,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrighTown.Pages.RegisterPage"
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModel"
+             x:DataType="viewmodel:RegisterViewModel"
              Title="RegisterPage"
              BackgroundColor="#2c3e54">
     <Grid
-        RowDefinitions="Auto,*,Auto"
+        RowDefinitions="*,Auto,*"
         >
     
         <Label
@@ -24,25 +26,36 @@
             <Image
                 BackgroundColor="Black"
                 HorizontalOptions="Center"
-                VerticalOptions="End"
-                HeightRequest="100"
-                WidthRequest="100"
+                VerticalOptions="Start"
+                HeightRequest="240"
+                WidthRequest="240"
                 />
         </StackLayout>
         <StackLayout
-            Grid.Row="2">
+            Grid.Row="2"
+            VerticalOptions="End"
+            Padding="25"
+            Spacing="20">
+            <!-- Command="{Binding RegisterPopUpCommand}" -->
             <Button
-                Margin="25,50,25,25"
                 x:Name="RegisterButton"
+                Clicked="RegisterPopUpFunc"
                 BackgroundColor="#FFA435"
                 HeightRequest="50"
+                CornerRadius="20"
+                TextColor="#FFF"
+                BorderWidth="1"
+                BorderColor="#000"
                 Text="Регистрация"
             />
         
             <Button
-                Margin="25,0,25,25"
                 BackgroundColor="#FFA435"
                 HeightRequest="50"
+                CornerRadius="20"
+                TextColor="#FFF"
+                BorderWidth="1"
+                BorderColor="#000"
                 x:Name="LogInButton"
                 Text="Вход"
             />

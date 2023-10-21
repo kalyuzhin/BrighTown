@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             CanBeDismissedByTappingOutsideOfPopup="True"
+             x:Class="BrighTown.Pages.RegisterPopUp"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+    <Frame>
+        <VerticalStackLayout>
+            <Label Text="Регистрация" HorizontalTextAlignment="Center" FontSize="28"/>
+            <Entry IsPassword="False" Placeholder="Login" HorizontalOptions="Center"/>
+            <Entry IsPassword="True" Placeholder="Password" HorizontalOptions="Center"/>
+            <Entry IsPassword="True" Placeholder="Confirm password" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </Frame>
+</toolkit:Popup>

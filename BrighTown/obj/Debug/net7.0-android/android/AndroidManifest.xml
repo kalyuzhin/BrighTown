@@ -28,11 +28,11 @@
     <receiver android:name="crc640a8d9a12ddbf2cf2.EnergySaverBroadcastReceiver" android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" />
     <service android:name="crc64396a3fe5f8138e3f.KeepAliveService" />
     <provider android:name="mono.MonoRuntimeProvider" android:authorities="com.companyname.brightown.mono.MonoRuntimeProvider.__mono_init__" android:exported="false" android:initOrder="1999999999" />
+    <uses-library android:name="androidx.window.extensions" android:required="false" />
+    <uses-library android:name="androidx.window.sidecar" android:required="false" />
     <provider android:name="androidx.startup.InitializationProvider" android:authorities="com.companyname.brightown.androidx-startup" android:exported="false" tools:node="merge">
       <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup" />
       <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup" />
     </provider>
-    <uses-library android:name="androidx.window.extensions" android:required="false" />
-    <uses-library android:name="androidx.window.sidecar" android:required="false" />
   </application>
 </manifest>

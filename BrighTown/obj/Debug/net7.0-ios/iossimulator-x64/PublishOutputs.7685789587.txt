@@ -1,4 +1,6 @@
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/publish/../BrighTown.app/icudt.dat
+/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/publish/../BrighTown.app/CommunityToolkit.Maui.dll
+/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/publish/../BrighTown.app/CommunityToolkit.Maui.Core.dll
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/publish/../BrighTown.app/CommunityToolkit.Mvvm.dll
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/publish/../BrighTown.app/Microsoft.Extensions.Configuration.dll
 /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/bin/Debug/net7.0-ios/iossimulator-x64/publish/../BrighTown.app/Microsoft.Extensions.Configuration.Abstractions.dll

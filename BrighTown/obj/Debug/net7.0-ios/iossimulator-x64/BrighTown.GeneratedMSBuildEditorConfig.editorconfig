@@ -8,64 +8,64 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BrighTown
-build_property.ProjectDir = /Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/
+build_property.ProjectDir = C:\BrigthTown\BrighTown\
 
-[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/App.xaml]
+[C:/BrigthTown/BrighTown/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Pages/FavouritesPage.xaml]
+[C:/BrigthTown/BrighTown/Pages/FavouritesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.FavouritesPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages/FavouritesPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages/FavouritesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\FavouritesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\FavouritesPage.xaml
 
-[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Pages/FriendsPage.xaml]
+[C:/BrigthTown/BrighTown/Pages/FriendsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.FriendsPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages/FriendsPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages/FriendsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\FriendsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\FriendsPage.xaml
 
-[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Pages/LoginPopUp.xaml]
+[C:/BrigthTown/BrighTown/Pages/LoginPopUp.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.LoginPopUp.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages/LoginPopUp.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages/LoginPopUp.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\LoginPopUp.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\LoginPopUp.xaml
 
-[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Pages/MapPage.xaml]
+[C:/BrigthTown/BrighTown/Pages/MapPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.MapPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages/MapPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages/MapPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MapPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MapPage.xaml
 
-[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Pages/ProfilePage.xaml]
+[C:/BrigthTown/BrighTown/Pages/ProfilePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.ProfilePage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages/ProfilePage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages/ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ProfilePage.xaml
 
-[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Pages/RegisterPage.xaml]
+[C:/BrigthTown/BrighTown/Pages/RegisterPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.RegisterPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages/RegisterPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages/RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RegisterPage.xaml
 
-[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Pages/RegisterPopUp.xaml]
+[C:/BrigthTown/BrighTown/Pages/RegisterPopUp.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Pages.RegisterPopUp.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages/RegisterPopUp.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages/RegisterPopUp.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RegisterPopUp.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RegisterPopUp.xaml
 
-[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Resources/Styles/Colors.xaml]
+[C:/BrigthTown/BrighTown/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Resources.Styles.Colors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/Resources/Styles/Styles.xaml]
+[C:/BrigthTown/BrighTown/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BrighTown.Resources.Styles.Styles.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

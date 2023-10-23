@@ -1,14 +1,28 @@
 using static Microsoft.Maui.ApplicationModel.Permissions;
+using Microsoft.Maui.Controls;
+using System;
+using System.Collections.ObjectModel;
 
 namespace BrighTown.Pages;
 
 public partial class FriendsPage : ContentPage
 {
-	public FriendsPage()
+  
+    public FriendsPage()
 	{
-		InitializeComponent();
-	}
+       
+        InitializeComponent();
+
+    }
+
     //-----------Навигационная панель---------------------------------------------
+
+
+
+
+   
+
+ 
 
     private void ClickOnFavouritesButton(object sender, EventArgs e)  // процедура реакции на кнопку "Избранное"
     {

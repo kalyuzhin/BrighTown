@@ -9,43 +9,47 @@
         BackgroundColor="#2c3e54"
         Padding="20"
         CornerRadius="10">
-        <Grid
-            RowDefinitions="40,30,30,30,*"
+        <Grid   Padding="5"
+            RowDefinitions="Auto,Auto,Auto,Auto,*"
             ColumnDefinitions="Auto"
             RowSpacing="15">
             <Label
                 Text="Регистрация"
                 FontSize="28"
-                FontFamily="Rounds"
+                FontFamily="RoundsBlack"
                 TextColor="#fff"
                 Grid.Row="0"
                 />
             <Entry
-                Placeholder="Login"
+                Placeholder="Логин"
                 BackgroundColor="#333"
                 TextColor="#fff"
+                FontFamily="RoundsBlack"
                 Grid.Row="1"
                 />
             <Entry
-                Placeholder="Password"
+                Placeholder="Пароль"
+                FontFamily="RoundsBlack"
                 BackgroundColor="#333"
                 TextColor="#fff"
                 IsPassword="True"
                 Grid.Row="2"
                 />
             <Entry
-                Placeholder="Confirm password"
+                Placeholder="Подтверждение пароля"
                 BackgroundColor="#333"
                 TextColor="#fff"
                 IsPassword="True"
                 Grid.Row="3"
+                FontFamily="RoundsBlack"
                 />
             <Button
                 Text="Регистрация"
                 FontFamily="Rounds"
+                TextColor="White"
                 FontSize="16"
                 Grid.Row="4"
-                BackgroundColor="#FFA435"
+                BackgroundColor="#fe7d3b"
                 CornerRadius="5"/>
         </Grid>
     </Frame>

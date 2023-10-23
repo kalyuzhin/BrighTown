@@ -4,11 +4,11 @@
     "includedFrameworks": [
       {
         "name": "Microsoft.NETCore.App",
-        "version": "7.0.11"
+        "version": "7.0.12"
       },
       {
         "name": "Microsoft.MacCatalyst",
-        "version": "16.4.7099"
+        "version": "16.4.7107"
       },
       {
         "name": "Microsoft.Maui.Core",

@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+             xmlns:local="clr-namespace:BrighTown"
              x:Class="BrighTown.Pages.MapPage"
-             Title="MapPage"
-             BackgroundColor="#2c3e54">
+             Title="MapPage">
+    <ContentPage.Resources>
+        <local:MapViewModel x:Key="MapViewModel" />
+    </ContentPage.Resources>
+
+
     <Grid ColumnDefinitions="*,*,*,*"
-          ColumnSpacing="5"
+          Background="#2c3e54"
+          ColumnSpacing="0"
           RowDefinitions="*,Auto"
           Padding="5"
           RowSpacing="10">
 
-        <WebView Source="https://www.openstreetmap.org/" MinimumHeightRequest="800" MinimumWidthRequest="400" x:Name="Maps"
-                 Grid.Row="0"  Grid.ColumnSpan="4"/>
+
+        <esri:MapView x:Name="MainMapView" 
+                      Map="{Binding Map, Source={StaticResource MapViewModel}}"   Grid.ColumnSpan="4" Margin="7"
+                      GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}" />
+        
+        <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#fe7d3b" HeightRequest="60" VerticalOptions="Start" />
+        <Label Text="Карта" FontFamily="RoundsBlack" VerticalOptions="StartAndExpand" HorizontalOptions="Center"  Grid.ColumnSpan="4" FontSize="Large" Padding="10" BackgroundColor="#fe7d3b" HeightRequest="50"/>
 
         <ImageButton
             Source ="mapbutton.png"

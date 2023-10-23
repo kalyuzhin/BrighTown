@@ -11,6 +11,11 @@ public partial class RegisterPage : ContentPage
         //BindingContext = viewModel;
     }
 
+    public RegisterPage()  // костыль для возврата на регистрацию
+    {
+        InitializeComponent();
+    }
+   
     public void PressRegisterButton(object sender, EventArgs e)
     {
         // if (Connectivity.Current != NetworkAccess.Internet)
@@ -37,4 +42,17 @@ public partial class RegisterPage : ContentPage
         
         this.ShowPopup(new LoginPopUp());
     }
+
+
+
+
+    //-----------Заглушка----------------------
+    private void ClickOnMapButton(object sender, EventArgs e)  // 
+    {
+        Navigation.PushModalAsync(new MapPage(), true);
+    }
+
+
+
+
 }

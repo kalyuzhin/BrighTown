@@ -30,5 +30,10 @@ public partial class ProfilePage : ContentPage
     }
 
 
+    private void ClickOnExitButton(object sender, EventArgs e)  // ��������� ������� �� ������ "���������"
+    {
+       Navigation.PushModalAsync(new RegisterPage());
+    }
+
 
 }

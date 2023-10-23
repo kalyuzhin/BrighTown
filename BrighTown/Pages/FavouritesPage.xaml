@@ -2,22 +2,47 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrighTown.Pages.FavouritesPage"
-             Title="FavouritesPage"
-             BackgroundColor="#2c3e54">
+             Title="FavouritesPage">
 
     <Grid ColumnDefinitions="*,*,*,*"
-      
-      ColumnSpacing="5"
+      Background="#2c3e54"
+      ColumnSpacing="0"
       RowDefinitions="*,Auto"
       Padding="5"
       RowSpacing="10">
 
-
-
-
         <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#d6f0fa"/>
         <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#fe7d3b" HeightRequest="60" VerticalOptions="Start" />
         <Label Text="Избранное" FontFamily="RoundsBlack" VerticalOptions="StartAndExpand" HorizontalOptions="Center"  Grid.ColumnSpan="4" FontSize="Large" Padding="10" BackgroundColor="#fe7d3b" HeightRequest="50"/>
+
+        <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4" VerticalOptions="FillAndExpand" Margin="0,70,0,0" >
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Пушкинская</x:String>
+                    <x:String>Парамоновские склады</x:String>
+                    <x:String>Гаражи</x:String>
+                    <x:String>Гаражи с сюрпризом</x:String>
+                    <x:String>Обзорная площадка</x:String>
+                    <x:String>И</x:String>
+                    <x:String>другие</x:String>
+                    <x:String>интересные</x:String>
+                    <x:String>места</x:String>
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*" Background="#b2b2b2" ColumnSpacing="5" RowDefinitions="*,Auto" Margin="5" >
+                        <Rectangle Background="#ffb882" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" VerticalOptions="Start"/>
+                        <Rectangle Background="#ffdabf" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start" VerticalOptions="Start"/>
+                        <Image Source="demo_place.png" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75" WidthRequest="75" Margin="12"  HorizontalOptions="Start"></Image>
+                        <Label Text="{Binding .}" FontFamily="RoundsBlack" FontSize="Medium"   HorizontalOptions="Start" Margin="120,10,0,0"/>
+                        <Label Text="info about it" FontFamily="RoundsBlack" FontSize="Micro"  Grid.ColumnSpan="3"   Margin="120,70,0,0" HorizontalOptions="Start"/>
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
 
         <ImageButton
         Source ="mapbutton.png"

@@ -6,64 +6,73 @@
              xmlns:viewmodel="clr-namespace:BrighTown.ViewModel"
              x:DataType="viewmodel:RegisterViewModel"
              Title="RegisterPage"
-             BackgroundColor="#2c3e54">
+             BackgroundColor="#d6f0fa">
     <Grid
-        RowDefinitions="*,Auto,*"
+        RowDefinitions="*,*"
         >
-    
-        <Label
-            Grid.Row="0"
-            Margin="0,10,0,0"
-            HorizontalTextAlignment="Center"
-            Text="brightown"
-            FontFamily="Rounds"
-            FontSize="48"
-            TextColor="#FFF"
-            TextTransform="Uppercase"
-            />
+        <BoxView Color="#fe7d3b" HeightRequest="60" VerticalOptions="Start" />
+        
         <StackLayout
-            Grid.Row="1">
+            Grid.Row="0">
             <Image
-                BackgroundColor="Black"
+                Source="icon.png"
                 HorizontalOptions="Center"
-                VerticalOptions="Start"
-                HeightRequest="240"
-                WidthRequest="240"
+                VerticalOptions="Center"
+                
+                HeightRequest="500"
                 />
         </StackLayout>
+
+        <BoxView Color="#2c3e54"  Grid.Row="2" VerticalOptions="End" HeightRequest="160" />
         <StackLayout
             Grid.Row="2"
             VerticalOptions="End"
             Padding="25"
             Spacing="20">
+
+
+            <!-- Кнопка обхода авторизации -->
+            <ImageButton
+                  
+                  Source ="favouritesbutton.png"
+                  x:Name="FavouriteButton"
+                   HeightRequest="50"
+                   WidthRequest="50"
+                   Clicked="ClickOnMapButton"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   HorizontalOptions="Center" />
+            
+            
             <!-- Command="{Binding RegisterPopUpCommand}" -->
+
+            <Button
+                BackgroundColor="#fe7d3b"
+                HeightRequest="50"
+                CornerRadius="6"
+                TextColor="White"
+                Clicked="PressLoginButton"
+                x:Name="LogInButton"
+                Text="Вход"
+                FontFamily="RoundsBlack"
+             />
             <Button
                 x:Name="RegisterButton"
                 Clicked="PressRegisterButton"
-                BackgroundColor="#FFA435"
+                BackgroundColor="#fe7d3b"
                 HeightRequest="50"
-                CornerRadius="20"
-                TextColor="#FFF"
-                BorderWidth="1"
-                BorderColor="#000"
+                CornerRadius="6"
+               
+                TextColor="White"
                 Text="Регистрация"
+                FontFamily="RoundsBlack"
             />
         
-            <Button
-                BackgroundColor="#FFA435"
-                HeightRequest="50"
-                CornerRadius="20"
-                TextColor="#FFF"
-                Clicked="PressLoginButton"
-                BorderWidth="1"
-                BorderColor="#000"
-                x:Name="LogInButton"
-                Text="Вход"
-            />
+           
 
         </StackLayout>
-            
-        
+     
+
     </Grid>
     
 </ContentPage>

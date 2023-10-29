@@ -1,5 +1,8 @@
 CommunityToolkit.Maui.Core.dll
 CommunityToolkit.Maui.dll
+Esri.ArcGISRuntime.Android.dll
+Esri.ArcGISRuntime.dll
+Esri.ArcGISRuntime.Maui.dll
 GoogleGson.dll
 Microsoft.Maui.Controls.Compatibility.dll
 Microsoft.Maui.Controls.dll
@@ -152,6 +155,7 @@ gifdecoder.aar
 glide.aar
 CommunityToolkit.Maui.Core.aar
 CommunityToolkit.Maui.aar
+Esri.ArcGISRuntime.Maui.aar
 GoogleGson.aar
 Microsoft.Maui.Controls.aar
 Microsoft.Maui.Controls.Compatibility.aar
@@ -159,7 +163,3 @@ maui.aar
 Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
 Xamarin.Google.Crypto.Tink.Android.aar
-Esri.ArcGISRuntime.Android.dll
-Esri.ArcGISRuntime.dll
-Esri.ArcGISRuntime.Maui.dll
-Esri.ArcGISRuntime.Maui.aar

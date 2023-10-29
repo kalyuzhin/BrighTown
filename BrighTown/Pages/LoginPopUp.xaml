@@ -13,54 +13,53 @@
             ColumnDefinitions="Auto,Auto,*"
             RowSpacing="15"
             ColumnSpacing="5">
-            <Label 
-                Text="Вход" 
-                HorizontalTextAlignment="Center" 
+            <Label
+                Text="Вход"
+                HorizontalTextAlignment="Center"
                 FontSize="28"
                 FontFamily="RoundsBlack"
                 TextColor="White"
                 Grid.Row="0"
-                Grid.ColumnSpan="2"/>
-            <Entry 
+                Grid.ColumnSpan="2" />
+            <Entry
                 IsSpellCheckEnabled="false"
-                IsPassword="False" 
-                Placeholder="Логин" 
-                HorizontalOptions="Fill" 
+                IsPassword="False"
+                Placeholder="Логин"
+                HorizontalOptions="Fill"
                 BackgroundColor="#333"
                 TextColor="White"
                 FontFamily="RoundsBlack"
                 Grid.ColumnSpan="2"
-                Grid.Row="1"
-                />
-            <Entry 
+                Grid.Row="1" />
+            <Entry
                 IsSpellCheckEnabled="false"
-                IsPassword="True" 
-                Placeholder="Пароль" 
-                HorizontalOptions="Fill" 
+                IsPassword="True"
+                Placeholder="Пароль"
+                HorizontalOptions="Fill"
                 BackgroundColor="#333"
-                TextColor="White" 
+                TextColor="White"
                 FontFamily="RoundsBlack"
                 Grid.ColumnSpan="2"
-                Grid.Row="2"
-                />
+                Grid.Row="2" />
             <Button
                 Grid.Row="3"
                 Grid.Column="0"
                 Text="Вход"
+                Clicked="PressLoginButton"
                 BackgroundColor="#fe7d3b"
                 FontFamily="RoundsBlack"
-                TextColor="White" 
+                TextColor="White"
                 FontSize="16"
-                CornerRadius="5"/>
+                CornerRadius="5" />
             <Button
                 Grid.Row="3"
                 Grid.Column="1"
                 Text="Забыли пароль?"
                 BackgroundColor="#fe7d3b"
                 FontFamily="RoundsBlack"
-                TextColor="White" 
+                TextColor="White"
                 FontSize="16"
-                CornerRadius="5"/>
+                CornerRadius="5" />
         </Grid>
     </Frame>
 

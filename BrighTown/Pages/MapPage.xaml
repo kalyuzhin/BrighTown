@@ -1,72 +1,81 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
              xmlns:local="clr-namespace:BrighTown"
              x:Class="BrighTown.Pages.MapPage"
-             Title="MapPage">
+             BackgroundColor="#2c3e54"
+             Shell.NavBarIsVisible="False">
     <ContentPage.Resources>
         <local:MapViewModel x:Key="MapViewModel" />
     </ContentPage.Resources>
 
+    <!-- <Shell.TitleView> -->
+    <!--     <StackLayout -->
+    <!--         BackgroundColor="#fe7d3b" -->
+    <!--         HorizontalOptions="Fill" -->
+    <!--         HeightRequest="50"> -->
+    <!--         <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#fe7d3b" HeightRequest="60" VerticalOptions="Start" /> -->
+    <!--         <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase" -->
+    <!--                FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Карта" /> -->
+    <!--     </StackLayout> -->
+    <!-- </Shell.TitleView> -->
 
     <Grid ColumnDefinitions="*,*,*,*"
-          Background="#2c3e54"
           ColumnSpacing="0"
           RowDefinitions="*,Auto"
-          Padding="5"
           RowSpacing="10">
 
 
-        <esri:MapView x:Name="MainMapView" 
-                      Map="{Binding Map, Source={StaticResource MapViewModel}}"   Grid.ColumnSpan="4" Margin="7"
+        <esri:MapView x:Name="MainMapView"
+                      Map="{Binding Map, Source={StaticResource MapViewModel}}" Grid.ColumnSpan="4"
                       GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}" />
-        
+
         <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#fe7d3b" HeightRequest="60" VerticalOptions="Start" />
-        <Label Text="Карта" FontFamily="RoundsBlack" VerticalOptions="StartAndExpand" HorizontalOptions="Center"  Grid.ColumnSpan="4" FontSize="Large" Padding="10" BackgroundColor="#fe7d3b" HeightRequest="50"/>
+        <Label Text="Карта" FontFamily="RoundsBlack" VerticalOptions="StartAndExpand" HorizontalOptions="Center"
+               Grid.ColumnSpan="4" FontSize="Large" Padding="10" BackgroundColor="#fe7d3b" HeightRequest="50" />
 
-        <ImageButton
-            Source ="mapbutton.png"
-            x:Name="MapButton"
-            HeightRequest="50"
-            WidthRequest="50"
-            Clicked="ClickOnMapButton"
-            Margin="8"
-            Grid.Row="1"
-            Grid.Column="0"
-            HorizontalOptions="Center" />
-
-        <ImageButton
-            Source ="favouritesbutton.png"
-            x:Name="FavouriteButton"
-            HeightRequest="50"
-            WidthRequest="50"
-            Clicked="ClickOnFavouritesButton"
-            Grid.Row="1"
-            Grid.Column="1"
-            HorizontalOptions="Center" />
-
-        <ImageButton
-            Source ="friendsbutton.png"
-            x:Name="FriendsButton"
-            HeightRequest="50"
-            WidthRequest="50"
-            Clicked="ClickOnFriendButton"
-            Grid.Row="1"
-            Grid.Column="2"
-            HorizontalOptions="Center" />
-
-        <ImageButton
-            Source ="profilebutton.png"
-            x:Name="ProfileButton"
-            HeightRequest="50"
-            WidthRequest="50"
-            Clicked="ClickOnProfileButton"
-            Grid.Column="3"
-            Grid.Row="1"
-            HorizontalOptions="Center" />
-
-
+        <!-- <ImageButton -->
+        <!--     Source="mapbutton.png" -->
+        <!--     x:Name="MapButton" -->
+        <!--     HeightRequest="50" -->
+        <!--     WidthRequest="50" -->
+        <!--     Clicked="ClickOnMapButton" -->
+        <!--     Margin="8" -->
+        <!--     Grid.Row="1" -->
+        <!--     Grid.Column="0" -->
+        <!--     HorizontalOptions="Center" /> -->
+        <!-- -->
+        <!-- <ImageButton -->
+        <!--     Source="favouritesbutton.png" -->
+        <!--     x:Name="FavouriteButton" -->
+        <!--     HeightRequest="50" -->
+        <!--     WidthRequest="50" -->
+        <!--     Clicked="ClickOnFavouritesButton" -->
+        <!--     Grid.Row="1" -->
+        <!--     Grid.Column="1" -->
+        <!--     HorizontalOptions="Center" /> -->
+        <!-- -->
+        <!-- <ImageButton -->
+        <!--     Source="friendsbutton.png" -->
+        <!--     x:Name="FriendsButton" -->
+        <!--     HeightRequest="50" -->
+        <!--     WidthRequest="50" -->
+        <!--     Clicked="ClickOnFriendButton" -->
+        <!--     Grid.Row="1" -->
+        <!--     Grid.Column="2" -->
+        <!--     HorizontalOptions="Center" /> -->
+        <!-- -->
+        <!-- <ImageButton -->
+        <!--     Source="profilebutton.png" -->
+        <!--     x:Name="ProfileButton" -->
+        <!--     HeightRequest="50" -->
+        <!--     WidthRequest="50" -->
+        <!--     Clicked="ClickOnProfileButton" -->
+        <!--     Grid.Column="3" -->
+        <!--     Grid.Row="1" -->
+        <!--     HorizontalOptions="Center" /> -->
     </Grid>
 
 

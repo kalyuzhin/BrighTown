@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrighTown.Pages.AuthenticationPage"
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModel"
+             x:DataType="viewmodel:AuthenticationViewModel"
+             BackgroundColor="#2c3e54"
+             Shell.NavBarIsVisible="False">
+    <Grid
+        RowDefinitions="*,*,*">
+        <Label Text="Brightown"
+               Grid.Row="0"
+               TextTransform="Uppercase"
+               FontFamily="Rounds"
+               FontSize="48"
+               TextColor="#fff"
+               HorizontalOptions="Center" />
+        <Image
+            Grid.Row="1"
+            BackgroundColor="#000"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="360"
+            WidthRequest="360" />
+
+        <StackLayout
+            Grid.Row="2"
+            VerticalOptions="End"
+            Padding="25"
+            Spacing="20">
+
+
+            <!-- Кнопка обхода авторизации -->
+            <!-- <ImageButton -->
+            <!-- -->
+            <!--     Source="favouritesbutton.png" -->
+            <!--     x:Name="FavouriteButton" -->
+            <!--     HeightRequest="50" -->
+            <!--     WidthRequest="50" -->
+            <!--     Clicked="ClickOnMapButton" -->
+            <!--     HorizontalOptions="Center" /> -->
+
+
+            <!-- Command="{Binding RegisterPopUpCommand}" -->
+
+            <Button
+                Command="{Binding LoginPopUpCommand}"
+                BackgroundColor="#fe7d3b"
+                HeightRequest="50"
+                CornerRadius="6"
+                TextColor="White"
+                x:Name="LogInButton"
+                Text="Вход"
+                FontFamily="RoundsBlack" />
+            <Button
+                x:Name="RegisterButton"
+                Command="{Binding RegisterPopUpCommand}"
+                BackgroundColor="#fe7d3b"
+                HeightRequest="50"
+                CornerRadius="6"
+                TextColor="White"
+                Text="Регистрация"
+                FontFamily="RoundsBlack" />
+        </StackLayout>
+
+
+    </Grid>
+
+</ContentPage>

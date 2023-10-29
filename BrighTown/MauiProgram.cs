@@ -23,8 +23,9 @@ namespace BrighTown
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                     fonts.AddFont("Rounds.ttf", "RoundsBlack");
                 });
-            builder.Services.AddSingleton<RegisterViewModel>();
-            builder.Services.AddSingleton<RegisterPage>();
+            builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
+            builder.Services.AddSingleton<AuthenticationViewModel>();
+            builder.Services.AddSingleton<AuthenticationPage>();
             builder.Services.AddSingleton<MapPage>();
             builder.Services.AddSingleton<FavouritesPage>();
             builder.Services.AddSingleton<FriendsPage>();

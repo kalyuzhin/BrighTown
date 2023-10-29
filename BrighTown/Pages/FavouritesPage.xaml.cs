@@ -2,33 +2,30 @@ namespace BrighTown.Pages;
 
 public partial class FavouritesPage : ContentPage
 {
-	public FavouritesPage()
-	{
-		InitializeComponent();
-	}
+    public FavouritesPage()
+    {
+        InitializeComponent();
+    }
 
-    //-----------Навигационная панель---------------------------------------------
+    //-----------пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ---------------------------------------------
 
-    private void ClickOnFavouritesButton(object sender, EventArgs e)  // процедура реакции на кнопку "Избранное"
+    private void ClickOnFavouritesButton(object sender, EventArgs e) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
     {
         Navigation.PushModalAsync(new FavouritesPage());
     }
 
-    private void ClickOnFriendButton(object sender, EventArgs e)  // процедура реакции на кнопку "Друзья"
+    private void ClickOnFriendButton(object sender, EventArgs e) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅ"
     {
         Navigation.PushModalAsync(new FriendsPage());
     }
 
-    private void ClickOnMapButton(object sender, EventArgs e) // процедура реакции на кнопку "Карта"
+    private void ClickOnMapButton(object sender, EventArgs e) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅ"
     {
         Navigation.PushModalAsync(new MapPage());
     }
 
-    private void ClickOnProfileButton(object sender, EventArgs e) // процедура реакции на кнопку "Профиль"
+    private void ClickOnProfileButton(object sender, EventArgs e) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
     {
         Navigation.PushModalAsync(new ProfilePage());
     }
-
-
-
 }

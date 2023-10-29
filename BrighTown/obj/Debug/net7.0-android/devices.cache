@@ -1,1 +1,1 @@
-<Devices><Device id="RF8R90Z6C0B"><ResultingAbi>arm64-v8a</ResultingAbi><ToolsAbi /><SdkVersion>33</SdkVersion><LongOutput>product:a32ser;model:SM_A325F;device:a32;transport_id:1</LongOutput></Device></Devices>
+<Devices><Device id="emulator-5554"><ResultingAbi>arm64-v8a</ResultingAbi><ToolsAbi /><SdkVersion>34</SdkVersion><LongOutput>product:sdk_gphone64_arm64;model:sdk_gphone64_arm64;device:emu64a;transport_id:1</LongOutput></Device></Devices>

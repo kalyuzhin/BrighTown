@@ -3,7 +3,11 @@
 <toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                x:Class="BrighTown.Pages.LoginPopUp"
-               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
+               CanBeDismissedByTappingOutsideOfPopup="True"
+               VerticalOptions="Center"
+               HorizontalOptions="Center">
     <Frame
         BackgroundColor="#2c3e54"
         Padding="20"
@@ -25,6 +29,7 @@
                 IsSpellCheckEnabled="false"
                 IsPassword="False"
                 Placeholder="Логин"
+                x:Name="EntryLogin"
                 HorizontalOptions="Fill"
                 BackgroundColor="#333"
                 TextColor="White"
@@ -34,6 +39,7 @@
             <Entry
                 IsSpellCheckEnabled="false"
                 IsPassword="True"
+                x:Name="EntryPassword"
                 Placeholder="Пароль"
                 HorizontalOptions="Fill"
                 BackgroundColor="#333"
@@ -45,7 +51,7 @@
                 Grid.Row="3"
                 Grid.Column="0"
                 Text="Вход"
-                Clicked="PressLoginButton"
+                Clicked="Login"
                 BackgroundColor="#fe7d3b"
                 FontFamily="RoundsBlack"
                 TextColor="White"

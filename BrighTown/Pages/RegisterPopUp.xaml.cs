@@ -13,6 +13,12 @@ public partial class RegisterPopUp : Popup
     {
         InitializeComponent();
     }
+    
+    async void Register(object sender, EventArgs e)
+    {
+        await CloseAsync();
+        await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+    }
 
 
 }

@@ -1,5 +1,5 @@
 ﻿using BrighTown.Pages;
-using BrighTown.ViewModel;
+using BrighTown.ViewModels;
 using CommunityToolkit.Maui;
 using Esri.ArcGISRuntime.Maui;
 using Esri.ArcGISRuntime;

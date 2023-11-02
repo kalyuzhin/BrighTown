@@ -1,5 +1,5 @@
 ﻿using BrighTown.Pages;
-using BrighTown.ViewModel;
+using BrighTown.ViewModels;
 
 namespace BrighTown
 {

@@ -2,19 +2,19 @@ namespace BrighTown.Pages;
 
 public partial class ProfilePage : ContentPage
 {
-	public ProfilePage()
-	{
-		InitializeComponent();
-	}
+    public ProfilePage()
+    {
+        InitializeComponent();
+    }
 
     //-----------������������� ������---------------------------------------------
 
-    private void ClickOnFavouritesButton(object sender, EventArgs e)  // ��������� ������� �� ������ "���������"
+    private void ClickOnFavouritesButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
     {
         Navigation.PushModalAsync(new FavouritesPage());
     }
 
-    private void ClickOnFriendButton(object sender, EventArgs e)  // ��������� ������� �� ������ "������"
+    private void ClickOnFriendButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
     {
         Navigation.PushModalAsync(new FriendsPage());
     }
@@ -30,10 +30,8 @@ public partial class ProfilePage : ContentPage
     }
 
 
-    private void ClickOnExitButton(object sender, EventArgs e)  // ��������� ������� �� ������ "���������"
+    private void ClickOnExitButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
     {
-       Navigation.PushModalAsync(new AuthenticationPage());
+        Shell.Current.GoToAsync($"//{nameof(AuthenticationPage)}");
     }
-
-
 }

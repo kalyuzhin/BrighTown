@@ -4,28 +4,28 @@
         <name>BrighTown</name>
     </assembly>
     <members>
-        <member name="T:BrighTown.ViewModel.AuthenticationViewModel">
+        <member name="T:BrighTown.ViewModels.AuthenticationViewModel">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:BrighTown.ViewModel.AuthenticationViewModel.UserName">
-            <inheritdoc cref="F:BrighTown.ViewModel.AuthenticationViewModel._userName"/>
+        <member name="P:BrighTown.ViewModels.AuthenticationViewModel.UserName">
+            <inheritdoc cref="F:BrighTown.ViewModels.AuthenticationViewModel._userName"/>
         </member>
-        <member name="P:BrighTown.ViewModel.AuthenticationViewModel.Password">
-            <inheritdoc cref="F:BrighTown.ViewModel.AuthenticationViewModel._password"/>
+        <member name="P:BrighTown.ViewModels.AuthenticationViewModel.Password">
+            <inheritdoc cref="F:BrighTown.ViewModels.AuthenticationViewModel._password"/>
         </member>
-        <member name="F:BrighTown.ViewModel.AuthenticationViewModel.registerPopUpCommand">
-            <summary>The backing field for <see cref="P:BrighTown.ViewModel.AuthenticationViewModel.RegisterPopUpCommand"/>.</summary>
+        <member name="F:BrighTown.ViewModels.AuthenticationViewModel.displayRegisterPopUpCommand">
+            <summary>The backing field for <see cref="P:BrighTown.ViewModels.AuthenticationViewModel.DisplayRegisterPopUpCommand"/>.</summary>
         </member>
-        <member name="P:BrighTown.ViewModel.AuthenticationViewModel.RegisterPopUpCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:BrighTown.ViewModel.AuthenticationViewModel.RegisterPopUp"/>.</summary>
+        <member name="P:BrighTown.ViewModels.AuthenticationViewModel.DisplayRegisterPopUpCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:BrighTown.ViewModels.AuthenticationViewModel.DisplayRegisterPopUp"/>.</summary>
         </member>
-        <member name="F:BrighTown.ViewModel.AuthenticationViewModel.loginPopUpCommand">
-            <summary>The backing field for <see cref="P:BrighTown.ViewModel.AuthenticationViewModel.LoginPopUpCommand"/>.</summary>
+        <member name="F:BrighTown.ViewModels.AuthenticationViewModel.displayLoginPopUpCommand">
+            <summary>The backing field for <see cref="P:BrighTown.ViewModels.AuthenticationViewModel.DisplayLoginPopUpCommand"/>.</summary>
         </member>
-        <member name="P:BrighTown.ViewModel.AuthenticationViewModel.LoginPopUpCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:BrighTown.ViewModel.AuthenticationViewModel.LoginPopUp"/>.</summary>
+        <member name="P:BrighTown.ViewModels.AuthenticationViewModel.DisplayLoginPopUpCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:BrighTown.ViewModels.AuthenticationViewModel.DisplayLoginPopUp"/>.</summary>
         </member>
         <member name="T:BrighTown.ViewModels.BaseViewModel">
             <inheritdoc/>

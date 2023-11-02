@@ -4,7 +4,7 @@ using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-namespace BrighTown.ViewModel;
+namespace BrighTown.ViewModels;
 
 public partial class AuthenticationViewModel : BaseViewModel
 {
@@ -20,7 +20,7 @@ public partial class AuthenticationViewModel : BaseViewModel
 
 
     [RelayCommand]
-    async Task RegisterPopUp()
+    async Task DisplayRegisterPopUp()
     {
         if (IsBusy)
         {
@@ -51,7 +51,7 @@ public partial class AuthenticationViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    async Task LoginPopUp()
+    async Task DisplayLoginPopUp()
     {
         if (IsBusy)
         {
@@ -69,7 +69,12 @@ public partial class AuthenticationViewModel : BaseViewModel
         {
             IsBusy = true;
             var popup = new LoginPopUp();
-            await Shell.Current.ShowPopupAsync(popup);
+            var currentPage = Shell.Current.CurrentPage;
+            Console.WriteLine(currentPage.ToString());
+            if (currentPage is AuthenticationPage)
+            {
+                await currentPage.ShowPopupAsync(popup);
+            }
         }
         catch (Exception ex)
         {
@@ -80,4 +85,10 @@ public partial class AuthenticationViewModel : BaseViewModel
             IsBusy = false;
         }
     }
+
+    // [RelayCommand]
+    // async Task Login()
+    // {
+    //     Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+    // }
 }

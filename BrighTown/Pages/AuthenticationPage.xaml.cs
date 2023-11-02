@@ -1,4 +1,4 @@
-using BrighTown.ViewModel;
+using BrighTown.ViewModels;
 using CommunityToolkit.Maui.Views;
 
 namespace BrighTown.Pages;
@@ -16,7 +16,7 @@ public partial class AuthenticationPage : ContentPage
         InitializeComponent();
     }
 
-    private void DisplayRegisterPopUp(object sender, EventArgs e)
+    async void DisplayRegisterPopUp(object sender, EventArgs e)
     {
         if (IsBusy)
         {
@@ -29,8 +29,9 @@ public partial class AuthenticationPage : ContentPage
             return;
         }
 
-        Shell.Current.CurrentPage.ShowPopup(new RegisterPopUp());
+        //Shell.Current.CurrentPage.ShowPopup(new RegisterPopUp());
         //this.ShowPopup();
+        //await this.ShowPopupAsync(new RegisterPopUp());
     }
 
     private void DisplayLoginPopUp(object sender, EventArgs e)

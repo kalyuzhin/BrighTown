@@ -3,10 +3,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrighTown.Pages.AuthenticationPage"
-             xmlns:viewmodel="clr-namespace:BrighTown.ViewModel"
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:DataType="viewmodel:AuthenticationViewModel"
              BackgroundColor="#2c3e54"
              Shell.NavBarIsVisible="False">
+    <!-- <Shell.TitleView> -->
+    <!--     <Label FontFamily="Rounds" FontSize="48" TextColor="#fff" HorizontalTextAlignment="Center" -->
+    <!--            TextTransform="Uppercase" Text="BrighTown"> -->
+    <!--     </Label> -->
+    <!-- </Shell.TitleView> -->
     <Grid
         RowDefinitions="*,*,*">
         <Label Text="Brightown"
@@ -45,7 +51,7 @@
             <!-- Command="{Binding RegisterPopUpCommand}" -->
 
             <Button
-                Command="{Binding LoginPopUpCommand}"
+                Command="{Binding DisplayLoginPopUpCommand}"
                 BackgroundColor="#fe7d3b"
                 HeightRequest="50"
                 CornerRadius="6"
@@ -55,7 +61,7 @@
                 FontFamily="RoundsBlack" />
             <Button
                 x:Name="RegisterButton"
-                Command="{Binding RegisterPopUpCommand}"
+                Command="{Binding DisplayRegisterPopUpCommand}"
                 BackgroundColor="#fe7d3b"
                 HeightRequest="50"
                 CornerRadius="6"

@@ -23,8 +23,9 @@
                TextColor="#fff"
                HorizontalOptions="Center" />
         <Image
+	    Source = 'icon.png'
             Grid.Row="1"
-            BackgroundColor="#000"
+            
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="360"

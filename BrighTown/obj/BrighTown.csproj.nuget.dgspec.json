@@ -1,28 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/BrighTown.csproj": {}
+    "C:\\Users\\Lyzhn\\Desktop\\main-branch\\BrighTown\\BrighTown.csproj": {}
   },
   "projects": {
-    "/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/BrighTown.csproj": {
+    "C:\\Users\\Lyzhn\\Desktop\\main-branch\\BrighTown\\BrighTown.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/BrighTown.csproj",
+        "projectUniqueName": "C:\\Users\\Lyzhn\\Desktop\\main-branch\\BrighTown\\BrighTown.csproj",
         "projectName": "BrighTown",
-        "projectPath": "/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/BrighTown.csproj",
-        "packagesPath": "/Users/kalyuzhin/.nuget/packages/",
-        "outputPath": "/Users/kalyuzhin/Developer/GitHub/BrighTown/BrighTown/BrighTown/obj/",
+        "projectPath": "C:\\Users\\Lyzhn\\Desktop\\main-branch\\BrighTown\\BrighTown.csproj",
+        "packagesPath": "C:\\Users\\Lyzhn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lyzhn\\Desktop\\main-branch\\BrighTown\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/kalyuzhin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Lyzhn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0-android",
           "net7.0-ios",
-          "net7.0-maccatalyst"
+          "net7.0-maccatalyst",
+          "net7.0-windows10.0.19041.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -36,6 +44,10 @@
           },
           "net7.0-maccatalyst16.1": {
             "targetAlias": "net7.0-maccatalyst",
+            "projectReferences": {}
+          },
+          "net7.0-windows10.0.19041": {
+            "targetAlias": "net7.0-windows10.0.19041.0",
             "projectReferences": {}
           }
         },
@@ -76,18 +88,13 @@
               "version": "[7.0.0, )",
               "autoReferenced": true
             },
-            "Microsoft.Extensions.Logging.Abstractions": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
-              "version": "[7.0.92, )",
+              "version": "[7.0.96, )",
               "autoReferenced": true
             },
             "Xamarin.Android.Glide": {
@@ -174,7 +181,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         },
         "net7.0-ios16.1": {
           "targetAlias": "net7.0-ios",
@@ -206,18 +213,13 @@
               "version": "[7.0.0, )",
               "autoReferenced": true
             },
-            "Microsoft.Extensions.Logging.Abstractions": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
-              "version": "[7.0.92, )",
+              "version": "[7.0.96, )",
               "autoReferenced": true
             }
           },
@@ -249,7 +251,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         },
         "net7.0-maccatalyst16.1": {
           "targetAlias": "net7.0-maccatalyst",
@@ -281,18 +283,13 @@
               "version": "[7.0.0, )",
               "autoReferenced": true
             },
-            "Microsoft.Extensions.Logging.Abstractions": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
-              "version": "[7.0.92, )",
+              "version": "[7.0.96, )",
               "autoReferenced": true
             }
           },
@@ -325,7 +322,105 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        },
+        "net7.0-windows10.0.19041": {
+          "targetAlias": "net7.0-windows10.0.19041.0",
+          "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
+            "Esri.ArcGISRuntime.Maui": {
+              "target": "Package",
+              "version": "[200.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Maui.Graphics": {
+              "target": "Package",
+              "version": "[7.0.96, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": {
+              "target": "Package",
+              "version": "[7.0.96, )",
+              "autoReferenced": true
+            },
+            "Microsoft.WindowsAppSDK": {
+              "target": "Package",
+              "version": "[1.2.221209.1, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[7.0.13, 7.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[7.0.13, 7.0.13]"
+            },
+            {
+              "name": "Microsoft.Windows.SDK.NET.Ref",
+              "version": "[10.0.19041.29, 10.0.19041.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[7.0.13, 7.0.13]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.Maui.Controls": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Core": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Maui.Essentials": {
+              "privateAssets": "all"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.Windows.SDK.NET.Ref": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -345,6 +440,9 @@
           "#import": []
         },
         "maccatalyst-x64": {
+          "#import": []
+        },
+        "win10-x64": {
           "#import": []
         }
       }

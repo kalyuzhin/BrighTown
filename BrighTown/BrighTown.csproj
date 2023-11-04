@@ -34,6 +34,8 @@
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="white" />
 		<MauiIcon Include="Resources\AppIcon\appiconfg.svg" />
+		<MauiIcon Include="Resources\Images\mapicon.svg" />
+		<MauiIcon Include="Resources\Images\profilebutton.png" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="white" BaseSize="512,512" />
@@ -51,6 +53,9 @@
 
 	<ItemGroup>
 	  <MauiImage Remove="Resources\Images\appicon.png" />
+	  <MauiImage Remove="Resources\Images\mapicon.svg" />
+	  <MauiImage Remove="Resources\Images\profilebutton.png" />
+	  <MauiImage Remove="Resources\Images\testicon.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -58,6 +63,7 @@
 	  <None Remove="Resources\Fonts\Rounds.ttf" />
 	  <None Remove="Resources\Images\demo.png" />
 	  <None Remove="Resources\Images\demo_place.png" />
+	  <None Remove="Resources\Images\mapicon.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

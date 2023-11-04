@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>2989a4dd-07dc-4372-aeb8-6ef1579531b0</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>
     </WindowsSdkPath>
-    <LayoutDir>C:\BrigthTown\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Lyzhn\Desktop\main-branch\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>BF8162F780B781178D5E7A0F350A2A86021C43E6B0D660BA94BA2A265F7CB5E4</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2989a4dd-07dc-4372-aeb8-6ef1579531b0_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2989a4dd-07dc-4372-aeb8-6ef1579531b0_9zz4h110yvjzm!App</RegisteredUserModeAppID>
@@ -27,28 +27,28 @@
     <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\BrigthTown\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-23T17:17:27.668</Modified>
+      <Modified>2023-11-02T14:03:00.038</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-23T17:17:26.759</Modified>
+      <Modified>2023-11-02T14:02:59.456</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.runtimeconfig.json">
       <PackagePath>BrighTown.runtimeconfig.json</PackagePath>
-      <Modified>2023-10-23T16:43:37.431</Modified>
+      <Modified>2023-11-02T14:02:59.095</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.dll">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.dll">
       <PackagePath>BrighTown.dll</PackagePath>
-      <Modified>2023-10-23T17:17:23.826</Modified>
+      <Modified>2023-11-02T14:02:57.070</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>BrighTown.exe</PackagePath>
-      <Modified>2023-10-23T17:17:23.860</Modified>
+      <Modified>2023-11-02T14:02:57.086</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lyzhn\.nuget\packages\esri.arcgisruntime\200.2.0\resources\network_analyst\strings.bin">
       <PackagePath>ArcGISRuntime200.2\resources\network_analyst\strings.bin</PackagePath>
@@ -762,9 +762,9 @@
       <PackagePath>ArcGISRuntime200.2\resources\shaders\water_3d_vs.cso</PackagePath>
       <Modified>2023-08-11T19:23:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.deps.json">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\BrighTown.deps.json">
       <PackagePath>BrighTown.deps.json</PackagePath>
-      <Modified>2023-10-23T17:17:26.312</Modified>
+      <Modified>2023-11-02T14:02:58.970</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lyzhn\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.12\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1858,441 +1858,437 @@
       <PackagePath>Microsoft.Maui.pri</PackagePath>
       <Modified>2023-09-21T14:56:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2023-10-23T15:00:22.267</Modified>
+      <Modified>2023-11-02T14:02:03.034</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-10-23T15:15:58.171</Modified>
+      <Modified>2023-11-02T14:02:36.295</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-10-23T15:15:58.187</Modified>
+      <Modified>2023-11-02T14:02:36.324</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-10-23T15:15:58.234</Modified>
+      <Modified>2023-11-02T14:02:36.369</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-10-23T15:15:58.328</Modified>
+      <Modified>2023-11-02T14:02:36.418</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-10-23T15:15:58.564</Modified>
+      <Modified>2023-11-02T14:02:36.576</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2023-10-23T15:00:22.258</Modified>
+      <Modified>2023-11-02T14:02:03.025</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2023-10-23T15:00:22.261</Modified>
+      <Modified>2023-11-02T14:02:03.027</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Rounds.ttf">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Rounds.ttf">
       <PackagePath>Rounds.ttf</PackagePath>
-      <Modified>2023-10-23T15:00:22.262</Modified>
+      <Modified>2023-11-02T14:02:03.028</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-10-23T16:29:42.121</Modified>
+      <Modified>2023-11-02T14:02:36.626</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfg.ico">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfg.ico">
       <PackagePath>appiconfg.ico</PackagePath>
-      <Modified>2023-10-23T16:29:42.032</Modified>
+      <Modified>2023-11-02T14:02:36.617</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLargeTile.scale-100.png">
       <PackagePath>appiconfgLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.316</Modified>
+      <Modified>2023-11-02T14:02:36.801</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLargeTile.scale-125.png">
       <PackagePath>appiconfgLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.332</Modified>
+      <Modified>2023-11-02T14:02:36.810</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLargeTile.scale-150.png">
       <PackagePath>appiconfgLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.356</Modified>
+      <Modified>2023-11-02T14:02:36.823</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLargeTile.scale-200.png">
       <PackagePath>appiconfgLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.388</Modified>
+      <Modified>2023-11-02T14:02:36.848</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLargeTile.scale-400.png">
       <PackagePath>appiconfgLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.564</Modified>
+      <Modified>2023-11-02T14:02:36.961</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconfgLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.065</Modified>
+      <Modified>2023-11-02T14:02:36.648</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconfgLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.066</Modified>
+      <Modified>2023-11-02T14:02:36.649</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconfgLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.075</Modified>
+      <Modified>2023-11-02T14:02:36.656</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconfgLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.067</Modified>
+      <Modified>2023-11-02T14:02:36.650</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconfgLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.069</Modified>
+      <Modified>2023-11-02T14:02:36.651</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconfgLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.054</Modified>
+      <Modified>2023-11-02T14:02:36.639</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconfgLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.055</Modified>
+      <Modified>2023-11-02T14:02:36.640</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconfgLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.064</Modified>
+      <Modified>2023-11-02T14:02:36.647</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconfgLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.056</Modified>
+      <Modified>2023-11-02T14:02:36.641</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconfgLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.057</Modified>
+      <Modified>2023-11-02T14:02:36.642</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.scale-100.png">
       <PackagePath>appiconfgLogo.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.034</Modified>
+      <Modified>2023-11-02T14:02:36.618</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.scale-125.png">
       <PackagePath>appiconfgLogo.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.036</Modified>
+      <Modified>2023-11-02T14:02:36.619</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.scale-150.png">
       <PackagePath>appiconfgLogo.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.037</Modified>
+      <Modified>2023-11-02T14:02:36.621</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.scale-200.png">
       <PackagePath>appiconfgLogo.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.039</Modified>
+      <Modified>2023-11-02T14:02:36.622</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.scale-400.png">
       <PackagePath>appiconfgLogo.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.042</Modified>
+      <Modified>2023-11-02T14:02:36.626</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.targetsize-16.png">
       <PackagePath>appiconfgLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.043</Modified>
+      <Modified>2023-11-02T14:02:36.627</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.targetsize-24.png">
       <PackagePath>appiconfgLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.044</Modified>
+      <Modified>2023-11-02T14:02:36.628</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.targetsize-256.png">
       <PackagePath>appiconfgLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.053</Modified>
+      <Modified>2023-11-02T14:02:36.633</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.targetsize-32.png">
       <PackagePath>appiconfgLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.045</Modified>
+      <Modified>2023-11-02T14:02:36.628</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgLogo.targetsize-48.png">
       <PackagePath>appiconfgLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.046</Modified>
+      <Modified>2023-11-02T14:02:36.629</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgMediumTile.scale-100.png">
       <PackagePath>appiconfgMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.107</Modified>
+      <Modified>2023-11-02T14:02:36.679</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgMediumTile.scale-125.png">
       <PackagePath>appiconfgMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.111</Modified>
+      <Modified>2023-11-02T14:02:36.682</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgMediumTile.scale-150.png">
       <PackagePath>appiconfgMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.116</Modified>
+      <Modified>2023-11-02T14:02:36.686</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgMediumTile.scale-200.png">
       <PackagePath>appiconfgMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.126</Modified>
+      <Modified>2023-11-02T14:02:36.692</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgMediumTile.scale-400.png">
       <PackagePath>appiconfgMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.170</Modified>
+      <Modified>2023-11-02T14:02:36.713</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgSmallTile.scale-100.png">
       <PackagePath>appiconfgSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.090</Modified>
+      <Modified>2023-11-02T14:02:36.665</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgSmallTile.scale-125.png">
       <PackagePath>appiconfgSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.092</Modified>
+      <Modified>2023-11-02T14:02:36.666</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgSmallTile.scale-150.png">
       <PackagePath>appiconfgSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.094</Modified>
+      <Modified>2023-11-02T14:02:36.669</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgSmallTile.scale-200.png">
       <PackagePath>appiconfgSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.097</Modified>
+      <Modified>2023-11-02T14:02:36.671</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgSmallTile.scale-400.png">
       <PackagePath>appiconfgSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.104</Modified>
+      <Modified>2023-11-02T14:02:36.677</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgStoreLogo.scale-100.png">
       <PackagePath>appiconfgStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.077</Modified>
+      <Modified>2023-11-02T14:02:36.657</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgStoreLogo.scale-125.png">
       <PackagePath>appiconfgStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.078</Modified>
+      <Modified>2023-11-02T14:02:36.658</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgStoreLogo.scale-150.png">
       <PackagePath>appiconfgStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.079</Modified>
+      <Modified>2023-11-02T14:02:36.659</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgStoreLogo.scale-200.png">
       <PackagePath>appiconfgStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.081</Modified>
+      <Modified>2023-11-02T14:02:36.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgStoreLogo.scale-400.png">
       <PackagePath>appiconfgStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.088</Modified>
+      <Modified>2023-11-02T14:02:36.663</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgWideTile.scale-100.png">
       <PackagePath>appiconfgWideTile.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.177</Modified>
+      <Modified>2023-11-02T14:02:36.716</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgWideTile.scale-125.png">
       <PackagePath>appiconfgWideTile.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.187</Modified>
+      <Modified>2023-11-02T14:02:36.724</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgWideTile.scale-150.png">
       <PackagePath>appiconfgWideTile.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.201</Modified>
+      <Modified>2023-11-02T14:02:36.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgWideTile.scale-200.png">
       <PackagePath>appiconfgWideTile.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.228</Modified>
+      <Modified>2023-11-02T14:02:36.745</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconfgWideTile.scale-400.png">
       <PackagePath>appiconfgWideTile.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.306</Modified>
+      <Modified>2023-11-02T14:02:36.791</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.524</Modified>
+      <Modified>2023-11-02T14:02:36.911</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.544</Modified>
+      <Modified>2023-11-02T14:02:36.928</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.573</Modified>
+      <Modified>2023-11-02T14:02:36.949</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.605</Modified>
+      <Modified>2023-11-02T14:02:36.967</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.727</Modified>
+      <Modified>2023-11-02T14:02:37.032</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.221</Modified>
+      <Modified>2023-11-02T14:02:36.702</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.225</Modified>
+      <Modified>2023-11-02T14:02:36.705</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.252</Modified>
+      <Modified>2023-11-02T14:02:36.719</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.235</Modified>
+      <Modified>2023-11-02T14:02:36.708</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.239</Modified>
+      <Modified>2023-11-02T14:02:36.711</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.191</Modified>
+      <Modified>2023-11-02T14:02:36.684</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.196</Modified>
+      <Modified>2023-11-02T14:02:36.687</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.217</Modified>
+      <Modified>2023-11-02T14:02:36.699</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.199</Modified>
+      <Modified>2023-11-02T14:02:36.690</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.204</Modified>
+      <Modified>2023-11-02T14:02:36.692</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.138</Modified>
+      <Modified>2023-11-02T14:02:36.643</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.143</Modified>
+      <Modified>2023-11-02T14:02:36.647</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.148</Modified>
+      <Modified>2023-11-02T14:02:36.651</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.154</Modified>
+      <Modified>2023-11-02T14:02:36.655</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.162</Modified>
+      <Modified>2023-11-02T14:02:36.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.165</Modified>
+      <Modified>2023-11-02T14:02:36.664</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.169</Modified>
+      <Modified>2023-11-02T14:02:36.667</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.187</Modified>
+      <Modified>2023-11-02T14:02:36.681</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.173</Modified>
+      <Modified>2023-11-02T14:02:36.670</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.177</Modified>
+      <Modified>2023-11-02T14:02:36.673</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.320</Modified>
+      <Modified>2023-11-02T14:02:36.763</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.328</Modified>
+      <Modified>2023-11-02T14:02:36.769</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.338</Modified>
+      <Modified>2023-11-02T14:02:36.775</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.349</Modified>
+      <Modified>2023-11-02T14:02:36.783</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.384</Modified>
+      <Modified>2023-11-02T14:02:36.804</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.286</Modified>
+      <Modified>2023-11-02T14:02:36.740</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.291</Modified>
+      <Modified>2023-11-02T14:02:36.744</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.297</Modified>
+      <Modified>2023-11-02T14:02:36.748</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.303</Modified>
+      <Modified>2023-11-02T14:02:36.751</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.314</Modified>
+      <Modified>2023-11-02T14:02:36.759</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.256</Modified>
+      <Modified>2023-11-02T14:02:36.722</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.261</Modified>
+      <Modified>2023-11-02T14:02:36.725</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.266</Modified>
+      <Modified>2023-11-02T14:02:36.728</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.271</Modified>
+      <Modified>2023-11-02T14:02:36.731</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.281</Modified>
+      <Modified>2023-11-02T14:02:36.737</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.392</Modified>
+      <Modified>2023-11-02T14:02:36.810</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.401</Modified>
+      <Modified>2023-11-02T14:02:36.816</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.420</Modified>
+      <Modified>2023-11-02T14:02:36.825</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.438</Modified>
+      <Modified>2023-11-02T14:02:36.842</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-10-23T16:29:42.511</Modified>
+      <Modified>2023-11-02T14:02:36.897</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\demo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\demo.scale-100.png">
       <PackagePath>demo.scale-100.png</PackagePath>
-      <Modified>2023-10-23T14:54:40.676</Modified>
+      <Modified>2023-11-02T14:02:03.029</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\demo_place.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\demo_place.scale-100.png">
       <PackagePath>demo_place.scale-100.png</PackagePath>
-      <Modified>2023-10-23T14:54:40.680</Modified>
+      <Modified>2023-11-02T14:02:03.029</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\favouritesbutton.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\favouritesbutton.scale-100.png">
       <PackagePath>favouritesbutton.scale-100.png</PackagePath>
-      <Modified>2023-10-23T15:00:22.264</Modified>
+      <Modified>2023-11-02T14:02:03.031</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\friendsbutton.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\friendsbutton.scale-100.png">
       <PackagePath>friendsbutton.scale-100.png</PackagePath>
-      <Modified>2023-10-23T15:00:22.265</Modified>
+      <Modified>2023-11-02T14:02:03.031</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icno.scale-100.png">
-      <PackagePath>icno.scale-100.png</PackagePath>
-      <Modified>2023-10-23T15:00:22.255</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon.scale-100.png">
       <PackagePath>icon.scale-100.png</PackagePath>
-      <Modified>2023-10-23T15:00:22.255</Modified>
+      <Modified>2023-11-02T14:02:03.032</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mapbutton.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mapbutton.scale-100.png">
       <PackagePath>mapbutton.scale-100.png</PackagePath>
-      <Modified>2023-10-23T15:00:22.266</Modified>
+      <Modified>2023-11-02T14:02:03.032</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\BrigthTown\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\profilebutton.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lyzhn\Desktop\main-branch\BrighTown\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\profilebutton.scale-100.png">
       <PackagePath>profilebutton.scale-100.png</PackagePath>
-      <Modified>2023-10-23T15:00:22.267</Modified>
+      <Modified>2023-11-02T14:02:03.033</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

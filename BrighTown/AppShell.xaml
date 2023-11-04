@@ -24,23 +24,24 @@
         ContentTemplate="{DataTemplate views:AuthenticationPage}" />
 
     <TabBar Route="MapPage" Shell.TabBarIsVisible="True">
-        <Tab Title="Map">
+        <Tab Title="Карта" Icon = "mapicon.png">
             <ShellContent
                 Route="MapPage"
                 ContentTemplate="{DataTemplate views:MapPage}" />
         </Tab>
-        <Tab Title="Favourites">
+        <Tab Title="Избранное" Icon = "favouritesicon.png">
             <ShellContent
                 Route="FavouritesPage"
                 ContentTemplate="{DataTemplate views:FavouritesPage}" />
         </Tab>
-        <Tab Title="Friends">
+        <Tab Title="Друзья" Icon = "friendsicon.png">
             <ShellContent
                 Route="FriendsPage"
                 ContentTemplate="{DataTemplate views:FriendsPage}" />
         </Tab>
-        <Tab Title="Profile">
+        <Tab Title="Профиль" Icon = "profileicon.png" >
             <ShellContent
+               
                 Route="ProfilePage"
                 ContentTemplate="{DataTemplate views:ProfilePage}" />
         </Tab>

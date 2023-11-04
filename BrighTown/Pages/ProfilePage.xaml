@@ -15,7 +15,7 @@
         <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#d6f0fa" />
         <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#fe7d3b" HeightRequest="60" VerticalOptions="Start" />
         <Label Text="Профиль" FontFamily="RoundsBlack" VerticalOptions="StartAndExpand" HorizontalOptions="Center"
-               Grid.ColumnSpan="4" FontSize="Large" Padding="10" BackgroundColor="#fe7d3b" HeightRequest="50" />
+               Grid.ColumnSpan="4" FontSize="Large" Padding="10" BackgroundColor="#fe7d3b" HeightRequest="50" TextColor="White"/>
         <Button Clicked="ClickOnExitButton" Text="Выйти из аккаунта" Grid.ColumnSpan="4" VerticalOptions="End"
                 TextColor="White" FontFamily="RoundsBlack" BackgroundColor="Red" />
         <!-- <ImageButton -->

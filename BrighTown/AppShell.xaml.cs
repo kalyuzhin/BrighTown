@@ -17,3 +17,4 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(MapPage), typeof(MapPage));
     }
 }
+

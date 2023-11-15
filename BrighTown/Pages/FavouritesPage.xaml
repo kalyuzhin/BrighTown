@@ -16,7 +16,7 @@
         <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#d6f0fa" />
         <BoxView Grid.Row="0" Grid.ColumnSpan="4" Color="#fe7d3b" HeightRequest="60" VerticalOptions="Start" />
         <Label Text="Избранное" FontFamily="RoundsBlack" VerticalOptions="StartAndExpand" HorizontalOptions="Center"
-               Grid.ColumnSpan="4" FontSize="Large" Padding="10" BackgroundColor="#fe7d3b" HeightRequest="50" />
+               Grid.ColumnSpan="4" FontSize="Large" Padding="10" BackgroundColor="#fe7d3b" HeightRequest="50" TextColor="White" />
 
         <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4" VerticalOptions="FillAndExpand"
                         Margin="0,70,0,0">

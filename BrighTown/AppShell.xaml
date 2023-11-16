@@ -8,7 +8,10 @@
     xmlns:model="clr-namespace:BrighTown.Models"
     x:Class="BrighTown.AppShell"
     Shell.FlyoutBehavior="Disabled"
-    Shell.TabBarIsVisible="False">
+    Shell.TabBarIsVisible="False"
+    Shell.BackgroundColor="#fe7d3b"
+    
+    >
 
     <Shell.Resources>
         <Style TargetType="TabBar">

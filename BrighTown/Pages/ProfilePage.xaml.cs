@@ -7,6 +7,12 @@ public partial class ProfilePage : ContentPage
         InitializeComponent();
     }
 
+    
+    private void ClickOnSettingsButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
+    {
+        Routing.RegisterRoute("OpenSettings", typeof(SettingsPage));
+        Shell.Current.GoToAsync("OpenSettings");
+    }
     //-----------������������� ������---------------------------------------------
 
     private void ClickOnFavouritesButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"

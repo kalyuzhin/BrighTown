@@ -9,33 +9,78 @@
              BackgroundColor="#2c3e54"
              Shell.PresentationMode="NotAnimated">
     <Shell.TitleView>
-        <Label FontFamily="Rounds" FontSize="48" TextColor="#fff" HorizontalTextAlignment="Center"
-               TextTransform="Uppercase" Text="BrighTown" Margin="-20,0,0,0">
+        <Label FontFamily="Rounds" FontSize="Large" TextColor="#fff" HorizontalTextAlignment="Center"
+               TextTransform="Uppercase" Text="Регистрация" Margin="0,10,0,0">
         </Label>
     </Shell.TitleView>
-    <Grid
-        RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
-        Padding="25,50"
-        RowSpacing="20"
-        VerticalOptions="FillAndExpand"
-        HorizontalOptions="FillAndExpand"
-        BackgroundColor="#2c3e54">
-        <Label Grid.Row="0" Text="Регистрация" TextColor="#fff" FontFamily="Rounds" FontSize="42" />
-        <Entry Grid.Row="1" Placeholder="Электронная почта" IsSpellCheckEnabled="False" BackgroundColor="#fff"
-               VerticalOptions="FillAndExpand"
-               HorizontalOptions="FillAndExpand" />
-        <Entry Grid.Row="2" Placeholder="Имя пользователя" IsSpellCheckEnabled="False" BackgroundColor="#fff"
-               VerticalOptions="FillAndExpand"
-               HorizontalOptions="FillAndExpand" />
-        <Entry Grid.Row="3" Placeholder="Пароль" IsSpellCheckEnabled="False" IsPassword="True" BackgroundColor="#fff"
-               VerticalOptions="FillAndExpand"
-               HorizontalOptions="FillAndExpand" />
-        <Entry Grid.Row="4" Placeholder="Подтверждение пароля" IsSpellCheckEnabled="False" IsPassword="True"
-               BackgroundColor="#fff"
-               VerticalOptions="FillAndExpand"
-               HorizontalOptions="FillAndExpand" />
-        <Button Clicked="PressRegisterButton" Grid.Row="5" Text="Регистрация" BackgroundColor="#fe7d3b"
-                FontFamily="Rounds" TextColor="#fff"
-                CornerRadius="20" />
-    </Grid>
+    <VerticalStackLayout Padding="0,0,0,0" VerticalOptions="End">
+
+        <Grid
+            RowDefinitions="Auto,*,*,*,*,*"
+            Padding="25,0,25,20"
+            RowSpacing="20"
+            VerticalOptions="Start"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="#2c3e54">
+            <!-- <Image Source="lamp.png" VerticalOptions="StartAndExpand"  Margin="5"></Image> -->
+            <Label Text="Создание Аккаунта" FontFamily="RoundsBlack" FontSize="Medium" VerticalOptions="End"
+                   HorizontalOptions="Center">
+            </Label>
+            <Border Grid.Row="1" BackgroundColor="White">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <Entry Placeholder="Электронная почта" IsSpellCheckEnabled="False" TextColor="Black"
+                       BackgroundColor="#fff"
+                       VerticalOptions="FillAndExpand"
+                       HorizontalOptions="FillAndExpand" />
+
+            </Border>
+
+            <Border Grid.Row="2" BackgroundColor="White">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <Entry Placeholder="Имя пользователя" IsSpellCheckEnabled="False" TextColor="Black"
+                       BackgroundColor="#fff"
+                       VerticalOptions="FillAndExpand"
+                       HorizontalOptions="FillAndExpand" />
+
+            </Border>
+
+            <Border Grid.Row="3" BackgroundColor="White">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <Entry Placeholder="Пароль" IsSpellCheckEnabled="False" IsPassword="True" TextColor="Black"
+                       BackgroundColor="#fff"
+                       VerticalOptions="FillAndExpand"
+                       HorizontalOptions="FillAndExpand" />
+            </Border>
+
+            <Border Grid.Row="4" BackgroundColor="White">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <Entry Placeholder="Подтверждение пароля" IsSpellCheckEnabled="False" TextColor="Black"
+                       IsPassword="True"
+                       BackgroundColor="#fff"
+                       VerticalOptions="FillAndExpand"
+                       HorizontalOptions="FillAndExpand" />
+
+
+            </Border>
+            <Button Clicked="PressRegisterButton" Grid.Row="5" Text="Зарегистрироваться" BackgroundColor="#fe7d3b"
+                    FontFamily="Rounds" TextColor="#fff"
+                    CornerRadius="20" />
+
+
+        </Grid>
+        <Image Source="city_sky.png" HorizontalOptions="FillAndExpand"></Image>
+    </VerticalStackLayout>
+
 </ContentPage>

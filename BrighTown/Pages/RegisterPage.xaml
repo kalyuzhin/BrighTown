@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrighTown.Pages.RegisterPage"
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
+             x:DataType="viewmodel:NewAuthenticationViewModel"
+             Shell.NavBarIsVisible="True"
+             BackgroundColor="#2c3e54"
+             Shell.PresentationMode="NotAnimated">
+    <Shell.TitleView>
+        <Label FontFamily="Rounds" FontSize="48" TextColor="#fff" HorizontalTextAlignment="Center"
+               TextTransform="Uppercase" Text="BrighTown" Margin="-20,0,0,0">
+        </Label>
+    </Shell.TitleView>
+    <Grid
+        RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+        Padding="25,50"
+        RowSpacing="20"
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="#2c3e54">
+        <Label Grid.Row="0" Text="Регистрация" TextColor="#fff" FontFamily="Rounds" FontSize="42" />
+        <Entry Grid.Row="1" Placeholder="Электронная почта" IsSpellCheckEnabled="False" BackgroundColor="#fff"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand" />
+        <Entry Grid.Row="2" Placeholder="Имя пользователя" IsSpellCheckEnabled="False" BackgroundColor="#fff"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand" />
+        <Entry Grid.Row="3" Placeholder="Пароль" IsSpellCheckEnabled="False" IsPassword="True" BackgroundColor="#fff"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand" />
+        <Entry Grid.Row="4" Placeholder="Подтверждение пароля" IsSpellCheckEnabled="False" IsPassword="True"
+               BackgroundColor="#fff"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand" />
+        <Button Clicked="PressRegisterButton" Grid.Row="5" Text="Регистрация" BackgroundColor="#fe7d3b"
+                FontFamily="Rounds" TextColor="#fff"
+                CornerRadius="20" />
+    </Grid>
+</ContentPage>

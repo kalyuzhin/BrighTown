@@ -10,7 +10,8 @@ namespace BrighTown
             InitializeComponent();
 
             MainPage = new AppShell();
-            //MainPage = new AuthenticationPage(new AuthenticationViewModel(Connectivity.Current));
+            //MainPage = new AuthenticationPage(new NewAuthenticationViewModel(Connectivity.Current));
+            //MainPage = new NewAuthenticationPage();
         }
     }
 }

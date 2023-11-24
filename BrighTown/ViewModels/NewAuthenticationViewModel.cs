@@ -1,19 +1,18 @@
 using BrighTown.Pages;
-using BrighTown.ViewModels;
 using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 namespace BrighTown.ViewModels;
 
-public partial class AuthenticationViewModel : BaseViewModel
+public partial class NewAuthenticationViewModel : BaseViewModel
 {
     [ObservableProperty] private string _userName;
-    [ObservableProperty] private string _password;
+    [ObservableProperty] private string _userPassword;
 
     IConnectivity _connectivity;
 
-    public AuthenticationViewModel(IConnectivity connectivity)
+    public NewAuthenticationViewModel(IConnectivity connectivity)
     {
         this._connectivity = connectivity;
     }
@@ -70,7 +69,7 @@ public partial class AuthenticationViewModel : BaseViewModel
             IsBusy = true;
             var popup = new LoginPopUp();
             var currentPage = Shell.Current.CurrentPage;
-            Console.WriteLine(currentPage.ToString());
+            //Console.WriteLine(currentPage.ToString());
             if (currentPage is AuthenticationPage)
             {
                 await currentPage.ShowPopupAsync(popup);
@@ -79,6 +78,69 @@ public partial class AuthenticationViewModel : BaseViewModel
         catch (Exception ex)
         {
             await Shell.Current.DisplayAlert("Ошибка!", $"{ex.Message}", "OK");
+        }
+        finally
+        {
+            IsBusy = false;
+        }
+    }
+
+
+    [RelayCommand]
+    async Task Login()
+    {
+        if (IsBusy)
+        {
+            return;
+        }
+
+        if (_connectivity.NetworkAccess != NetworkAccess.Internet)
+        {
+            await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
+                "Повторить попытку");
+            return;
+        }
+
+        try
+        {
+            IsBusy = true;
+            // await Shell.Current.Navigation.PushAsync(new MapPage());
+            await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+        }
+        catch (Exception ex)
+        {
+            await Shell.Current.DisplayAlert("Упс!", "К сожалению произошла ошибка...", "ОК");
+        }
+        finally
+        {
+            IsBusy = false;
+        }
+    }
+
+    [RelayCommand]
+    async Task Register()
+    {
+        if (IsBusy)
+        {
+            return;
+        }
+
+        if (_connectivity.NetworkAccess != NetworkAccess.Internet)
+        {
+            await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
+                "Повторить попытку");
+            return;
+        }
+
+        try
+        {
+            IsBusy = true;
+            // await Shell.Current.Navigation.PushAsync(new MapPage());
+            await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+        }
+        catch (Exception ex)
+        {
+            await Shell.Current.DisplayAlert("Упс!", "К сожалению произошла ошибка...", "ОК");
         }
         finally
         {

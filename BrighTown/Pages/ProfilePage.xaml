@@ -8,35 +8,47 @@
 
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
-           
+
             <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase"
-                   Margin="0,10,0,0"   FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Профиль" />
+                   Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Профиль" />
         </StackLayout>
     </Shell.TitleView>
-    
-    
-    
+
+
     <Grid ColumnDefinitions="*,*,*,*"
           ColumnSpacing="5"
           RowDefinitions="*,*,*,*"
-          RowSpacing="10"
-          >
-        
-        <BoxView VerticalOptions="Start" HorizontalOptions="Fill" Color="#A7B6BB" Grid.ColumnSpan="4" ></BoxView>
-        <Image Source="demo.png" VerticalOptions="Fill" HorizontalOptions="Start" Grid.Column="0"  Margin="5"> </Image>
-        <BoxView VerticalOptions="Start" HorizontalOptions="Fill" Color="#ffdabf" Grid.ColumnSpan="4" HeightRequest="100" Grid.Row="1"></BoxView>
-        <BoxView VerticalOptions="Start" HorizontalOptions="Fill" Color="#fe7d3b" Grid.ColumnSpan="4" HeightRequest="35" Grid.Row="1"></BoxView>
-        <Label Text="Информация об аккаунте" HorizontalOptions="Center" FontFamily="RoundsBlack"  Grid.Row="1" Grid.ColumnSpan="4" FontSize="Medium"></Label>
-        <Label Text="Друзья" HorizontalOptions="Center" FontFamily="RoundsBlack" Margin="45" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"></Label>
-        <Label Text="0" HorizontalOptions="Center" FontFamily="RoundsBlack" Margin="65" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"></Label>
-        <Label Text="Сохранено мест" HorizontalOptions="Center" FontFamily="RoundsBlack" Margin="45" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></Label>
-        <Label Text="0" HorizontalOptions="Center" FontFamily="RoundsBlack" Margin="65" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></Label>
+          RowSpacing="10">
 
-        <Button  Clicked = "ClickOnSettingsButton" Text="Настройки" Grid.ColumnSpan="4" VerticalOptions="End"
-                 Margin="5,5,5,53" TextColor="White" FontFamily="RoundsBlack" BackgroundColor="#2c3e54" Grid.Row="3"/>
-        <Button Clicked="ClickOnExitButton" Text="Выйти из аккаунта" Grid.ColumnSpan="4" VerticalOptions="End" 
-                TextColor="White" FontFamily="RoundsBlack" BackgroundColor="Red" Margin="5,5,5,5" Grid.Row="3"/>
-      
+        <BoxView VerticalOptions="Start" HorizontalOptions="Fill" Color="#A7B6BB" Grid.ColumnSpan="4"></BoxView>
+        <Image Source="demo.png" VerticalOptions="Fill" HorizontalOptions="Start" Grid.Column="0" Margin="5"> </Image>
+        <BoxView VerticalOptions="Start" HorizontalOptions="Fill" Color="#ffdabf" Grid.ColumnSpan="4"
+                 HeightRequest="100" Grid.Row="1">
+        </BoxView>
+        <BoxView VerticalOptions="Start" HorizontalOptions="Fill" Color="#fe7d3b" Grid.ColumnSpan="4"
+                 HeightRequest="35" Grid.Row="1">
+        </BoxView>
+        <Label Text="Информация об аккаунте" HorizontalOptions="Center" FontFamily="RoundsBlack" Grid.Row="1"
+               Grid.ColumnSpan="4" FontSize="Medium">
+        </Label>
+        <Label Text="Друзья" HorizontalOptions="Center" FontFamily="RoundsBlack" Margin="45" Grid.Row="1"
+               Grid.Column="2" Grid.ColumnSpan="2">
+        </Label>
+        <Label Text="0" HorizontalOptions="Center" FontFamily="RoundsBlack" Margin="65" Grid.Row="1" Grid.Column="2"
+               Grid.ColumnSpan="2">
+        </Label>
+        <Label Text="Сохранено мест" HorizontalOptions="Center" FontFamily="RoundsBlack" Margin="45" Grid.Row="1"
+               Grid.Column="0" Grid.ColumnSpan="2">
+        </Label>
+        <Label Text="0" HorizontalOptions="Center" FontFamily="RoundsBlack" Margin="65" Grid.Row="1" Grid.Column="0"
+               Grid.ColumnSpan="2">
+        </Label>
+
+        <Button Clicked="ClickOnSettingsButton" Text="Настройки" Grid.ColumnSpan="4" VerticalOptions="End"
+                Margin="5,5,5,53" TextColor="White" FontFamily="RoundsBlack" BackgroundColor="#2c3e54" Grid.Row="3" />
+        <Button Clicked="ClickOnExitButton" Text="Выйти из аккаунта" Grid.ColumnSpan="4" VerticalOptions="End"
+                TextColor="White" FontFamily="RoundsBlack" BackgroundColor="Red" Margin="5,5,5,5" Grid.Row="3" />
+
     </Grid>
 
 </ContentPage>

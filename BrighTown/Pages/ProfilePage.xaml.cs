@@ -38,6 +38,6 @@ public partial class ProfilePage : ContentPage
 
     private void ClickOnExitButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
     {
-        Shell.Current.GoToAsync($"//{nameof(AuthenticationPage)}");
+        Shell.Current.GoToAsync($"//{nameof(NewAuthenticationPage)}");
     }
 }

@@ -5,7 +5,7 @@ namespace BrighTown.Pages;
 
 public partial class AuthenticationPage : ContentPage
 {
-    public AuthenticationPage(AuthenticationViewModel viewModel)
+    public AuthenticationPage(NewAuthenticationViewModel viewModel)
     {
         InitializeComponent();
         BindingContext = viewModel;

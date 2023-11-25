@@ -25,8 +25,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPlacesService, PlacesService>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
-// builder.Services.AddDbContext<DataContext>(opt =>
-//     opt.UseSqlite(builder.Configuration.GetConnectionString("DatabaseConnection")));
+builder.Services.AddDbContext<DataContext>(opt =>
+    opt.UseSqlite(builder.Configuration.GetConnectionString("DatabaseConnection")));
 
 var app = builder.Build();
 

@@ -13,6 +13,8 @@ public partial class RegisterPage : ContentPage
     {
         InitializeComponent();
     }
+    
+    
 
     async void PressRegisterButton(object sender, EventArgs e)
     {

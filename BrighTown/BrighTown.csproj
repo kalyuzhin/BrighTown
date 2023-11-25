@@ -38,7 +38,6 @@
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="white" />
 		<MauiIcon Include="Resources\AppIcon\appiconfg.svg" />
-		<MauiIcon Include="Resources\Images\mapicon.svg" />
 		<MauiIcon Include="Resources\Images\profilebutton.png" />
 
 		<!-- Splash Screen -->

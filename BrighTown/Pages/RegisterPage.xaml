@@ -4,6 +4,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrighTown.Pages.RegisterPage"
              xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
+             xmlns:mauidevices="clr-namespace:Microsoft.Maui.Devices;assembly=Microsoft.Maui.Essentials"
+             xmlns:mauicontrols="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
              x:DataType="viewmodel:NewAuthenticationViewModel"
              Shell.NavBarIsVisible="True"
              BackgroundColor="#2c3e54"
@@ -13,74 +15,78 @@
                TextTransform="Uppercase" Text="Регистрация" Margin="0,10,0,0">
         </Label>
     </Shell.TitleView>
-    <VerticalStackLayout Padding="0,0,0,0" VerticalOptions="End">
+    <!-- <VerticalStackLayout Padding="0,0,0,0" VerticalOptions="End"> -->
 
-        <Grid
-            RowDefinitions="Auto,*,*,*,*,*"
-            Padding="25,0,25,20"
-            RowSpacing="20"
-            VerticalOptions="Start"
-            HorizontalOptions="FillAndExpand"
-            BackgroundColor="#2c3e54">
-            <!-- <Image Source="lamp.png" VerticalOptions="StartAndExpand"  Margin="5"></Image> -->
-            <Label Text="Создание Аккаунта" FontFamily="RoundsBlack" FontSize="Medium" VerticalOptions="End"
-                   HorizontalOptions="Center">
-            </Label>
-            <Border Grid.Row="1" BackgroundColor="White">
+    <Grid
+        RowDefinitions="Auto,*,*,*,*,*,*"
+        Padding="25,0,25,0"
+        RowSpacing="20"
+        VerticalOptions="Center"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="#2c3e54">
+        <!-- <Image Source="lamp.png" VerticalOptions="StartAndExpand"  Margin="5"></Image> -->
+        <Label Text="Создание Аккаунта" FontFamily="RoundsBlack" FontSize="Medium" VerticalOptions="End"
+               HorizontalOptions="Center" TextColor="#fff" Grid.Row="0">
+        </Label>
+        <Border Grid.Row="1" BackgroundColor="White">
 
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="10" />
-                </Border.StrokeShape>
-                <Entry Placeholder="Электронная почта" IsSpellCheckEnabled="False" TextColor="Black"
-                       BackgroundColor="#fff"
-                       VerticalOptions="FillAndExpand"
-                       HorizontalOptions="FillAndExpand" />
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Entry Placeholder="Электронная почта" IsSpellCheckEnabled="False" TextColor="Black"
+                   BackgroundColor="#fff"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand" />
 
-            </Border>
+        </Border>
 
-            <Border Grid.Row="2" BackgroundColor="White">
+        <Border Grid.Row="2" BackgroundColor="White">
 
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="10" />
-                </Border.StrokeShape>
-                <Entry Placeholder="Имя пользователя" IsSpellCheckEnabled="False" TextColor="Black"
-                       BackgroundColor="#fff"
-                       VerticalOptions="FillAndExpand"
-                       HorizontalOptions="FillAndExpand" />
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Entry Placeholder="Имя пользователя" IsSpellCheckEnabled="False" TextColor="Black"
+                   BackgroundColor="#fff"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand" />
 
-            </Border>
+        </Border>
 
-            <Border Grid.Row="3" BackgroundColor="White">
+        <Border Grid.Row="3" BackgroundColor="White">
 
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="10" />
-                </Border.StrokeShape>
-                <Entry Placeholder="Пароль" IsSpellCheckEnabled="False" IsPassword="True" TextColor="Black"
-                       BackgroundColor="#fff"
-                       VerticalOptions="FillAndExpand"
-                       HorizontalOptions="FillAndExpand" />
-            </Border>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Entry Placeholder="Пароль" IsSpellCheckEnabled="False" IsPassword="True" TextColor="Black"
+                   BackgroundColor="#fff"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand" />
+        </Border>
 
-            <Border Grid.Row="4" BackgroundColor="White">
+        <Border Grid.Row="4" BackgroundColor="White">
 
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="10" />
-                </Border.StrokeShape>
-                <Entry Placeholder="Подтверждение пароля" IsSpellCheckEnabled="False" TextColor="Black"
-                       IsPassword="True"
-                       BackgroundColor="#fff"
-                       VerticalOptions="FillAndExpand"
-                       HorizontalOptions="FillAndExpand" />
-
-
-            </Border>
-            <Button Clicked="PressRegisterButton" Grid.Row="5" Text="Зарегистрироваться" BackgroundColor="#fe7d3b"
-                    FontFamily="Rounds" TextColor="#fff"
-                    CornerRadius="20" />
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Entry Placeholder="Подтверждение пароля" IsSpellCheckEnabled="False" TextColor="Black"
+                   IsPassword="True"
+                   BackgroundColor="#fff"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand" />
 
 
-        </Grid>
-        <Image Source="city_sky.png" HorizontalOptions="FillAndExpand"></Image>
-    </VerticalStackLayout>
+        </Border>
+        <Button Clicked="PressRegisterButton" Grid.Row="5" Text="Зарегистрироваться" BackgroundColor="#fe7d3b"
+                FontFamily="Rounds" TextColor="#fff"
+                CornerRadius="20" />
+        <StackLayout Grid.Row="6" HorizontalOptions="Center" VerticalOptions="End">
+            <Image Source="city_sky.png"
+                   MaximumHeightRequest="240"
+                   MinimumHeightRequest="120"
+                   WidthRequest="{Binding Source={x:Static mauidevices:DeviceDisplay.MainDisplayInfo}, Path=Width}" />
+        </StackLayout>
+    </Grid>
+
+    <!-- </VerticalStackLayout> -->
 
 </ContentPage>

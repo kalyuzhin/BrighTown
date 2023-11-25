@@ -12,8 +12,15 @@
              Shell.PresentationMode="NotAnimated">
     <Shell.TitleView>
         <Label FontFamily="Rounds" FontSize="Large" TextColor="#fff" HorizontalTextAlignment="Center"
-               TextTransform="Uppercase" Text="Регистрация" Margin="0,10,0,0">
+               TextTransform="Uppercase" Text="Регистрация">
+            <Label.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS" Value="-30,0,0,0" />
+                    <On Platform="Android" Value="-60,10,0,0" />
+                </OnPlatform>
+            </Label.Margin>
         </Label>
+
     </Shell.TitleView>
     <!-- <VerticalStackLayout Padding="0,0,0,0" VerticalOptions="End"> -->
 

@@ -135,8 +135,9 @@ public partial class NewAuthenticationViewModel : BaseViewModel
         try
         {
             IsBusy = true;
-            // await Shell.Current.Navigation.PushAsync(new MapPage());
+            await Shell.Current.GoToAsync($"..");
             await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+            await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
         }
         catch (Exception ex)
         {

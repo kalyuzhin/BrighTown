@@ -41,10 +41,10 @@
                        Margin="0,-15,0,0" />
                 <Entry Grid.Row="2" Placeholder="Логин"
                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#fff"
-                       IsSpellCheckEnabled="False" Margin="0,20,0,0" x:Name="LoginEntry" />
+                       IsSpellCheckEnabled="False" Margin="0,20,0,0" x:Name="LoginEntry" TextColor="#000" />
                 <Entry Grid.Row="3" Placeholder="Пароль"
                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#fff"
-                       IsPassword="True" IsSpellCheckEnabled="False" x:Name="PasswordEntry" />
+                       IsPassword="True" IsSpellCheckEnabled="False" x:Name="PasswordEntry" TextColor="#000" />
                 <Button Command="{Binding LoginCommand}"
                         Grid.Row="4" BackgroundColor="#fe7d3b" Text="Вход" TextColor="#fff" FontFamily="Rounds"
                         CornerRadius="20" />

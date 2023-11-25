@@ -25,7 +25,7 @@
   <li>Язык программирования: C#</li>
   <li>Используемый Framework: MAUI</li>
   <li>VCS: Git</li>
-  <li>БД: FireBase</li>
+  <li>БД: SQLite</li>
 </ul>
 
 

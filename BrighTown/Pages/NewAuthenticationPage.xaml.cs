@@ -22,7 +22,7 @@ public partial class NewAuthenticationPage : ContentPage
         {
             return;
         }
-        
+
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
             await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
@@ -52,29 +52,21 @@ public partial class NewAuthenticationPage : ContentPage
         {
             return;
         }
-        
-        // if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
-        // {
-        //     await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
-        //         "Повторить попытку");
-        //     return;
-        // }
 
         try
         {
             IsBusy = true;
-            //Routing.RegisterRoute("RegisterPage", typeof(RegisterPage));
+            Routing.RegisterRoute("RegisterPage", typeof(RegisterPage));
             await Shell.Current.GoToAsync($"{nameof(RegisterPage)}");
             //await Shell.Current.Navigation.PushModalAsync(new MapPage());
         }
         catch (Exception ex)
         {
-            await Shell.Current.DisplayAlert("Упс!", "К сожалению произошла ошибка...", "ОК");
+            await Shell.Current.DisplayAlert("Упс!", $"{ex}", "ОК");
         }
         finally
         {
             IsBusy = false;
         }
     }
-    
 }

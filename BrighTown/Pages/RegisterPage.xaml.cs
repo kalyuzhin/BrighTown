@@ -12,6 +12,7 @@ public partial class RegisterPage : ContentPage
     public RegisterPage()
     {
         InitializeComponent();
+        //BindingContext = viewModel;
     }
 
     async void PressRegisterButton(object sender, EventArgs e)
@@ -32,8 +33,8 @@ public partial class RegisterPage : ContentPage
         {
             IsBusy = true;
             await Shell.Current.GoToAsync($"..");
-            Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
-            Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+            await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+            await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
         }
         catch (Exception ex)
         {

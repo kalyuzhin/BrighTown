@@ -7,14 +7,20 @@
              Shell.NavBarIsVisible="True"
              Shell.TabBarIsVisible="False">
     <Shell.BackButtonBehavior>
-        <BackButtonBehavior IsVisible="False" IsEnabled="False" />
+        <BackButtonBehavior IsVisible="True" IsEnabled="True" />
     </Shell.BackButtonBehavior>
 
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
-
             <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase"
-                   Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Настройки" />
+                   FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Настройки">
+                <Label.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="-35,-15,0,0" />
+                        <On Platform="Android" Value="-70,10,0,0" />
+                    </OnPlatform>
+                </Label.Margin>
+            </Label>
         </StackLayout>
     </Shell.TitleView>
 

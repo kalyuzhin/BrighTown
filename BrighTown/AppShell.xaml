@@ -23,7 +23,7 @@
         ContentTemplate="{DataTemplate views:NewAuthenticationPage}" />
 
     <TabBar Route="MapPage" Shell.TabBarIsVisible="True" Shell.BackgroundColor="#fe7d3b">
-        <Tab Title="Карта" Icon="mapicon.png">
+        <Tab Title="Карта" Icon="iconofmap.png">
             <ShellContent
                 Route="MapPage"
                 ContentTemplate="{DataTemplate views:MapPage}" />

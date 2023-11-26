@@ -5,14 +5,17 @@
              x:Class="BrighTown.Pages.NewAuthenticationPage"
              xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
              x:DataType="viewmodel:NewAuthenticationViewModel"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              BackgroundColor="#fe7d3b"
              Shell.NavBarIsVisible="False">
     <Shell.TitleView>
         <Label FontFamily="Rounds" FontSize="48" TextColor="#fff" HorizontalTextAlignment="Center"
-               TextTransform="Uppercase" Text="BrighTown" />
+               TextTransform="Uppercase" Text="BrighTown">
+        </Label>
     </Shell.TitleView>
     <Grid
         RowDefinitions="Auto,*"
+        ColumnDefinitions="*"
         HorizontalOptions="FillAndExpand"
         VerticalOptions="FillAndExpand">
         <StackLayout Grid.Row="0" HorizontalOptions="Center" Margin="0,0,0,40">
@@ -30,19 +33,36 @@
                 RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                 RowSpacing="20"
                 VerticalOptions="FillAndExpand"
-                HorizontalOptions="FillAndExpand"
+                HorizontalOptions="Center"
                 BackgroundColor="#2c3e54">
                 <Label Grid.Row="0" Text="Добро пожаловать!" TextColor="#fff" FontFamily="Rounds" FontSize="24"
                        HorizontalOptions="CenterAndExpand" />
                 <Label Grid.Row="1" Text="Войдите в свой аккаунт" TextColor="#fff" FontFamily="Rounds"
                        HorizontalOptions="CenterAndExpand"
                        Margin="0,-15,0,0" />
-                <Entry Grid.Row="2" Placeholder="Логин"
-                       VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#fff"
-                       IsSpellCheckEnabled="False" Margin="0,20,0,0" x:Name="LoginEntry" TextColor="#000" />
-                <Entry Grid.Row="3" Placeholder="Пароль"
-                       VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#fff"
-                       IsPassword="True" IsSpellCheckEnabled="False" x:Name="PasswordEntry" TextColor="#000" />
+
+                <Border Grid.Row="2" Margin="0,20,0,0" BackgroundColor="White">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <Entry Placeholder="Логин"
+                           VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" TextColor="Black"
+                           BackgroundColor="#fff"
+                           IsSpellCheckEnabled="False" x:Name="LoginEntry" />
+                </Border>
+                <Border Grid.Row="3" BackgroundColor="White">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <Entry Placeholder="Пароль"
+                           VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" TextColor="Black"
+                           BackgroundColor="#fff"
+                           IsPassword="True" IsSpellCheckEnabled="False" x:Name="PasswordEntry" />
+
+
+                </Border>
                 <Button Command="{Binding LoginCommand}"
                         Grid.Row="4" BackgroundColor="#fe7d3b" Text="Вход" TextColor="#fff" FontFamily="Rounds"
                         CornerRadius="20" />

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BrighTown.Pages;
+﻿namespace BrighTown.Pages;
 
 public partial class SettingsPage : ContentPage
 {
@@ -12,11 +6,9 @@ public partial class SettingsPage : ContentPage
     {
         InitializeComponent();
     }
-    
+
     private void ClickOnSettingsButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
     {
         Shell.Current.GoToAsync("..");
     }
-    
-    
 }

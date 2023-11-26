@@ -9,18 +9,18 @@
 
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
-           
+
             <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase"
-                   Margin="0,10,0,0"   FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Избранное" />
+                   Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Избранное" />
         </StackLayout>
     </Shell.TitleView>
-    
+
     <Grid ColumnDefinitions="*,*,*,*"
           ColumnSpacing="0"
           RowDefinitions="*"
           RowSpacing="10">
 
-      
+
         <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4" VerticalOptions="FillAndExpand">
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
@@ -44,8 +44,7 @@
                         <Rectangle Background="#ffdabf" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
                                    VerticalOptions="Start" />
                         <Image Source="{Binding ImageUrl}" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75"
-                               WidthRequest="75" Margin="12" HorizontalOptions="Start">
-                        </Image>
+                               WidthRequest="75" Margin="12" HorizontalOptions="Start" />
                         <Label Text="{Binding Name}" FontFamily="RoundsBlack" FontSize="Medium"
                                HorizontalOptions="Start"
                                Margin="120,10,0,0" />
@@ -58,7 +57,7 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-       
+
     </Grid>
 
 </ContentPage>

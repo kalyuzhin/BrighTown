@@ -7,22 +7,20 @@
              x:Class="BrighTown.Pages.MapPage"
              BackgroundColor="#d6f0fa"
              Shell.NavBarIsVisible="True">
-    
-    
+
+
     <ContentPage.Resources>
         <local:MapViewModel x:Key="MapViewModel" />
     </ContentPage.Resources>
 
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
-           
             <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase"
-                Margin="0,10,0,0"   FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Карта" />
+                   Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Карта" />
         </StackLayout>
     </Shell.TitleView>
 
-    
-    
+
     <Grid ColumnDefinitions="*,*,*,*"
           ColumnSpacing="0"
           RowDefinitions="*"
@@ -30,11 +28,11 @@
 
 
         <esri:MapView x:Name="MainMapView"
-                      Map="{Binding Map, Source={StaticResource MapViewModel}}" VerticalOptions="Fill" Grid.ColumnSpan="4"
+                      Map="{Binding Map, Source={StaticResource MapViewModel}}" VerticalOptions="Fill"
+                      Grid.ColumnSpan="4"
                       GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}" />
 
-      
-        
+
     </Grid>
 
 

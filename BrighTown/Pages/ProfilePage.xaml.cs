@@ -7,7 +7,7 @@ public partial class ProfilePage : ContentPage
         InitializeComponent();
     }
 
-    
+
     private void ClickOnSettingsButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
     {
         Routing.RegisterRoute("OpenSettings", typeof(SettingsPage));

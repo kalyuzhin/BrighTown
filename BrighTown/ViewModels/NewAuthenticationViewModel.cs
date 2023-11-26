@@ -7,24 +7,20 @@ namespace BrighTown.ViewModels;
 
 public partial class NewAuthenticationViewModel : BaseViewModel
 {
+    private readonly IConnectivity _connectivity;
     [ObservableProperty] private string _userName;
     [ObservableProperty] private string _userPassword;
 
-    IConnectivity _connectivity;
-
     public NewAuthenticationViewModel(IConnectivity connectivity)
     {
-        this._connectivity = connectivity;
+        _connectivity = connectivity;
     }
 
 
     [RelayCommand]
-    async Task DisplayRegisterPopUp()
+    private async Task DisplayRegisterPopUp()
     {
-        if (IsBusy)
-        {
-            return;
-        }
+        if (IsBusy) return;
 
         if (_connectivity.NetworkAccess != NetworkAccess.Internet)
         {
@@ -50,12 +46,9 @@ public partial class NewAuthenticationViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    async Task DisplayLoginPopUp()
+    private async Task DisplayLoginPopUp()
     {
-        if (IsBusy)
-        {
-            return;
-        }
+        if (IsBusy) return;
 
         if (_connectivity.NetworkAccess != NetworkAccess.Internet)
         {
@@ -70,10 +63,7 @@ public partial class NewAuthenticationViewModel : BaseViewModel
             var popup = new LoginPopUp();
             var currentPage = Shell.Current.CurrentPage;
             //Console.WriteLine(currentPage.ToString());
-            if (currentPage is AuthenticationPage)
-            {
-                await currentPage.ShowPopupAsync(popup);
-            }
+            if (currentPage is AuthenticationPage) await currentPage.ShowPopupAsync(popup);
         }
         catch (Exception ex)
         {
@@ -87,12 +77,9 @@ public partial class NewAuthenticationViewModel : BaseViewModel
 
 
     [RelayCommand]
-    async Task Login()
+    private async Task Login()
     {
-        if (IsBusy)
-        {
-            return;
-        }
+        if (IsBusy) return;
 
         if (_connectivity.NetworkAccess != NetworkAccess.Internet)
         {
@@ -118,12 +105,9 @@ public partial class NewAuthenticationViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    async Task Register()
+    private async Task Register()
     {
-        if (IsBusy)
-        {
-            return;
-        }
+        if (IsBusy) return;
 
         if (_connectivity.NetworkAccess != NetworkAccess.Internet)
         {
@@ -135,7 +119,7 @@ public partial class NewAuthenticationViewModel : BaseViewModel
         try
         {
             IsBusy = true;
-            await Shell.Current.GoToAsync($"..");
+            await Shell.Current.GoToAsync("..");
             await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
             await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
         }

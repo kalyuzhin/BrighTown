@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BrighTown.ViewModels;
-using Esri.ArcGISRuntime.Mapping;
 
 namespace BrighTown.Pages;
 
@@ -16,12 +10,9 @@ public partial class NewAuthenticationPage : ContentPage
         BindingContext = viewModel;
     }
 
-    async void Login(object sender, EventArgs e)
+    private async void Login(object sender, EventArgs e)
     {
-        if (IsBusy)
-        {
-            return;
-        }
+        if (IsBusy) return;
 
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
@@ -46,12 +37,9 @@ public partial class NewAuthenticationPage : ContentPage
         }
     }
 
-    async void MoveToRegisterPage(object sender, EventArgs e)
+    private async void MoveToRegisterPage(object sender, EventArgs e)
     {
-        if (IsBusy)
-        {
-            return;
-        }
+        if (IsBusy) return;
 
         try
         {

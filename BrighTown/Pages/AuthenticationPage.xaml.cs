@@ -16,17 +16,13 @@ public partial class AuthenticationPage : ContentPage
         InitializeComponent();
     }
 
-    async void DisplayRegisterPopUp(object sender, EventArgs e)
+    private async void DisplayRegisterPopUp(object sender, EventArgs e)
     {
-        if (IsBusy)
-        {
-            return;
-        }
+        if (IsBusy) return;
 
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
-            this.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...", "Повторить попытку");
-            return;
+            DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...", "Повторить попытку");
         }
 
         //Shell.Current.CurrentPage.ShowPopup(new RegisterPopUp());
@@ -36,14 +32,11 @@ public partial class AuthenticationPage : ContentPage
 
     private void DisplayLoginPopUp(object sender, EventArgs e)
     {
-        if (IsBusy)
-        {
-            return;
-        }
+        if (IsBusy) return;
 
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
-            this.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...", "Повторить попытку");
+            DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...", "Повторить попытку");
             return;
         }
 

@@ -44,8 +44,7 @@
                         <Rectangle Background="#ffdabf" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
                                    VerticalOptions="Start" />
                         <Image Source="{Binding ImageUrl}" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75"
-                               WidthRequest="75" Margin="12" HorizontalOptions="Start">
-                        </Image>
+                               WidthRequest="75" Margin="12" HorizontalOptions="Start" />
                         <Label Text="{Binding Name}" FontFamily="RoundsBlack" FontSize="Medium"
                                HorizontalOptions="Start"
                                Margin="120,10,0,0" />

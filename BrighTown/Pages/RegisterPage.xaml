@@ -10,8 +10,7 @@
              Shell.PresentationMode="NotAnimated">
     <Shell.TitleView>
         <Label FontFamily="Rounds" FontSize="48" TextColor="#fff" HorizontalTextAlignment="Center"
-               TextTransform="Uppercase" Text="BrighTown" Margin="-15,0,0,0">
-        </Label>
+               TextTransform="Uppercase" Text="BrighTown" Margin="-15,0,0,0" />
     </Shell.TitleView>
     <Grid
         RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
@@ -23,13 +22,13 @@
         <Label Grid.Row="0" Text="Регистрация" TextColor="#fff" FontFamily="Rounds" FontSize="42" />
         <Border Grid.Row="1" BackgroundColor="White">
 
-               <Border.StrokeShape>
-                      <RoundRectangle CornerRadius="10" />
-               </Border.StrokeShape>
-               <Entry Placeholder="Электронная почта" IsSpellCheckEnabled="False" TextColor="Black"
-                      BackgroundColor="#fff"
-                      VerticalOptions="FillAndExpand"
-                      HorizontalOptions="FillAndExpand" />
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Entry Placeholder="Электронная почта" IsSpellCheckEnabled="False" TextColor="Black"
+                   BackgroundColor="#fff"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand" />
 
         </Border>
         <Entry Grid.Row="2" Placeholder="Имя пользователя" IsSpellCheckEnabled="False" BackgroundColor="#fff"

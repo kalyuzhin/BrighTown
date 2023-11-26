@@ -43,7 +43,9 @@
             <Entry Placeholder="Электронная почта" IsSpellCheckEnabled="False" TextColor="Black"
                    BackgroundColor="#fff"
                    VerticalOptions="FillAndExpand"
-                   HorizontalOptions="FillAndExpand" />
+                   HorizontalOptions="FillAndExpand"
+                   x:Name="EmailEntry"
+                   TextChanged="EmailEntryTextChanged" />
 
         </Border>
 
@@ -55,7 +57,8 @@
             <Entry Placeholder="Имя пользователя" IsSpellCheckEnabled="False" TextColor="Black"
                    BackgroundColor="#fff"
                    VerticalOptions="FillAndExpand"
-                   HorizontalOptions="FillAndExpand" />
+                   HorizontalOptions="FillAndExpand"
+                   x:Name="UsernameEntry" />
 
         </Border>
 
@@ -67,7 +70,8 @@
             <Entry Placeholder="Пароль" IsSpellCheckEnabled="False" IsPassword="True" TextColor="Black"
                    BackgroundColor="#fff"
                    VerticalOptions="FillAndExpand"
-                   HorizontalOptions="FillAndExpand" />
+                   HorizontalOptions="FillAndExpand"
+                   x:Name="PasswordEntry" />
         </Border>
 
         <Border Grid.Row="4" BackgroundColor="White">
@@ -79,7 +83,9 @@
                    IsPassword="True"
                    BackgroundColor="#fff"
                    VerticalOptions="FillAndExpand"
-                   HorizontalOptions="FillAndExpand" />
+                   HorizontalOptions="FillAndExpand"
+                   x:Name="PasswordConfirmEntry"
+                   TextChanged="PasswordConfirmEntryTextChanged" />
 
 
         </Border>

@@ -4,21 +4,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrighTown.Pages.AuthenticationPage"
              xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:DataType="viewmodel:NewAuthenticationViewModel"
              Shell.NavBarIsVisible="True"
              BackgroundColor="#2c3e54">
     <Shell.TitleView>
         <Label FontFamily="Rounds" FontSize="48" TextColor="#fff" HorizontalTextAlignment="Center"
-               TextTransform="Uppercase" Text="BrighTown">
-        </Label>
+               TextTransform="Uppercase" Text="BrighTown" />
     </Shell.TitleView>
     <Grid
         RowDefinitions="*,*,*">
         <Image
-	    Source = 'icon.png'
+            Source='icon.png'
             Grid.Row="1"
-            
+
             HorizontalOptions="Center"
             VerticalOptions="Center"
             HeightRequest="360"

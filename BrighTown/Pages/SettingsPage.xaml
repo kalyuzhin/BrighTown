@@ -20,7 +20,7 @@
 
 
     <ScrollView>
-        <Button Clicked="ClickOnSettingsButton" Text="Сохранить" Grid.ColumnSpan="4" VerticalOptions="End"
+        <Button Clicked="ClickOnSettingsButton" Text="Сохранить" VerticalOptions="End"
                 Margin="5,5,5,5" TextColor="White" FontFamily="RoundsBlack" BackgroundColor="#2c3e54" />
 
 

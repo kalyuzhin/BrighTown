@@ -1,5 +1,3 @@
-using System.Security.AccessControl;
-
 namespace BrighTown.Pages;
 
 public class PlaceSearchHandler : SearchHandler

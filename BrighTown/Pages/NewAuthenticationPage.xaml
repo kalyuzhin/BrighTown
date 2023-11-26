@@ -5,13 +5,11 @@
              x:Class="BrighTown.Pages.NewAuthenticationPage"
              xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
              x:DataType="viewmodel:NewAuthenticationViewModel"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              BackgroundColor="#fe7d3b"
              Shell.NavBarIsVisible="False">
     <Shell.TitleView>
         <Label FontFamily="Rounds" FontSize="48" TextColor="#fff" HorizontalTextAlignment="Center"
-               TextTransform="Uppercase" Text="BrighTown">
-        </Label>
+               TextTransform="Uppercase" Text="BrighTown" />
     </Shell.TitleView>
     <Grid
         RowDefinitions="Auto,*"

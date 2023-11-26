@@ -14,6 +14,7 @@ global using Backend.Services;
 global using Microsoft.EntityFrameworkCore;
 global using Backend.Dtos.Place;
 global using AutoMapper;
+global using Backend.Dtos.User;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -40,6 +40,13 @@ public class PlacesService : IPlacesService
         //var db = await _dataContext.Places.ToListAsync();
         var place = _mapper.Map<Place>(newPlace);
         var db = _dataContext.Places;
+        if (db.ToList().Select(c => c.Name.ToLower()).Contains($@"{newPlace.Name.ToLower()}"))
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "This place is already created";
+            return serviceResponse;
+        }
+
         //place.Id = db.Count == 0 ? 1 : db.Max(c => c.Id) + 1;
         //db.Add(place);
         place.Id = db.ToList().Select(c => c.Id).DefaultIfEmpty(0).Max() + 1;

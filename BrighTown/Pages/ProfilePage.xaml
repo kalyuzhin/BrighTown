@@ -22,7 +22,7 @@
 
         <BoxView VerticalOptions="Fill" HorizontalOptions="Fill" Color="#fbbf93" Margin="0,5,0,0" Grid.ColumnSpan="4"></BoxView>
         <Label Text="Александр" FontFamily="Rounds" FontSize="Large" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.ColumnSpan="3" ></Label>
-        <Image Source="demo.png" VerticalOptions="Fill" HorizontalOptions="Start" Grid.Column="0" Margin="5"> </Image>
+        <Image Source="demo.png" HeightRequest="100" WidthRequest="100" VerticalOptions="Fill" HorizontalOptions="Start" Grid.Column="0" Margin="5"> </Image>
 
         <BoxView VerticalOptions="Start" HorizontalOptions="Fill" Color="#fe7d3b" Grid.ColumnSpan="4"
                  HeightRequest="35" Grid.Row="1">

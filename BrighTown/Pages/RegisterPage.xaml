@@ -94,6 +94,7 @@
                 CornerRadius="20" />
         <StackLayout Grid.Row="6" HorizontalOptions="Center" VerticalOptions="End">
             <Image Source="city_sky.png"
+                   VerticalOptions="End"
                    MaximumHeightRequest="240"
                    MinimumHeightRequest="120"
                    WidthRequest="{Binding Source={x:Static mauidevices:DeviceDisplay.MainDisplayInfo}, Path=Width}" />

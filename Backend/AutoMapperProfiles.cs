@@ -6,5 +6,7 @@ public class AutoMapperProfiles : Profile
     {
         CreateMap<Place, GetPlaceRequestDto>();
         CreateMap<AddPlaceResponseDto, Place>();
+        CreateMap<AddUserDto, User>();
+        CreateMap<User, GetUserDto>();
     }
 }

@@ -37,11 +37,22 @@ public class PlacesService : IPlacesService
     public async Task<ServiceResponse<List<GetPlaceRequestDto>>> AddPlace(AddPlaceResponseDto newPlace)
     {
         var serviceResponse = new ServiceResponse<List<GetPlaceRequestDto>>();
-        var db = await _dataContext.Places.ToListAsync();
+        //var db = await _dataContext.Places.ToListAsync();
         var place = _mapper.Map<Place>(newPlace);
-        place.Id = db.Max(c => c.Id) + 1;
-        db.Add(place);
-        serviceResponse.Data = db.Select(c => _mapper.Map<GetPlaceRequestDto>(c)).ToList();
+        var db = _dataContext.Places;
+        if (db.ToList().Select(c => c.Name.ToLower()).Contains($@"{newPlace.Name.ToLower()}"))
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "This place is already created";
+            return serviceResponse;
+        }
+
+        //place.Id = db.Count == 0 ? 1 : db.Max(c => c.Id) + 1;
+        //db.Add(place);
+        place.Id = db.ToList().Select(c => c.Id).DefaultIfEmpty(0).Max() + 1;
+        await db.AddAsync(place);
+        await _dataContext.SaveChangesAsync();
+        serviceResponse.Data = await db.Select(c => _mapper.Map<GetPlaceRequestDto>(c)).ToListAsync();
         return serviceResponse;
     }
 }

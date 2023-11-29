@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrighTown.Pages.FavouritesPage"
              xmlns:model="clr-namespace:BrighTown.Models"
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
              BackgroundColor="#d6f0fa"
              Shell.NavBarIsVisible="True">
 

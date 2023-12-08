@@ -11,6 +11,7 @@ public partial class MapPage : ContentPage
     public MapPage()
     {
         InitializeComponent();
+        
     }
 
     //-----------������������� ������---------------------------------------------
@@ -20,9 +21,10 @@ public partial class MapPage : ContentPage
         Navigation.PushModalAsync(new FavouritesPage(), true);
     }
 
-    private void ClickOnFriendButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
+    private void ClickOnAddPlaceButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
     {
-        Navigation.PushModalAsync(new FriendsPage(), true);
+       
+       
     }
 
     private void ClickOnMapButton(object sender, EventArgs e) // ��������� ������� �� ������ "�����"

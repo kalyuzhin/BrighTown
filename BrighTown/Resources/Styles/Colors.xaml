@@ -3,7 +3,7 @@
 <ResourceDictionary 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-
+    <!-- Default Colors -->
     <Color x:Key="Primary">#2c3e54</Color>
     <Color x:Key="Secondary">#2c3e54</Color>
     <Color x:Key="Tertiary">#2c3e54</Color>
@@ -40,5 +40,22 @@
     <Color x:Key="Blue100Accent">#3E8EED</Color>
     <Color x:Key="Blue200Accent">#72ACF1</Color>
     <Color x:Key="Blue300Accent">#A7CBF6</Color>
-
+   
+    
+    
+    
+    <!-- Our Colors -->
+    <!-- For LightTheme -->
+    <Color x:Key="OrangeBackGroundTitleLightTheme">#fe7d3b </Color>
+    <Color x:Key="OrangeBackGroundBoxViewsLightTheme">#fbbf93</Color>
+    <Color x:Key="BlueBackGroundLightTheme">#d6f0fa</Color>
+    
+    <!-- For Dark Theme -->
+    <Color x:Key="BlueBackGroundDarkTheme">#1b2633</Color>
+    
+   
+    <!-- Base Colors -->
+    <Color x:Key="BlueNavBar">#2c3e54</Color>
+    
+    
 </ResourceDictionary>

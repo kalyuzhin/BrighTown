@@ -3,7 +3,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrighTown.Pages.ProfilePage"
-             BackgroundColor="#d6f0fa"
+             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.NavBarIsVisible="True">
 
     <Shell.TitleView>
@@ -20,33 +20,33 @@
           RowDefinitions="Auto,Auto,Auto,*"
           RowSpacing="5">
 
-        <BoxView VerticalOptions="Fill" HorizontalOptions="Fill" Color="#fbbf93" Margin="0,5,0,0" Grid.ColumnSpan="4"></BoxView>
+        <BoxView VerticalOptions="Fill" HorizontalOptions="Fill" Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" Margin="0,5,0,0" Grid.ColumnSpan="4"></BoxView>
         <Label Text="Александр" FontFamily="Rounds" FontSize="Large" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.ColumnSpan="3" ></Label>
         <Image Source="demo.png" HeightRequest="100" WidthRequest="100" VerticalOptions="Fill" HorizontalOptions="Start" Grid.Column="0" Margin="5"> </Image>
 
-        <BoxView VerticalOptions="Start" HorizontalOptions="Fill" Color="#fe7d3b" Grid.ColumnSpan="4"
+        <BoxView VerticalOptions="Start" HorizontalOptions="Fill" Color="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" Grid.ColumnSpan="4"
                  HeightRequest="35" Grid.Row="1">
         </BoxView>
-        <Label Text="Информация об аккаунте" HorizontalOptions="Center" FontFamily="RoundsBlack" Grid.Row="1"
+        <Label Text="Информация об аккаунте" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack" Grid.Row="1"
                Grid.ColumnSpan="4" FontSize="Medium">
         </Label>
 
-        <BoxView VerticalOptions="Fill" HorizontalOptions="Fill" Color="#fbbf93" Grid.ColumnSpan="4" Grid.Row="2">
+        <BoxView VerticalOptions="Fill" HorizontalOptions="Fill" Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" Grid.ColumnSpan="4" Grid.Row="2">
         </BoxView>
         
         <VerticalStackLayout VerticalOptions="Start" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="10">
-            <Label Text="Друзья" HorizontalOptions="Center" FontFamily="RoundsBlack"> </Label>
-            <Label Text="0" HorizontalOptions="Center" FontFamily="RoundsBlack"></Label>
+            <Label Text="Друзья" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack"> </Label>
+            <Label Text="0" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack"></Label>
         </VerticalStackLayout>
 
         <VerticalStackLayout VerticalOptions="Start" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
-            <Label Text="Сохранено мест" HorizontalOptions="Center" FontFamily="RoundsBlack"> </Label>
-            <Label Text="0" HorizontalOptions="Center" FontFamily="RoundsBlack"></Label>
+            <Label Text="Сохранено мест" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack"> </Label>
+            <Label Text="0" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack"></Label>
         </VerticalStackLayout>
 
 
         <Button Clicked="ClickOnSettingsButton" Text="Настройки" Grid.ColumnSpan="4" VerticalOptions="End"
-                Margin="5,5,5,53" TextColor="White" FontFamily="RoundsBlack" BackgroundColor="#2c3e54" Grid.Row="3" />
+                Margin="5,5,5,53" TextColor="White" FontFamily="RoundsBlack" BackgroundColor="{AppThemeBinding Light=#2c3e54 , Dark=#878889  }" Grid.Row="3" />
         <Button Clicked="ClickOnExitButton" Text="Выйти из аккаунта" Grid.ColumnSpan="4" VerticalOptions="End"
                 TextColor="White" FontFamily="RoundsBlack" BackgroundColor="Red" Margin="5,5,5,5" Grid.Row="3" />
 

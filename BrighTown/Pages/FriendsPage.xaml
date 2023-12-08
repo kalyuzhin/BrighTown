@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:BrighTown.Models"
              x:Class="BrighTown.Pages.FriendsPage"
-             BackgroundColor="#d6f0fa"
+             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.NavBarIsVisible="True">
 
     <Shell.TitleView>
@@ -40,11 +40,11 @@
             </CollectionView.ItemsSource>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Friend">
-                    <Grid ColumnDefinitions="*" Background="#b2b2b2" ColumnSpacing="0" RowDefinitions="*,Auto"
+                    <Grid ColumnDefinitions="*" BackgroundColor="{AppThemeBinding Light=#b2b2b2 , Dark=#98918e  }" ColumnSpacing="0" RowDefinitions="*,Auto"
                           Margin="5">
-                        <Rectangle Background="#ffb882" HeightRequest="100" WidthRequest="100"
+                        <Rectangle BackgroundColor="{AppThemeBinding Light=#ffb882 , Dark=#685f5b  }" HeightRequest="100" WidthRequest="100"
                                    HorizontalOptions="Start" VerticalOptions="Start" />
-                        <Rectangle Background="#ffdabf" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
+                        <Rectangle BackgroundColor="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
                                    VerticalOptions="Start" />
                         <Image Source="{Binding ImageUrl}" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75"
                                WidthRequest="75"

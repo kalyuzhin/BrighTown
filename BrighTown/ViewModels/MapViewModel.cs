@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Microsoft.Maui.Controls;
 using Esri.ArcGISRuntime.Mapping;
 using Esri.ArcGISRuntime.Geometry;
 using System.ComponentModel;
@@ -54,8 +54,15 @@ namespace BrighTown
         private void SetupMap()
         {
 
+            if (Application.Current.RequestedTheme.ToString() == "Dark")
+            {
+                Map = new Map(BasemapStyle.OSMDarkGray);
+            }
+            else
+            {
+                Map = new Map(BasemapStyle.OSMStandard);
+            }
             
-            Map = new Map(BasemapStyle.ArcGISTopographic);
             var mapCenterPoint = new MapPoint(39.709612, 47.240004,  SpatialReferences.Wgs84);
             Map.InitialViewpoint = new Viewpoint(mapCenterPoint, 100000);
 
@@ -79,7 +86,7 @@ namespace BrighTown
 
             // Create a point geometry.
             var MMCS = new MapPoint(39.628649, 47.216686,  SpatialReferences.Wgs84);
-
+            Button mm = new Button();
 
 
 
@@ -98,14 +105,19 @@ namespace BrighTown
                 Color = System.Drawing.Color.Blue,
                 Width = 2.0
             };
-
+           
             // Create a point graphic with the geometry and symbol.
             var pointGraphic = new Graphic(MMCS, pointSymbol);
-
+          
             // Add the point graphic to graphics overlay.
             MapGraphicsOverlay.Graphics.Add(pointGraphic);
-
+            
+           
+          
+            
         }
+        
+        
 
     }
 }

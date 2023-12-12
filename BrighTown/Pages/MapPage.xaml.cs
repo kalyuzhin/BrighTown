@@ -25,6 +25,8 @@ public partial class MapPage : ContentPage
     {
        
        
+        
+        
     }
 
     private void ClickOnMapButton(object sender, EventArgs e) // ��������� ������� �� ������ "�����"

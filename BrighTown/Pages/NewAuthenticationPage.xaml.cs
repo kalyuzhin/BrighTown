@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BrighTown.ViewModels;
 using Esri.ArcGISRuntime.Mapping;
 
+
 namespace BrighTown.Pages;
 
 public partial class NewAuthenticationPage : ContentPage
@@ -14,6 +15,21 @@ public partial class NewAuthenticationPage : ContentPage
     {
         InitializeComponent();
         BindingContext = viewModel;
+
+
+        if (Preferences.Default.Get("theme",Application.Current.RequestedTheme.ToString() == "Dark"))
+        {
+
+            Application.Current.UserAppTheme = AppTheme.Dark;
+
+        }
+        else
+        {
+            Application.Current.UserAppTheme = AppTheme.Light;
+        }
+        
+
+
     }
 
     async void Login(object sender, EventArgs e)

@@ -6,7 +6,7 @@
              xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
              x:DataType="viewmodel:NewAuthenticationViewModel"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             BackgroundColor="#fe7d3b"
+             BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}"
              Shell.NavBarIsVisible="False">
     <Shell.TitleView>
         <Label FontFamily="Rounds" FontSize="48" TextColor="#fff" HorizontalTextAlignment="Center"
@@ -27,14 +27,14 @@
             HasShadow="True"
             HeightRequest="700"
             Margin="0,0,0,0"
-            BackgroundColor="#2c3e54">
+            BackgroundColor="{AppThemeBinding Light=#2c3e54 , Dark=#212324   }">
             <Grid
                 Padding="20,50"
                 RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
                 RowSpacing="20"
                 VerticalOptions="FillAndExpand"
                 HorizontalOptions="Center"
-                BackgroundColor="#2c3e54">
+                BackgroundColor="{AppThemeBinding Light=#2c3e54 , Dark=#212324   }">
                 <Label Grid.Row="0" Text="Добро пожаловать!" TextColor="#fff" FontFamily="Rounds" FontSize="24"
                        HorizontalOptions="CenterAndExpand" />
                 <Label Grid.Row="1" Text="Войдите в свой аккаунт" TextColor="#fff" FontFamily="Rounds"
@@ -64,10 +64,10 @@
 
                 </Border>
                 <Button Command="{Binding LoginCommand}"
-                        Grid.Row="4" BackgroundColor="#fe7d3b" Text="Вход" TextColor="#fff" FontFamily="Rounds"
+                        Grid.Row="4" BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" Text="Вход" TextColor="#fff" FontFamily="Rounds"
                         CornerRadius="20" />
                 <Button Clicked="MoveToRegisterPage" Grid.Row="5"
-                        BackgroundColor="#fe7d3b" Text="Регистрация с email" TextColor="#fff"
+                        BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" Text="Регистрация с email" TextColor="#fff"
                         FontFamily="Rounds" CornerRadius="20" />
                 <Label
                     Grid.Row="6"

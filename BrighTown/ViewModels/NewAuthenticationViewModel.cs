@@ -2,7 +2,8 @@ using BrighTown.Pages;
 using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-
+using Microsoft.Maui.Networking;
+using System.Xml.Linq;
 namespace BrighTown.ViewModels;
 
 public partial class NewAuthenticationViewModel : BaseViewModel
@@ -16,6 +17,9 @@ public partial class NewAuthenticationViewModel : BaseViewModel
         _connectivity = connectivity;
     }
 
+    public NewAuthenticationViewModel()
+    {
+    }
 
     [RelayCommand]
     private async Task DisplayRegisterPopUp()
@@ -77,7 +81,7 @@ public partial class NewAuthenticationViewModel : BaseViewModel
 
 
     [RelayCommand]
-    private async Task Login()
+    private async Task Login() // Отключил т к иначе введённую строку видеть не будет, напиши в лс объясню (Егор)
     {
         if (IsBusy) return;
 

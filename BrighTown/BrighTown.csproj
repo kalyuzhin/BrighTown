@@ -36,45 +36,59 @@
 
     <ItemGroup>
         <!-- App Icon -->
-        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="white"/>
-        <MauiIcon Include="Resources\AppIcon\appiconfg.svg"/>
-        <MauiIcon Include="Resources\Images\mapicon.svg"/>
-        <MauiIcon Include="Resources\Images\profilebutton.png"/>
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="white" />
+        <MauiIcon Include="Resources\AppIcon\appiconfg.svg" />
+        <MauiIcon Include="Resources\Images\mapicon.svg" />
+        <MauiIcon Include="Resources\Images\profilebutton.png" />
 
         <!-- Splash Screen -->
-        <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="white" BaseSize="512,512"/>
+        <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="white" BaseSize="512,512" />
 
         <!-- Images -->
-        <MauiImage Include="Resources\Images\*"/>
-        <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208"/>
+        <MauiImage Include="Resources\Images\*" />
+        <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
         <!-- Custom Fonts -->
-        <MauiFont Include="Resources\Fonts\*"/>
+        <MauiFont Include="Resources\Fonts\*" />
 
         <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
-        <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)"/>
+        <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
     </ItemGroup>
 
     <ItemGroup>
-        <MauiImage Remove="Resources\Images\appicon.png"/>
-        <MauiImage Remove="Resources\Images\mapicon.svg"/>
-        <MauiImage Remove="Resources\Images\profilebutton.png"/>
-        <MauiImage Remove="Resources\Images\testicon.svg"/>
+        <MauiImage Remove="Resources\Images\appicon.png" />
+        <MauiImage Remove="Resources\Images\mapicon.svg" />
+        <MauiImage Remove="Resources\Images\profilebutton.png" />
+        <MauiImage Remove="Resources\Images\testicon.svg" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="Resources\AppIcon\appiconfg.svg"/>
-        <None Remove="Resources\Fonts\Rounds.ttf"/>
-        <None Remove="Resources\Images\demo.png"/>
-        <None Remove="Resources\Images\demo_place.png"/>
-        <None Remove="Resources\Images\mapicon.svg"/>
+      <MauiXaml Remove="Pages\LoginErrorPage.xaml" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="CommunityToolkit.Maui" Version="6.0.0"/>
-        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
-        <PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.2.0"/>
-        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0"/>
+        <None Remove="Resources\AppIcon\appiconfg.svg" />
+        <None Remove="Resources\Fonts\Rounds.ttf" />
+        <None Remove="Resources\Images\demo.png" />
+        <None Remove="Resources\Images\demo_place.png" />
+        <None Remove="Resources\Images\mapicon.svg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Pages\LoginErrorPage.xaml">
+        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Maui" Version="6.0.0" />
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+        <PackageReference Include="Esri.ArcGISRuntime.Maui" Version="200.2.0" />
+        <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.14" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+        <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.7" />
+        <PackageReference Include="SQLitePCLRaw.core" Version="2.1.7" />
+        <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.7" />
     </ItemGroup>
 
     <ItemGroup>

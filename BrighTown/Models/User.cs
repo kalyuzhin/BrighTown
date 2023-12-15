@@ -1,4 +1,5 @@
-namespace Backend.Models;
+namespace BrighTown.Models;
+
 
 public class User
 {

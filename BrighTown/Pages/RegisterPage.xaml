@@ -13,7 +13,7 @@
                TextTransform="Uppercase" Text="BrighTown" Margin="-15,0,0,0" />
     </Shell.TitleView>
     <Grid
-        RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+        RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
         Padding="25,50"
         RowSpacing="20"
         VerticalOptions="FillAndExpand"
@@ -25,26 +25,36 @@
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="10" />
             </Border.StrokeShape>
-            <Entry Placeholder="Электронная почта" IsSpellCheckEnabled="False" TextColor="Black"
+            <Entry Placeholder="Электронная почта" x:Name="Mail" IsSpellCheckEnabled="False" TextColor="Black"
                    BackgroundColor="#fff"
                    VerticalOptions="FillAndExpand"
                    HorizontalOptions="FillAndExpand" />
 
         </Border>
-        <Entry Grid.Row="2" Placeholder="Имя пользователя" IsSpellCheckEnabled="False" BackgroundColor="#fff"
+        <Entry Grid.Row="2" Placeholder="Имя пользователя" x:Name="UserName" IsSpellCheckEnabled="False" BackgroundColor="#fff"
                VerticalOptions="FillAndExpand"
                HorizontalOptions="FillAndExpand"
                TextColor="#000" />
-        <Entry Grid.Row="3" Placeholder="Пароль" IsSpellCheckEnabled="False" IsPassword="True" BackgroundColor="#fff"
-               VerticalOptions="FillAndExpand"
-               HorizontalOptions="FillAndExpand"
-               TextColor="#000" />
-        <Entry Grid.Row="4" Placeholder="Подтверждение пароля" IsSpellCheckEnabled="False" IsPassword="True"
+        <Entry Grid.Row="3" Placeholder="Имя" x:Name="FirstName" IsSpellCheckEnabled="False" 
                BackgroundColor="#fff"
                VerticalOptions="FillAndExpand"
                HorizontalOptions="FillAndExpand"
                TextColor="#000" />
-        <Button Clicked="PressRegisterButton" Grid.Row="5" Text="Регистрация" BackgroundColor="#fe7d3b"
+        <Entry Grid.Row="4" Placeholder="Фамилия" x:Name="SecondName" IsSpellCheckEnabled="False"
+               BackgroundColor="#fff"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand"
+               TextColor="#000" />
+        <Entry Grid.Row="5" Placeholder="Пароль" x:Name="UserPassword" IsSpellCheckEnabled="False" IsPassword="True" BackgroundColor="#fff"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand"
+               TextColor="#000" />
+        <Entry Grid.Row="6" Placeholder="Подтверждение пароля" x:Name="ConfirmUserPassword" IsSpellCheckEnabled="False" IsPassword="True"
+               BackgroundColor="#fff"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand"
+               TextColor="#000" />
+        <Button Clicked="PressRegisterButton" Grid.Row="7" Text="Регистрация" BackgroundColor="#fe7d3b"
                 FontFamily="Rounds" TextColor="#fff"
                 CornerRadius="20" />
     </Grid>

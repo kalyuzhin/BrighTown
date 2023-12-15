@@ -5,7 +5,7 @@ public class UsersService : IUsersService
     private readonly IMapper _mapper;
     private readonly DataContext _dataContext;
 
-    UsersService(DataContext dataContext, IMapper mapper)
+    public UsersService(DataContext dataContext, IMapper mapper)
     {
         _mapper = mapper;
         _dataContext = dataContext;
@@ -15,17 +15,24 @@ public class UsersService : IUsersService
     {
         var serviceResponse = new ServiceResponse<GetUserDto>();
         var db = _dataContext.Users;
-        if (db.ToList().Select(c => c.Email).Contains(newUser.Email))
-        {
-            serviceResponse.Success = false;
-            serviceResponse.Message = "This email address is already taken!";
-            return serviceResponse;
-        }
+        // if (db.ToList().Select(c => c.Email).Contains(newUser.Email))
+        // {
+        //     serviceResponse.Success = false;
+        //     serviceResponse.Message = "This email address is already taken!";
+        //     return serviceResponse;
+        // }
 
         if (db.ToList().Select(c => c.Username).Contains(newUser.Username))
         {
             serviceResponse.Success = false;
             serviceResponse.Message = "This username is already taken!";
+            return serviceResponse;
+        }
+
+        if (string.IsNullOrWhiteSpace(newUser.Password))
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "Incorrect type of password!";
             return serviceResponse;
         }
 
@@ -35,9 +42,5 @@ public class UsersService : IUsersService
         serviceResponse.Data = _mapper.Map<GetUserDto>(user);
         return serviceResponse;
     }
-
-    // public async Task<ServiceResponse<GetUserDto>> AddFriend(GetUserDto user)
-    // {
-    //     
-    // }
+    
 }

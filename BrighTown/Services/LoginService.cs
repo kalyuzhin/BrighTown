@@ -1,4 +1,5 @@
 using System.Net.Http.Json;
+using System.Text.Json;
 using BrighTown.Models;
 
 namespace BrighTown.Services;
@@ -19,7 +20,7 @@ public class LoginService : ILoginRepository
         try
         {
             var client = new HttpClient();
-            string localHostUrl = "http://localhost:5280/api/user/register/" + username + "/" + password;
+            string localHostUrl = "http://localhost:5280/api/Users/register";
             HttpResponseMessage response = await client.GetAsync(client.BaseAddress);
             if (response.IsSuccessStatusCode)
             {

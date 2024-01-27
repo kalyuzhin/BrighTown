@@ -1,7 +1,11 @@
-﻿namespace BrighTown;
+﻿using BrighTown.Models;
+
+namespace BrighTown;
 
 public partial class App : Application
 {
+    public static User user;
+
     public App()
     {
         InitializeComponent();

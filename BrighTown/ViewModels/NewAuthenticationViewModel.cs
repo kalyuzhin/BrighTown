@@ -132,10 +132,4 @@ public partial class NewAuthenticationViewModel : BaseViewModel
             IsBusy = false;
         }
     }
-
-    // [RelayCommand]
-    // async Task Login()
-    // {
-    //     Shell.Current.GoToAsync($"//{nameof(MapPage)}");
-    // }
 }

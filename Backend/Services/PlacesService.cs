@@ -40,7 +40,7 @@ public class PlacesService : IPlacesService
         //var db = await _dataContext.Places.ToListAsync();
         var place = _mapper.Map<Place>(newPlace);
         var db = _dataContext.Places;
-        if (db.ToList().Select(c => c.Name.ToLower()).Contains($@"{newPlace.Name.ToLower()}"))
+        if (db.ToList().Select(c => c.Name.ToLower()).Contains($@"{newPlace.Name.ToLower().Trim()}"))
         {
             serviceResponse.Success = false;
             serviceResponse.Message = "This place is already created";

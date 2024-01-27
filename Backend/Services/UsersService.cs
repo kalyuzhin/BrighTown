@@ -28,6 +28,13 @@ public class UsersService : IUsersService
             serviceResponse.Message = "This username is already taken!";
             return serviceResponse;
         }
+        
+        // if (db.ToList().Select(c => c.Email).Contains(newUser.Email))
+        // {
+        //     serviceResponse.Success = false;
+        //     serviceResponse.Message = "This email is already taken!";
+        //     return serviceResponse;
+        // }
 
         if (string.IsNullOrWhiteSpace(newUser.Password))
         {

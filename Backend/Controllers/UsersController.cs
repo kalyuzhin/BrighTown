@@ -11,7 +11,8 @@ namespace Backend.Controllers
             _usersService = usersService;
         }
 
-        [HttpPost("register-user")]
+        // [HttpPost("/user/register/{email}/{username}/{password}")]
+        [HttpPost("user/register/{username}/{password}")]
         public async Task<ActionResult<ServiceResponse<GetUserDto>>> Register(AddUserDto newUser)
         {
             return Ok(await _usersService.Register(newUser));

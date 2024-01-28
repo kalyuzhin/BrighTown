@@ -4,7 +4,7 @@ using BrighTown.Models;
 
 namespace BrighTown.Services;
 
-public class LoginService : ILoginRepository
+public class ClientService : IClientService
 {
     // public async Task<User> Login(string email, string password)
     // {
@@ -15,16 +15,18 @@ public class LoginService : ILoginRepository
     //     return Task.FromResult(user);
     // }
 
-    public async Task<User> Register(string username, string password) //string email, string username, string password)
+    private readonly IHttpClientFactory _httpClientFactory;
+    private readonly string _localHostUrl = "http://localhost:5280/api/Users/register";
+
+    public async Task<User> Register(RegisterModel model) //string email, string username, string password)
     {
         try
         {
-            var client = new HttpClient();
-            string localHostUrl = "http://localhost:5280/api/Users/register";
-            HttpResponseMessage response = await client.GetAsync(client.BaseAddress);
-            if (response.IsSuccessStatusCode)
+            var client = _httpClientFactory.CreateClient();
+            var result = await client.PostAsJsonAsync("/register", model);
+            if (result.IsSuccessStatusCode)
             {
-                User user = await response.Content.ReadFromJsonAsync<User>();
+                User user = await result.Content.ReadFromJsonAsync<User>();
                 return await Task.FromResult(user);
             }
 

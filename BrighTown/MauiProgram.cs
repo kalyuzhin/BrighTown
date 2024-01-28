@@ -23,6 +23,7 @@ public static class MauiProgram
             });
         builder.Services.AddSingleton(Connectivity.Current);
         builder.Services.AddSingleton<NewAuthenticationViewModel>();
+        builder.Services.AddSingleton<RegisterViewModel>();
         // builder.Services.AddSingleton<AuthenticationPage>();
         builder.Services.AddSingleton<NewAuthenticationPage>();
         builder.Services.AddSingleton<MapPage>();

@@ -59,7 +59,7 @@
                    VerticalOptions="FillAndExpand"
                    HorizontalOptions="FillAndExpand"
                    x:Name="UsernameEntry"
-                   Text="{Binding Username}" />
+                   Text="{Binding RegisterModel.Username}" />
 
         </Border>
 
@@ -73,7 +73,7 @@
                    VerticalOptions="FillAndExpand"
                    HorizontalOptions="FillAndExpand"
                    x:Name="PasswordEntry"
-                   Text="{Binding Password}" />
+                   Text="{Binding RegisterModel.Password}" />
         </Border>
 
         <Border Grid.Row="4" BackgroundColor="White">

@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrighTown", "BrighTown.csproj", "{3D491450-987A-4E4F-9620-AB8183C9FAA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrighTown", "BrighTown.csproj", "{3D491450-987A-4E4F-9620-AB8183C9FAA9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FDC44FA4-A4F8-459A-B431-0D1FDE25C8E2} = {FDC44FA4-A4F8-459A-B431-0D1FDE25C8E2}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "..\Backend\Backend.csproj", "{FDC44FA4-A4F8-459A-B431-0D1FDE25C8E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend", "..\Backend\Backend.csproj", "{FDC44FA4-A4F8-459A-B431-0D1FDE25C8E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

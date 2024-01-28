@@ -15,6 +15,7 @@ global using Microsoft.EntityFrameworkCore;
 global using Backend.Dtos.Place;
 global using AutoMapper;
 global using Backend.Dtos.User;
+using Microsoft.AspNetCore.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using BrighTown.ViewModels;
 using System.Text.RegularExpressions;
 using System.Net.Http.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace BrighTown.Pages;
 
@@ -49,6 +52,7 @@ public partial class RegisterPage : ContentPage
         {
             return;
         }
+            IsBusy = true;
 
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
@@ -65,41 +69,45 @@ public partial class RegisterPage : ContentPage
         }
 
         try
-
         {
-            IsBusy = true;
-            await Shell.Current.GoToAsync($"..");
-            // Получение данных из полей ввода
-            string username = UsernameEntry.Text;
+            //Получение данных из полей ввода
+            string Username = UsernameEntry.Text;
             string firstName = FirstNameEntry.Text;
             string secondName = SecondNameEntry.Text;
-            string password = PasswordEntry.Text;
-            string email = EmailEntry.Text;
+            string Password = PasswordEntry.Text;
+            string Email = EmailEntry.Text;
             var data = new
             {
-                Param1 = username,
-                Param2 = password,
-                Param3 = email,
+                username = Username,
+                password = Password,
+                email = Email
             };
-            using (HttpClient httpClient = new HttpClient())
-            {
-                try
-                {
-                    IsBusy = true;
 
-                    var response = await httpClient.PostAsJsonAsync("http://localhost:5280/api/users/Register", data);
-                    await Shell.Current.GoToAsync($"..");
-                    await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
-                }
-                catch
+        using (HttpClient httpClient = new HttpClient())
+            {
+                var url = "http://localhost:5280/register";
+
+                var requestData = new Dictionary<string, string>
+            {
+            { "username", Username },
+            { "password", Password },
+                { "email", Email }
+            };
+
+                var content = new
+                    StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
+
+                var response = await httpClient.PostAsync(url, content);
+                if (response.IsSuccessStatusCode)
                 {
-                    await Shell.Current.DisplayAlert("Упс!", "К сожалению произошла ошибка...", "ОК");
+                    //Запрос успешно отправлен
                 }
-                finally
+                else
                 {
-                    IsBusy = false;
+                    //Обработка ошибки при отправке запроса
                 }
             }
+            await Shell.Current.GoToAsync($"..");
             await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
             await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
         }

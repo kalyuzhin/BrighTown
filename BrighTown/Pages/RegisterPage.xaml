@@ -6,7 +6,7 @@
              xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
              xmlns:mauidevices="clr-namespace:Microsoft.Maui.Devices;assembly=Microsoft.Maui.Essentials"
              xmlns:mauicontrols="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
-             x:DataType="viewmodel:RegisterViewModel"
+             x:DataType="viewmodel:NewAuthenticationViewModel"
              Shell.NavBarIsVisible="True"
              BackgroundColor="#2c3e54"
              Shell.PresentationMode="NotAnimated">
@@ -25,7 +25,7 @@
     <!-- <VerticalStackLayout Padding="0,0,0,0" VerticalOptions="End"> -->
 
     <Grid
-        RowDefinitions="Auto,*,*,*,*,*,*"
+        RowDefinitions="Auto,*,*,*,*,*,*,*,*"
         Padding="25,0,25,0"
         RowSpacing="20"
         VerticalOptions="Center"
@@ -54,12 +54,11 @@
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="10" />
             </Border.StrokeShape>
-            <Entry Placeholder="Имя пользователя" IsSpellCheckEnabled="False" TextColor="Black"
-                   BackgroundColor="#fff"
-                   VerticalOptions="FillAndExpand"
-                   HorizontalOptions="FillAndExpand"
-                   x:Name="UsernameEntry"
-                   Text="{Binding RegisterModel.Username}" />
+            <Entry Placeholder="Имя" IsSpellCheckEnabled="False" TextColor="Black"
+           BackgroundColor="#fff"
+           VerticalOptions="FillAndExpand"
+           HorizontalOptions="FillAndExpand"
+           x:Name="FirstNameEntry" />
 
         </Border>
 
@@ -68,15 +67,40 @@
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="10" />
             </Border.StrokeShape>
+            <Entry Placeholder="Фамилия" IsSpellCheckEnabled="False" TextColor="Black"
+           BackgroundColor="#fff"
+           VerticalOptions="FillAndExpand"
+           HorizontalOptions="FillAndExpand"
+           x:Name="SecondNameEntry" />
+
+        </Border>
+
+        <Border Grid.Row="4" BackgroundColor="White">
+
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
+            <Entry Placeholder="Имя пользователя" IsSpellCheckEnabled="False" TextColor="Black"
+                   BackgroundColor="#fff"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   x:Name="UsernameEntry" />
+
+        </Border>
+
+        <Border Grid.Row="5" BackgroundColor="White">
+
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10" />
+            </Border.StrokeShape>
             <Entry Placeholder="Пароль" IsSpellCheckEnabled="False" IsPassword="True" TextColor="Black"
                    BackgroundColor="#fff"
                    VerticalOptions="FillAndExpand"
                    HorizontalOptions="FillAndExpand"
-                   x:Name="PasswordEntry"
-                   Text="{Binding RegisterModel.Password}" />
+                   x:Name="PasswordEntry" />
         </Border>
 
-        <Border Grid.Row="4" BackgroundColor="White">
+        <Border Grid.Row="6" BackgroundColor="White">
 
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="10" />
@@ -91,13 +115,10 @@
 
 
         </Border>
-        <!-- Clicked="PressRegisterButton" -->
-        <Button
-            Command="{Binding RegisterCommand}"
-            Grid.Row="5" Text="Зарегистрироваться" BackgroundColor="#fe7d3b"
-            FontFamily="Rounds" TextColor="#fff"
-            CornerRadius="20" />
-        <StackLayout Grid.Row="6" HorizontalOptions="Center" VerticalOptions="End">
+        <Button Clicked="PressRegisterButton" Grid.Row="7" Text="Зарегистрироваться" BackgroundColor="#fe7d3b"
+                FontFamily="Rounds" TextColor="#fff"
+                CornerRadius="20" />
+        <StackLayout Grid.Row="8" HorizontalOptions="Center" VerticalOptions="End">
             <Image Source="city_sky.png"
                    VerticalOptions="End"
                    MaximumHeightRequest="240"

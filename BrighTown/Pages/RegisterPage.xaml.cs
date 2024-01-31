@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BrighTown.ViewModels;
 using System.Text.RegularExpressions;
+using System.Net.Http.Json;
 
 namespace BrighTown.Pages;
 
@@ -74,26 +75,31 @@ public partial class RegisterPage : ContentPage
             string secondName = SecondNameEntry.Text;
             string password = PasswordEntry.Text;
             string email = EmailEntry.Text;
+            var data = new
+            {
+                Param1 = username,
+                Param2 = password,
+                Param3 = email,
+            };
+            using (HttpClient httpClient = new HttpClient())
+            {
+                try
+                {
+                    IsBusy = true;
 
-            //using (HttpClient httpClient = new HttpClient())
-            //{
-            //    try
-            //    {
-            //        IsBusy = true;
-
-            //        var response = await httpClient.PostAsync("http://localhost:5280/api/users/Register", new StringContent(user.ToString(), Encoding.UTF8, "application/json"));
-            //        await Shell.Current.GoToAsync($"..");
-            //        await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
-            //    }
-            //    catch
-            //    {
-            //        await Shell.Current.DisplayAlert("Упс!", "К сожалению произошла ошибка...", "ОК");
-            //    }
-            //    finally
-            //    {
-            //        IsBusy = false;
-            //    }
-            //}
+                    var response = await httpClient.PostAsJsonAsync("http://localhost:5280/api/users/Register", data);
+                    await Shell.Current.GoToAsync($"..");
+                    await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+                }
+                catch
+                {
+                    await Shell.Current.DisplayAlert("Упс!", "К сожалению произошла ошибка...", "ОК");
+                }
+                finally
+                {
+                    IsBusy = false;
+                }
+            }
             await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
             await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
         }

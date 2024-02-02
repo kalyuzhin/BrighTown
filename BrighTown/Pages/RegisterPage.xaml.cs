@@ -52,7 +52,8 @@ public partial class RegisterPage : ContentPage
         {
             return;
         }
-            IsBusy = true;
+
+        IsBusy = true;
 
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
@@ -72,8 +73,8 @@ public partial class RegisterPage : ContentPage
         {
             //Получение данных из полей ввода
             string Username = UsernameEntry.Text;
-            string firstName = FirstNameEntry.Text;
-            string secondName = SecondNameEntry.Text;
+            // string firstName = FirstNameEntry.Text;
+            // string secondName = SecondNameEntry.Text;
             string Password = PasswordEntry.Text;
             string Email = EmailEntry.Text;
             var data = new
@@ -83,16 +84,16 @@ public partial class RegisterPage : ContentPage
                 email = Email
             };
 
-        using (HttpClient httpClient = new HttpClient())
+            using (HttpClient httpClient = new HttpClient())
             {
-                var url = "http://localhost:5280/register";
+                var url = "http://10.0.2.2:5280/register";
 
                 var requestData = new Dictionary<string, string>
-            {
-            { "username", Username },
-            { "password", Password },
-                { "email", Email }
-            };
+                {
+                    { "username", Username },
+                    { "password", Password },
+                    { "email", Email }
+                };
 
                 var content = new
                     StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
@@ -107,6 +108,7 @@ public partial class RegisterPage : ContentPage
                     //Обработка ошибки при отправке запроса
                 }
             }
+
             await Shell.Current.GoToAsync($"..");
             await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
             await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");

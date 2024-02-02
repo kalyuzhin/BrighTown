@@ -6,7 +6,7 @@
              xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
              xmlns:mauidevices="clr-namespace:Microsoft.Maui.Devices;assembly=Microsoft.Maui.Essentials"
              xmlns:mauicontrols="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
-             x:DataType="viewmodel:NewAuthenticationViewModel"
+             x:DataType="viewmodel:RegisterViewModel"
              Shell.NavBarIsVisible="True"
              BackgroundColor="#2c3e54"
              Shell.PresentationMode="NotAnimated">
@@ -25,7 +25,7 @@
     <!-- <VerticalStackLayout Padding="0,0,0,0" VerticalOptions="End"> -->
 
     <Grid
-        RowDefinitions="Auto,*,*,*,*,*,*,*,*"
+        RowDefinitions="Auto,*,*,*,*,*,*"
         Padding="25,0,25,0"
         RowSpacing="20"
         VerticalOptions="Center"
@@ -49,33 +49,8 @@
 
         </Border>
 
+
         <Border Grid.Row="2" BackgroundColor="White">
-
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10" />
-            </Border.StrokeShape>
-            <Entry Placeholder="Имя" IsSpellCheckEnabled="False" TextColor="Black"
-           BackgroundColor="#fff"
-           VerticalOptions="FillAndExpand"
-           HorizontalOptions="FillAndExpand"
-           x:Name="FirstNameEntry" />
-
-        </Border>
-
-        <Border Grid.Row="3" BackgroundColor="White">
-
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10" />
-            </Border.StrokeShape>
-            <Entry Placeholder="Фамилия" IsSpellCheckEnabled="False" TextColor="Black"
-           BackgroundColor="#fff"
-           VerticalOptions="FillAndExpand"
-           HorizontalOptions="FillAndExpand"
-           x:Name="SecondNameEntry" />
-
-        </Border>
-
-        <Border Grid.Row="4" BackgroundColor="White">
 
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="10" />
@@ -88,7 +63,7 @@
 
         </Border>
 
-        <Border Grid.Row="5" BackgroundColor="White">
+        <Border Grid.Row="3" BackgroundColor="White">
 
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="10" />
@@ -100,7 +75,7 @@
                    x:Name="PasswordEntry" />
         </Border>
 
-        <Border Grid.Row="6" BackgroundColor="White">
+        <Border Grid.Row="4" BackgroundColor="White">
 
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="10" />
@@ -115,10 +90,11 @@
 
 
         </Border>
-        <Button Clicked="PressRegisterButton" Grid.Row="7" Text="Зарегистрироваться" BackgroundColor="#fe7d3b"
+        <Button Grid.Row="5" Text="Зарегистрироваться" BackgroundColor="#fe7d3b"
+                Clicked="PressRegisterButton"
                 FontFamily="Rounds" TextColor="#fff"
                 CornerRadius="20" />
-        <StackLayout Grid.Row="8" HorizontalOptions="Center" VerticalOptions="End">
+        <StackLayout Grid.Row="6" HorizontalOptions="Center" VerticalOptions="End">
             <Image Source="city_sky.png"
                    VerticalOptions="End"
                    MaximumHeightRequest="240"

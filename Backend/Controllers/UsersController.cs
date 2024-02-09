@@ -17,5 +17,11 @@ namespace Backend.Controllers
         {
             return Ok(await _usersService.Register(newUser));
         }
+
+        [HttpPost("/login")]
+        public async Task<ActionResult<ServiceResponse<GetUserDto>>> Authorize(AddUserDto newUser)
+        {
+            return Ok(await _usersService.Authorize(newUser));
+        }
     }
 }

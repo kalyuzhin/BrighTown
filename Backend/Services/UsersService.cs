@@ -1,3 +1,5 @@
+using Backend.Models;
+
 namespace Backend.Services;
 
 public class UsersService : IUsersService
@@ -50,4 +52,23 @@ public class UsersService : IUsersService
         return serviceResponse;
     }
     
+
+    public async Task<ServiceResponse<GetUserDto>> Authorize(AddUserDto request)
+    {
+        var serviceResponse = new ServiceResponse<GetUserDto>();
+        var db = _dataContext.Users;
+
+        User foundUser = db.ToList().FirstOrDefault(user => user.Username == request.Username && user.Password == request.Password);
+        if (foundUser == null)
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "Incorrect username or password!";
+            return serviceResponse;
+        }
+        else
+        {
+            serviceResponse.Data = _mapper.Map<GetUserDto>(foundUser);
+            return serviceResponse;
+        }
+    }
 }

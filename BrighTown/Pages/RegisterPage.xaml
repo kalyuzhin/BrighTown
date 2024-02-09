@@ -49,6 +49,7 @@
 
         </Border>
 
+
         <Border Grid.Row="2" BackgroundColor="White">
 
             <Border.StrokeShape>
@@ -58,8 +59,7 @@
                    BackgroundColor="#fff"
                    VerticalOptions="FillAndExpand"
                    HorizontalOptions="FillAndExpand"
-                   x:Name="UsernameEntry"
-                   Text="{Binding RegisterModel.Username}" />
+                   x:Name="UsernameEntry" />
 
         </Border>
 
@@ -72,8 +72,7 @@
                    BackgroundColor="#fff"
                    VerticalOptions="FillAndExpand"
                    HorizontalOptions="FillAndExpand"
-                   x:Name="PasswordEntry"
-                   Text="{Binding RegisterModel.Password}" />
+                   x:Name="PasswordEntry" />
         </Border>
 
         <Border Grid.Row="4" BackgroundColor="White">
@@ -91,12 +90,10 @@
 
 
         </Border>
-        <!-- Clicked="PressRegisterButton" -->
-        <Button
-            Command="{Binding RegisterCommand}"
-            Grid.Row="5" Text="Зарегистрироваться" BackgroundColor="#fe7d3b"
-            FontFamily="Rounds" TextColor="#fff"
-            CornerRadius="20" />
+        <Button Grid.Row="5" Text="Зарегистрироваться" BackgroundColor="#fe7d3b"
+                Clicked="PressRegisterButton"
+                FontFamily="Rounds" TextColor="#fff"
+                CornerRadius="20" />
         <StackLayout Grid.Row="6" HorizontalOptions="Center" VerticalOptions="End">
             <Image Source="city_sky.png"
                    VerticalOptions="End"

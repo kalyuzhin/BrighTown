@@ -21,6 +21,7 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFont("Rounds.ttf", "RoundsBlack");
             });
+        builder.Services.AddHttpClient("api", httpclient => httpclient.BaseAddress = new Uri("http://localhost:5280/"));
         builder.Services.AddSingleton(Connectivity.Current);
         builder.Services.AddSingleton<NewAuthenticationViewModel>();
         builder.Services.AddSingleton<RegisterViewModel>();

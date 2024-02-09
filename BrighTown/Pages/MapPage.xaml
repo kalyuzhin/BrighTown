@@ -36,8 +36,8 @@
         
         <Button Clicked ="ClickOnAddPlaceButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }" Text="Добавить место" TextColor="White"  Grid.ColumnSpan="4"
                 Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="End" Margin="3"></Button>
-
+        
     </Grid>
 
-
+       
 </ContentPage>

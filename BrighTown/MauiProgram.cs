@@ -1,6 +1,7 @@
 ﻿using BrighTown.Pages;
 using BrighTown.ViewModels;
 using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Storage;
 using Esri.ArcGISRuntime.Maui;
 using Esri.ArcGISRuntime;
 using Microsoft.Extensions.Logging;
@@ -29,6 +30,8 @@ namespace BrighTown
             builder.Services.AddSingleton<FavouritesPage>();
             builder.Services.AddSingleton<FriendsPage>();
             builder.Services.AddSingleton<ProfilePage>();
+            builder.Services.AddSingleton(FolderPicker.Default);
+            builder.Services.AddSingleton(FilePicker.Default);
             builder.UseArcGISRuntime(config =>
                 config.UseApiKey(
                     "AAPK0cf905d7ea244bfbae7d5d62f5b4d476-3kbqUfa0vXuT3WOM6tPIWvmL714wXqi8CmDzt9AivhZGrfTWuy3xRUGi_T1f886")); // ac

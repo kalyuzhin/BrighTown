@@ -24,7 +24,8 @@ public partial class MapPage : ContentPage
     private void ClickOnAddPlaceButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
     {
        
-       
+        Routing.RegisterRoute("AddPlace", typeof(AddPlaceToMapPage));
+        Shell.Current.GoToAsync("AddPlace");
         
         
     }

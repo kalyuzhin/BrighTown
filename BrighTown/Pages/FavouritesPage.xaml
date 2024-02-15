@@ -37,12 +37,13 @@
             </CollectionView.ItemsSource>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Place">
-                    <Grid ColumnDefinitions="*"  BackgroundColor="{AppThemeBinding Light=#b2b2b2 , Dark=#98918e  }" ColumnSpacing="5" RowDefinitions="*,Auto"
+                    <Grid ColumnDefinitions="*"  ColumnSpacing="5" RowDefinitions="*,Auto"
                           Margin="5">
-                        <Rectangle BackgroundColor="{AppThemeBinding Light=#ffb882 , Dark=#685f5b  }" HeightRequest="100" WidthRequest="100"
-                                   HorizontalOptions="Start" VerticalOptions="Start" />
-                        <Rectangle BackgroundColor="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
-                                   VerticalOptions="Start" />
+                        <BoxView Color="{AppThemeBinding Light=#b2b2b2 , Dark=#98918e  }" Grid.ColumnSpan="1" Grid.RowSpan="2" HorizontalOptions="Fill" VerticalOptions="Fill" CornerRadius="5"></BoxView>
+                        <BoxView  Color="{AppThemeBinding Light=#ffb882 , Dark=#685f5b  }" CornerRadius="5" HeightRequest="100" WidthRequest="100"
+                                  HorizontalOptions="Start" VerticalOptions="Start" />
+                        <BoxView  Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" CornerRadius="5" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
+                                  VerticalOptions="Start" />
                         <Image Source="{Binding ImageUrl}" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75"
                                WidthRequest="75" Margin="12" HorizontalOptions="Start">
                         </Image>

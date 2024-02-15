@@ -65,10 +65,10 @@
                 </Border>
                 <Button Command="{Binding LoginCommand}"
                         Grid.Row="4" BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" Text="Вход" TextColor="#fff" FontFamily="Rounds"
-                        CornerRadius="20" />
+                        CornerRadius="10" />
                 <Button Clicked="MoveToRegisterPage" Grid.Row="5"
                         BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" Text="Регистрация с email" TextColor="#fff"
-                        FontFamily="Rounds" CornerRadius="20" />
+                        FontFamily="Rounds" CornerRadius="10" />
                 <Label
                     Grid.Row="6"
                     Margin="0,40,0,0"

@@ -9,7 +9,7 @@ using BrighTown.Models;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Storage;
-using static BrighTown.Models.Debug_Data;
+
 
 namespace BrighTown.Pages;
 

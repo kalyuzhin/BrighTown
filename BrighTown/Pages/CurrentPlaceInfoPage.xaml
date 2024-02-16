@@ -62,10 +62,10 @@
                FontSize="Medium">
         </Label>
         <BoxView Margin="5,0,5,50" Color="White" Grid.Row="4" CornerRadius="5" ></BoxView>
-      <ScrollView  Grid.Row="4" BackgroundColor="Transparent">
+      <ScrollView  Grid.Row="4" Margin="0,0,0,30" BackgroundColor="Transparent">
           <StackLayout  >
               
-              <Label Margin="20,5,10,50" TextColor="Black" x:Name="Descriptor"  FontFamily="Rounds"  ></Label>
+              <Label Margin="20,5,10,5" TextColor="Black" x:Name="Descriptor"  FontFamily="Rounds"  ></Label>
 
           </StackLayout>
 

@@ -21,18 +21,22 @@
           RowSpacing="10">
 
 
-        <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4" VerticalOptions="FillAndExpand">
+        <CollectionView x:Name="FavouritesCollections" HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4" VerticalOptions="FillAndExpand"
+                        SelectionMode="Single"
+                        SelectionChanged="OnFavouritesCollectionViewSelectionChanged"
+                        
+                        >
             <CollectionView.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Пушкинская</x:String>
-                    <x:String>Парамоновские склады</x:String>
-                    <x:String>Гаражи</x:String>
-                    <x:String>Гаражи с сюрпризом</x:String>
-                    <x:String>Обзорная площадка</x:String>
-                    <x:String>И</x:String>
-                    <x:String>другие</x:String>
-                    <x:String>интересные</x:String>
-                    <x:String>места</x:String>
+                <x:Array Type="{x:Type model:Place}">
+                    <model:Place Name="TestPlace1" Description="FOR the most wild, yet most homely narrative which I am about to pen, I neither expect nor solicit belief. Mad indeed would I be to expect it, in a case where my very senses reject their own evidence. Yet, mad am I not -- and very surely do I not dream. But to-morrow I die, and to-day I would unburthen my soul. My immediate purpose is to place before the world, plainly, succinctly, and without comment, a series of mere household events. In their consequences, these events have terrified -- have tortured -- have destroyed me. Yet I will not attempt to expound them. To me, they have presented little but Horror -- to many they will seem less terrible than barroques. Hereafter, perhaps, some intellect may be found which will reduce my phantasm to the common-place -- some intellect more calm, more logical, and far less excitable than my own, which will perceive, in the circumstances I detail with awe, nothing more than an ordinary succession of very natural causes and effects." ImageUrl="demo_place.png" Rating="4.0"></model:Place>
+                    <model:Place Name="TestPlace2" Description="Discripte this" ImageUrl="demo_place.png" Rating="4.0"></model:Place>
+                    <model:Place Name="TestPlace3" Description="Discripte this" ImageUrl="demo_place.png" Rating="4.0"></model:Place>
+                    <model:Place Name="TestPlace4" Description="Discripte this" ImageUrl="demo_place.png" Rating="5.0"></model:Place>
+                    <model:Place Name="TestPlace5" Description="Discripte this" ImageUrl="demo_place.png" Rating="4.0"></model:Place>
+                    <model:Place Name="TestPlace" Description="Discripte this" ImageUrl="demo_place.png" Rating="2.0"></model:Place>
+                    <model:Place Name="TestPlace" Description="Discripte this place" ImageUrl="demo_place.png" Rating="1.0"></model:Place>
+                    <model:Place Name="TestPlace" Description="Discripte this" ImageUrl="demo_place.png" Rating="3.0"></model:Place>
+                    
                 </x:Array>
             </CollectionView.ItemsSource>
             <CollectionView.ItemTemplate>
@@ -45,14 +49,14 @@
                         <BoxView  Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" CornerRadius="5" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
                                   VerticalOptions="Start" />
                         <Image Source="{Binding ImageUrl}" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75"
-                               WidthRequest="75" Margin="12" HorizontalOptions="Start">
+                               WidthRequest="75" Margin="12" VerticalOptions="Start" HorizontalOptions="Start">
                         </Image>
                         <Label Text="{Binding Name}" FontFamily="RoundsBlack" FontSize="Medium"
                                HorizontalOptions="Start"
                                Margin="120,10,0,0" />
                         <Label Text="{Binding Description}" FontFamily="RoundsBlack" FontSize="Micro"
                                Grid.ColumnSpan="3"
-                               Margin="120,70,0,0" HorizontalOptions="Start" />
+                               Margin="120,70,0,5" HorizontalOptions="Start" />
 
                     </Grid>
                 </DataTemplate>

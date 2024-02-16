@@ -106,6 +106,7 @@ public partial class AddPlaceToMapPage : ContentPage
 
         return lst;
     }
+    
     public void ClickOnAddButton(object sender, EventArgs e)
     {
         

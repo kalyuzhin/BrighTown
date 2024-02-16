@@ -65,7 +65,7 @@
                FontSize="Medium">
         </Label>
         <BoxView Margin="5,0" CornerRadius="5" Color="White" Grid.ColumnSpan="2" Grid.Row="5" HorizontalOptions="Fill" ></BoxView>
-        <Entry  Margin="5,0" TextColor="Black" Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand"  Placeholder="Опишите место..."  Completed="OnDiscriptionEntryCompleted" FontFamily="Rounds" HorizontalOptions="Fill" ></Entry>
+        <Editor  Margin="5,0" TextColor="Black" Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand"  Placeholder="Опишите место..."  Completed="OnDiscriptionEntryCompleted" FontFamily="Rounds" HorizontalOptions="Fill" ></Editor>
         
         
         <Button Clicked ="ClickOnAddButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }" Text="Добавить" TextColor="White"  Grid.ColumnSpan="2"

@@ -56,10 +56,10 @@ public class UsersService : IUsersService
     public async Task<ServiceResponse<GetUserDto>> Authorize(AddUserDto request)
     {
         var serviceResponse = new ServiceResponse<GetUserDto>();
-        var db = _dataContext.Users;
+        var db = await _dataContext.Users.ToListAsync();
 
-        User foundUser = db.ToList()
-            .FirstOrDefault(user => user.Username == request.Username && user.Password == request.Password);
+        User? foundUser = db.FirstOrDefault(user =>
+            (user.Username == request.Username || user.Email == request.Email) && user.Password == request.Password);
         if (foundUser == null)
         {
             serviceResponse.Success = false;

@@ -101,17 +101,15 @@ public partial class RegisterPage : ContentPage
                 var response = await httpClient.PostAsync(url, content);
                 if (response.IsSuccessStatusCode)
                 {
-                    //Запрос успешно отправлен
+                    await Shell.Current.GoToAsync($"..");
+                    await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+                    await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
                 }
                 else
                 {
-                    //Обработка ошибки при отправке запроса
+                    await Shell.Current.DisplayAlert("Упс!", "К сожалению произошла ошибка...", "ОК");
                 }
             }
-
-            await Shell.Current.GoToAsync($"..");
-            await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
-            await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
         }
         catch (Exception ex)
         {

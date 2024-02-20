@@ -30,7 +30,7 @@ public class UsersService : IUsersService
             serviceResponse.Message = "This username is already taken!";
             return serviceResponse;
         }
-        
+
         // if (db.ToList().Select(c => c.Email).Contains(newUser.Email))
         // {
         //     serviceResponse.Success = false;
@@ -51,14 +51,15 @@ public class UsersService : IUsersService
         serviceResponse.Data = _mapper.Map<GetUserDto>(user);
         return serviceResponse;
     }
-    
+
 
     public async Task<ServiceResponse<GetUserDto>> Authorize(AddUserDto request)
     {
         var serviceResponse = new ServiceResponse<GetUserDto>();
         var db = _dataContext.Users;
 
-        User foundUser = db.ToList().FirstOrDefault(user => user.Username == request.Username && user.Password == request.Password);
+        User foundUser = db.ToList()
+            .FirstOrDefault(user => user.Username == request.Username && user.Password == request.Password);
         if (foundUser == null)
         {
             serviceResponse.Success = false;
@@ -70,5 +71,13 @@ public class UsersService : IUsersService
             serviceResponse.Data = _mapper.Map<GetUserDto>(foundUser);
             return serviceResponse;
         }
+    }
+
+    public async Task<ServiceResponse<List<GetUserDto>>> GetAllUsers()
+    {
+        var serviceResponse = new ServiceResponse<List<GetUserDto>>();
+        var db = await _dataContext.Users.ToListAsync();
+        serviceResponse.Data = db.Select(u => _mapper.Map<GetUserDto>(u)).ToList();
+        return serviceResponse;
     }
 }

@@ -52,10 +52,11 @@ public partial class NewAuthenticationPage : ContentPage
 
                 var requestData = new Dictionary<string, string>
                 {
-                    { "login", Login },
                     { "email", Login },
+                    { "login", Login },
                     { "password", Password }
                 };
+
                 var content = new
                     StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
 
@@ -69,7 +70,7 @@ public partial class NewAuthenticationPage : ContentPage
                 }
                 else
                 {
-                    await Shell.Current.DisplayAlert("Упс!", "К сожалению произошла ошибка...", "ОК");
+                    await Shell.Current.DisplayAlert("Упс!", $"{responseContent.Message}", "ОК");
                 }
             }
             //await Shell.Current.Navigation.PushModalAsync(new MapPage());

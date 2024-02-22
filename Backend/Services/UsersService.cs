@@ -57,20 +57,18 @@ public class UsersService : IUsersService
     {
         var serviceResponse = new ServiceResponse<GetUserDto>();
         var db = await _dataContext.Users.ToListAsync();
+        User? user = db.ToList().Find(u =>
+            u.Password == request.Password && (u.Username == request.Username || u.Email == request.Email));
 
-        User? foundUser = db.FirstOrDefault(user =>
-            (user.Username == request.Username || user.Email == request.Email) && user.Password == request.Password);
-        if (foundUser == null)
+        if (user == null)
         {
             serviceResponse.Success = false;
-            serviceResponse.Message = "Incorrect username or password!";
+            serviceResponse.Message = "Wrong login or password";
             return serviceResponse;
         }
-        else
-        {
-            serviceResponse.Data = _mapper.Map<GetUserDto>(foundUser);
-            return serviceResponse;
-        }
+
+        serviceResponse.Data = _mapper.Map<GetUserDto>(user);
+        return serviceResponse;
     }
 
     public async Task<ServiceResponse<List<GetUserDto>>> GetAllUsers()

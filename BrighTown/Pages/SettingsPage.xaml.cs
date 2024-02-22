@@ -10,5 +10,6 @@ public partial class SettingsPage : ContentPage
     private void ClickOnSettingsButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
     {
         Shell.Current.GoToAsync("..");
+        App.user = null;
     }
 }

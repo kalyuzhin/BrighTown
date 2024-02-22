@@ -1,6 +1,6 @@
 namespace BrighTown.Models;
 
-public class ServiceResponse<T> : HttpResponseMessage
+public class ServiceResponse<T>
 {
     public T? Data { get; set; }
 

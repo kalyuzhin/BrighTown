@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using BrighTown.Models;
 using Newtonsoft.Json;
 
 namespace BrighTown.Pages;
@@ -99,7 +100,8 @@ public partial class RegisterPage : ContentPage
                     StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
 
                 var response = await httpClient.PostAsync(url, content);
-                if (response.IsSuccessStatusCode)
+                var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<User>>();
+                if (responseContent.Success == true)
                 {
                     await Shell.Current.GoToAsync($"..");
                     await Shell.Current.GoToAsync($"//{nameof(MapPage)}");

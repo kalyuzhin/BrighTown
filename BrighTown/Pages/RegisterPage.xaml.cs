@@ -78,12 +78,12 @@ public partial class RegisterPage : ContentPage
             // string secondName = SecondNameEntry.Text;
             string Password = PasswordEntry.Text;
             string Email = EmailEntry.Text;
-            var data = new
-            {
-                username = Username,
-                password = Password,
-                email = Email
-            };
+            // var data = new
+            // {
+            //     username = Username,
+            //     password = Password,
+            //     email = Email
+            // };
 
             using (HttpClient httpClient = new HttpClient())
             {
@@ -101,15 +101,16 @@ public partial class RegisterPage : ContentPage
 
                 var response = await httpClient.PostAsync(url, content);
                 var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<User>>();
-                if (responseContent.Success == true)
+                if (responseContent.Success)
                 {
+                    App.user = responseContent.Data;
                     await Shell.Current.GoToAsync($"..");
                     await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
                     await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
                 }
                 else
                 {
-                    await Shell.Current.DisplayAlert("Упс!", "К сожалению произошла ошибка...", "ОК");
+                    await Shell.Current.DisplayAlert("Упс!", $"{responseContent.Message}", "ОК");
                 }
             }
         }

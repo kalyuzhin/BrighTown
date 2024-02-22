@@ -7,6 +7,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using BrighTown.Models;
 
 namespace BrighTown.Pages;
 
@@ -20,7 +21,10 @@ public partial class NewAuthenticationPage : ContentPage
 
     private async void Login(object sender, EventArgs e)
     {
-        if (IsBusy) return;
+        if (IsBusy)
+        {
+            return;
+        }
 
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
@@ -36,12 +40,12 @@ public partial class NewAuthenticationPage : ContentPage
             // string secondName = SecondNameEntry.Text;
             string Password = PasswordEntry.Text;
             string Login = LoginEntry.Text;
-            var data = new
-            {
-                login = Login,
-                password = Password,
-            };
-            
+            // var data = new
+            // {
+            //     login = Login,
+            //     password = Password,
+            // };
+
             using (HttpClient httpClient = new HttpClient())
             {
                 var url = "http://10.0.2.2:5280/login";
@@ -49,17 +53,19 @@ public partial class NewAuthenticationPage : ContentPage
                 var requestData = new Dictionary<string, string>
                 {
                     { "login", Login },
+                    { "email", Login },
                     { "password", Password }
                 };
                 var content = new
                     StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
 
                 var response = await httpClient.PostAsync(url, content);
-                if (response.IsSuccessStatusCode)
+                var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<User>>();
+                if (responseContent.Success)
                 {
-                    // Надо дописать
-                    //App.user = response.Content.
-                    await Shell.Current.GoToAsync($"//{nameof(MapPage)}");   
+                    App.user = responseContent.Data;
+                    await Shell.Current.DisplayAlert("Ура!", "Вход в аккаунт выполнен успешно!", "OK");
+                    await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
                 }
                 else
                 {

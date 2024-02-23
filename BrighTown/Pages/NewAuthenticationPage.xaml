@@ -65,7 +65,7 @@
                 </Border>
                 <Button
                     Clicked="Login"
-                    Grid.Row="4" BackgroundColor="#fe7d3b" Text="Вход" TextColor="#fff" FontFamily="Rounds" BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}"
+                    Grid.Row="4" Text="Вход" TextColor="#fff" FontFamily="Rounds" BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}"
                     CornerRadius="20"/>
                 <Button Clicked="MoveToRegisterPage" Grid.Row="5"
                         BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" Text="Регистрация с email" TextColor="#fff"

@@ -20,19 +20,14 @@ public partial class NewAuthenticationPage : ContentPage
         BindingContext = viewModel;
 
 
-        if (Preferences.Default.Get("theme",Application.Current.RequestedTheme.ToString() == "Dark"))
+        if (Preferences.Default.Get("theme", Application.Current.RequestedTheme.ToString() == "Dark"))
         {
-
             Application.Current.UserAppTheme = AppTheme.Dark;
-
         }
         else
         {
             Application.Current.UserAppTheme = AppTheme.Light;
         }
-        
-
-
     }
 
     private async void Login(object sender, EventArgs e)
@@ -83,6 +78,8 @@ public partial class NewAuthenticationPage : ContentPage
                     App.user = responseContent.Data;
                     await Shell.Current.DisplayAlert("Ура!", "Вход в аккаунт выполнен успешно!", "OK");
                     await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+                    LoginEntry.Text = "";
+                    PasswordEntry.Text = "";
                 }
                 else
                 {

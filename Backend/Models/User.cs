@@ -8,10 +8,10 @@ public class User
     public string Password { get; set; } = string.Empty;
 
     // public string FirstName { get; set; } = string.Empty;
-    //
+    
     // public string SecondName { get; set; } = string.Empty;
-    //
+    
     // public List<Place> FavouritePlaces { get; set; } = new List<Place>();
-    //
+    
     // public List<User> Friends { get; set; } = new List<User>();
 }

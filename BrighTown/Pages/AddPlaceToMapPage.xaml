@@ -4,82 +4,89 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:BrighTown.Models"
              x:Class="BrighTown.Pages.AddPlaceToMapPage"
-             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
-             >
-   
-    
+             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }">
+
+
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
 
             <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase"
-                   Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Добавить место" />
+                   Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center"
+                   Text="Добавить место" />
         </StackLayout>
     </Shell.TitleView>
     <Grid ColumnDefinitions="*,Auto"
           ColumnSpacing="0"
           RowSpacing="5"
           RowDefinitions="Auto,Auto,Auto,Auto,Auto,*,*">
-       
-            <CollectionView  x:Name="Plac" 
-                             ItemsSource="{Binding Place_Images}" >
-                <!-- <CollectionView.ItemsSource> -->
-                <!--     <x:Array Type="{x:Type model:Place}"> -->
-                <!--         <model:Place ImageUrl="demo_place.png"></model:Place> -->
-                <!--     </x:Array> -->
-                <!-- </CollectionView.ItemsSource> -->
-                
-                
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Horizontal" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate >
-                    <DataTemplate x:DataType="model:Place">
-                        <Image Margin="0,10" HeightRequest="100" WidthRequest="100" Source="{Binding ImageUrl }" ></Image>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-         
-            <Button HeightRequest="100" WidthRequest="100" FontSize="Large" Clicked="PickPhoto_Clicked" Margin = "10" Text="+" Grid.Column="1"></Button>
-           
-      
-        
-        
-        <BoxView Grid.ColumnSpan="2" Margin="5,0" HorizontalOptions="Fill" Color="{AppThemeBinding Light=#fe7d3b , Dark=#8b8b8b}"  Grid.Row="1" CornerRadius="5">
+
+        <CollectionView x:Name="Plac"
+                        ItemsSource="{Binding Place_Images}">
+            <!-- <CollectionView.ItemsSource> -->
+            <!--     <x:Array Type="{x:Type model:Place}"> -->
+            <!--         <model:Place ImageUrl="demo_place.png"></model:Place> -->
+            <!--     </x:Array> -->
+            <!-- </CollectionView.ItemsSource> -->
+
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Place">
+                    <Image Margin="0,10" HeightRequest="100" WidthRequest="100" Source="{Binding ImageUrl }"></Image>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button HeightRequest="100" WidthRequest="100" FontSize="Large" Clicked="PickPhoto_Clicked" Margin="10"
+                Text="+" Grid.Column="1">
+        </Button>
+
+
+        <BoxView Grid.ColumnSpan="2" Margin="5,0" HorizontalOptions="Fill"
+                 Color="{AppThemeBinding Light=#fe7d3b , Dark=#8b8b8b}" Grid.Row="1" CornerRadius="5">
         </BoxView>
-        <Label Text="Информация о месте" Grid.ColumnSpan="2" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack" Grid.Row="1"
+        <Label Text="Информация о месте" Grid.ColumnSpan="2" TextColor="White" HorizontalOptions="Center"
+               FontFamily="RoundsBlack" Grid.Row="1"
                FontSize="Medium">
         </Label>
-        <BoxView Margin="5,0" CornerRadius="5" Color="White" Grid.ColumnSpan="2" Grid.Row="2" HorizontalOptions="Fill" ></BoxView>
-        <Entry  TextColor="Black" Margin="5,0" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand" Grid.Row="2" Placeholder="Название"  Completed="OnNameEntryCompleted" FontFamily="Rounds" HorizontalOptions="Fill" ></Entry>
-        <BoxView  Margin="5,0" Grid.Row="3" Grid.ColumnSpan="2"  HorizontalOptions="Fill" Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}"   CornerRadius="5"></BoxView>
+        <BoxView Margin="5,0" CornerRadius="5" Color="White" Grid.ColumnSpan="2" Grid.Row="2" HorizontalOptions="Fill"></BoxView>
+        <Entry TextColor="Black" x:Name="Name" Margin="5,0" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand" Grid.Row="2"
+               Placeholder="Название" Completed="OnNameEntryCompleted" FontFamily="Rounds" HorizontalOptions="Fill">
+        </Entry>
+        <BoxView Margin="5,0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Fill"
+                 Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" CornerRadius="5">
+        </BoxView>
         <VerticalStackLayout Grid.Row="3" Grid.ColumnSpan="2" BackgroundColor="Transparent" HorizontalOptions="Fill">
-            
-            <Label TextColor="White" FontSize="Medium" x:Name="RatingValue" FontFamily="Rounds" HorizontalOptions="Center" ></Label>
-            <Slider Margin="5" Maximum="500000000" Minimum="0" ValueChanged="OnRatingValueChanged"  />
+
+            <Label TextColor="White" FontSize="Medium" x:Name="RatingValue" FontFamily="Rounds"
+                   HorizontalOptions="Center">
+            </Label>
+            <Slider Margin="5" Maximum="500000000" Minimum="0" ValueChanged="OnRatingValueChanged" />
         </VerticalStackLayout>
-        
-        
-        <BoxView Grid.ColumnSpan="2" Margin="5,0" HorizontalOptions="Fill" Color="{AppThemeBinding Light=#fe7d3b , Dark=#8b8b8b}"  Grid.Row="4" CornerRadius="5">
+
+
+        <BoxView Grid.ColumnSpan="2" Margin="5,0" HorizontalOptions="Fill"
+                 Color="{AppThemeBinding Light=#fe7d3b , Dark=#8b8b8b}" Grid.Row="4" CornerRadius="5">
         </BoxView>
-        <Label Text="описание места" Grid.ColumnSpan="2" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack" Grid.Row="4"
+        <Label Text="описание места" Grid.ColumnSpan="2" TextColor="White" HorizontalOptions="Center"
+               FontFamily="RoundsBlack" Grid.Row="4"
                FontSize="Medium">
         </Label>
-        <BoxView Margin="5,0" CornerRadius="5" Color="White" Grid.ColumnSpan="2" Grid.Row="5" HorizontalOptions="Fill" ></BoxView>
-        <Editor  Margin="5,0" TextColor="Black" Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand"  Placeholder="Опишите место..."  Completed="OnDiscriptionEntryCompleted" FontFamily="Rounds" HorizontalOptions="Fill" ></Editor>
-        
-        
-        <Button Clicked ="ClickOnAddButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }" Text="Добавить" TextColor="White"  Grid.ColumnSpan="2"
-                Grid.Row="6" HorizontalOptions="Fill" VerticalOptions="End" Margin="3"></Button>
-        
+        <BoxView Margin="5,0" CornerRadius="5" Color="White" Grid.ColumnSpan="2" Grid.Row="5" HorizontalOptions="Fill"></BoxView>
+        <Editor Margin="5,0" TextColor="Black" Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand"
+                Placeholder="Опишите место..." Completed="OnDiscriptionEntryCompleted" FontFamily="Rounds"
+                HorizontalOptions="Fill" x:Name="DescriptionEntry">
+        </Editor>
+
+
+        <Button Clicked="ClickOnAddButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
+                Text="Добавить" TextColor="White" Grid.ColumnSpan="2"
+                Grid.Row="6" HorizontalOptions="Fill" VerticalOptions="End" Margin="3">
+        </Button>
+
     </Grid>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
 </ContentPage>

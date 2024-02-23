@@ -17,12 +17,6 @@ public class UsersService : IUsersService
     {
         var serviceResponse = new ServiceResponse<GetUserDto>();
         var db = _dataContext.Users;
-        // if (db.ToList().Select(c => c.Email).Contains(newUser.Email))
-        // {
-        //     serviceResponse.Success = false;
-        //     serviceResponse.Message = "This email address is already taken!";
-        //     return serviceResponse;
-        // }
 
         if (db.ToList().Select(c => c.Username).Contains(newUser.Username))
         {
@@ -31,12 +25,12 @@ public class UsersService : IUsersService
             return serviceResponse;
         }
 
-        // if (db.ToList().Select(c => c.Email).Contains(newUser.Email))
-        // {
-        //     serviceResponse.Success = false;
-        //     serviceResponse.Message = "This email is already taken!";
-        //     return serviceResponse;
-        // }
+        if (db.ToList().Select(c => c.Email).Contains(newUser.Email))
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "This email is already taken!";
+            return serviceResponse;
+        }
 
         if (string.IsNullOrWhiteSpace(newUser.Password))
         {

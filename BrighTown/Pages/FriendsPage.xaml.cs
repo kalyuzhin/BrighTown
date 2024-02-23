@@ -1,32 +1,48 @@
+using static Microsoft.Maui.ApplicationModel.Permissions;
+using Microsoft.Maui.Controls;
+using System;
+using System.Collections.ObjectModel;
+using BrighTown.Models;
+
 namespace BrighTown.Pages;
 
 public partial class FriendsPage : ContentPage
 {
+    
     public FriendsPage()
     {
+
         InitializeComponent();
+        
+        
     }
 
-    //-----------������������� ������---------------------------------------------
-
-
-    private void ClickOnFavouritesButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
+    public static string CurrentFriendName;
+    public static string CurrentFriendStatus;
+    public static string CurrentFriendImageUrl;
+    void OnFriendsCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        Navigation.PushModalAsync(new FavouritesPage());
-    }
 
-    private void ClickOnFriendButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
-    {
-        Navigation.PushModalAsync(new FriendsPage());
-    }
+        if (FriendsCollections.SelectedItem != null)
+        {
+            CurrentFriendName = (e.CurrentSelection.FirstOrDefault() as Friend)?.Name;
+            CurrentFriendStatus = (e.CurrentSelection.FirstOrDefault() as Friend)?.Status;
+            CurrentFriendImageUrl = (e.CurrentSelection.FirstOrDefault() as Friend)?.ImageUrl;
+            FriendsCollections.SelectedItem = null;
+            Routing.RegisterRoute("TakeALookOnFriend", typeof(CurrentFriendInfoPage));
+            Shell.Current.GoToAsync("TakeALookOnFriend");
+        }
 
-    private void ClickOnMapButton(object sender, EventArgs e) // ��������� ������� �� ������ "�����"
-    {
-        Navigation.PushModalAsync(new MapPage());
-    }
 
-    private void ClickOnProfileButton(object sender, EventArgs e) // ��������� ������� �� ������ "�������"
-    {
-        Navigation.PushModalAsync(new ProfilePage());
+
+
+
+
+
+
+
+
+
+
     }
 }

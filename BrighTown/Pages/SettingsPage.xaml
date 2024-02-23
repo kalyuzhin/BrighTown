@@ -5,7 +5,7 @@
              x:Class="BrighTown.Pages.SettingsPage"
              xmlns:local="clr-namespace:BrighTown"
              BindingContext="{x:Static local:App.user}"
-             BackgroundColor="#d6f0fa"
+             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.NavBarIsVisible="True"
              Shell.TabBarIsVisible="False">
     <Shell.BackButtonBehavior>
@@ -28,72 +28,65 @@
 
 
     <Grid
-        RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*"
+        RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*"
         ColumnDefinitions="*,Auto"
         RowSpacing="5"
         Margin="5"
-        Padding="5">
-
-        <RoundRectangle Grid.Row="0" BackgroundColor="#fe7d3b" CornerRadius="5" HorizontalOptions="Fill"
-                        Grid.ColumnSpan="2">
-        </RoundRectangle>
+        >
+        
+   
+        
+        <BoxView Grid.Row="0" Color="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" CornerRadius= "5" HorizontalOptions="Fill" Grid.ColumnSpan="2"></BoxView>
         <Label Grid.Row="0" Text="Данные аккаунта" FontSize="Medium" TextColor="White" FontFamily="Rounds"
                HorizontalOptions="Center" Grid.ColumnSpan="2">
         </Label>
-
-        <RoundRectangle Grid.Row="1" BackgroundColor="#fbbf93" CornerRadius="5" Grid.ColumnSpan="2"
-                        HorizontalOptions="Fill">
-        </RoundRectangle>
-
+       
+        <BoxView  Grid.Row="1" Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" CornerRadius= "5" Grid.ColumnSpan="2" HorizontalOptions="Fill"></BoxView>
+        
         <VerticalStackLayout Grid.Row="1" Grid.Column="0">
-            <Label HorizontalOptions="Start" Margin="5,5,5,5" Text="Имя акаунта:" VerticalOptions="Center"
-                   FontFamily="Rounds" TextColor="#fff" />
-            <Label HorizontalOptions="Start" Margin="5,0,0,0" Text="{Binding UserName}" VerticalOptions="Center"
-                   FontFamily="Rounds" TextColor="#fff" />
+            <Label HorizontalOptions="Start" TextColor="White"  Margin="5,5,5,5" Text="Имя акаунта:" VerticalOptions="Center" FontFamily="Rounds"></Label>
+            <Label HorizontalOptions="Start" TextColor="White"  Margin="5,0,0,0" Text="{Binding UserName}" VerticalOptions="Center" FontFamily="Rounds"></Label>
         </VerticalStackLayout>
-
-
-        <Button Text="Изменить" BackgroundColor="#fe7d3b" FontFamily="Rounds" TextColor="White"
-                VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="1" Margin="5">
-        </Button>
-
-        <RoundRectangle Grid.Row="2" BackgroundColor="#fbbf93" CornerRadius="5" Grid.ColumnSpan="2"
-                        HorizontalOptions="Fill">
-        </RoundRectangle>
+       
+       
+        <Button Text="Изменить" BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" FontFamily="Rounds" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Grid.Column="1" Margin="5"></Button>
+        
+        <BoxView Grid.Row="2" Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" CornerRadius= "5" Grid.ColumnSpan="2" HorizontalOptions="Fill"></BoxView>
         <VerticalStackLayout Grid.Row="2" Grid.Column="0">
-            <Label HorizontalOptions="Start" Margin="5,5,5,5" Text="Адрес электронной почты:" VerticalOptions="Center"
-                   FontFamily="Rounds" TextColor="#fff" />
-            <Label HorizontalOptions="Start" Margin="5,0,0,0" Text="{Binding Email}" VerticalOptions="Center"
-                   FontFamily="Rounds" TextColor="#fff" />
+            <Label HorizontalOptions="Start"  Margin="5,5,5,5" TextColor="White" Text="Адрес электронной почты:" VerticalOptions="Center" FontFamily="Rounds"></Label>
+            <Label HorizontalOptions="Start" Margin="5,0,0,0" TextColor="White" Text="{Binding Email}" VerticalOptions="Center" FontFamily="Rounds"></Label>
         </VerticalStackLayout>
-
-        <Button Text="Изменить" BackgroundColor="#fe7d3b" FontFamily="Rounds" TextColor="White"
-                VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="2" Grid.Column="1" Margin="5">
-        </Button>
-
-        <RoundRectangle Grid.Row="3" BackgroundColor="#fe7d3b" CornerRadius="5" HorizontalOptions="Fill"
-                        Grid.ColumnSpan="2">
-        </RoundRectangle>
-        <Label Grid.Row="3" Text="Настройки аккаунта" FontSize="Medium" TextColor="White" Grid.ColumnSpan="2"
-               FontFamily="Rounds"
+        
+        <Button Text="Изменить" BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" FontFamily="Rounds" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="2" Grid.Column="1" Margin="5"></Button>
+        
+        <BoxView Grid.Row="3" Color="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" CornerRadius= "5" HorizontalOptions="Fill" Grid.ColumnSpan="2"></BoxView>
+        <Label Grid.Row="3" Text="Настройки аккаунта" FontSize="Medium" TextColor="White"  Grid.ColumnSpan="2" FontFamily="Rounds"
                HorizontalOptions="Center">
         </Label>
-
-        <RoundRectangle Grid.Row="4" BackgroundColor="#fbbf93" CornerRadius="5" HorizontalOptions="Fill"
-                        Grid.ColumnSpan="2">
-        </RoundRectangle>
-        <Label Grid.Row="4" HorizontalOptions="Start" Margin="5,5,5,5" Text="Запоминать предыдущий вход"
-               VerticalOptions="Center" FontFamily="Rounds" Grid.ColumnSpan="2" TextColor="#fff" />
+        
+        <BoxView Grid.Row="4" Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" CornerRadius= "5" HorizontalOptions="Fill" Grid.ColumnSpan="2"></BoxView>
+        <Label Grid.Row="4" HorizontalOptions="Start"  Margin="5,5,5,5" TextColor="White" Text="Запоминать предыдущий вход" VerticalOptions="Center" FontFamily="Rounds" Grid.ColumnSpan="2"></Label>
         <Switch HorizontalOptions="End" Grid.Row="4" Grid.ColumnSpan="2" Margin="5,5,5,5" IsToggled="False" />
+       
+        <BoxView Grid.Row="5" Color="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" CornerRadius= "5" HorizontalOptions="Fill" Grid.ColumnSpan="2"></BoxView>
+        <Label Grid.Row="5" Text="Настройки приложения" FontSize="Medium" TextColor="White"  Grid.ColumnSpan="2" FontFamily="Rounds"
+               HorizontalOptions="Center">
+        </Label>
+        
+        <BoxView Grid.Row="6" Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" CornerRadius= "5" HorizontalOptions="Fill" Grid.ColumnSpan="2"></BoxView>
+        <Label Grid.Row="6" HorizontalOptions="Start"  Margin="5,5,5,5" TextColor="White" Text="Темная тема" VerticalOptions="Center" FontFamily="Rounds" Grid.ColumnSpan="2"></Label>
+        <Switch Toggled="OnToggledThemeSwitcher" x:Name="ThemeSwitch" HorizontalOptions="End" Grid.Row="6" Grid.ColumnSpan="2" Margin="5,5,5,5"  />
 
-        <Button Text="Удалить аккаунт" BackgroundColor="red" FontFamily="Rounds" TextColor="White"
-                VerticalOptions="Center" HorizontalOptions="Fill" Grid.Row="5" Grid.ColumnSpan="2" Margin="5">
-        </Button>
+        
+        
+        
+        <Button Text="Удалить аккаунт" BackgroundColor="red" FontFamily="Rounds" TextColor="White" VerticalOptions="Center" HorizontalOptions="Fill" Grid.Row="7" Grid.ColumnSpan="2" Margin="5"></Button>
 
-
-        <Button Grid.RowSpan="7" Clicked="ClickOnSettingsButton" Text="Сохранить" Grid.ColumnSpan="2"
+        
+        
+        <Button Grid.RowSpan="9" Clicked="ClickOnSettingsButton" Text="Сохранить" Grid.ColumnSpan="2"
                 VerticalOptions="End"
-                Margin="5,5,5,5" TextColor="White" FontFamily="RoundsBlack" BackgroundColor="#2c3e54" />
+                Margin="5,5,5,5" TextColor="White" FontFamily="RoundsBlack" BackgroundColor="{AppThemeBinding Light=#2c3e54 , Dark=#878889  }" />
 
 
     </Grid>

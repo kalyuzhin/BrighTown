@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:BrighTown.Models"
              x:Class="BrighTown.Pages.FriendsPage"
-             BackgroundColor="#d6f0fa"
+             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.NavBarIsVisible="True">
 
     <Shell.TitleView>
@@ -22,29 +22,33 @@
           RowSpacing="10">
 
 
-        <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4" VerticalOptions="FillAndExpand">
+        <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4"  SelectionMode="Single"
+                        SelectionChanged="OnFriendsCollectionViewSelectionChanged" VerticalOptions="FillAndExpand" x:Name="FriendsCollections">
             <CollectionView.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Alex</x:String>
-                    <x:String>Mask</x:String>
-                    <x:String>Billy</x:String>
-                    <x:String>Van</x:String>
-                    <x:String>Van</x:String>
-                    <x:String>Van</x:String>
-                    <x:String>Billy</x:String>
-                    <x:String>Billy</x:String>
-                    <x:String>Billy</x:String>
-                    <x:String>Billy</x:String>
-                    <x:String>Billy</x:String>
+                <x:Array Type="{x:Type model:Friend}">
+                    <model:Friend Name="Steve" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
+                    <model:Friend Name="Steve" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
+                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
+                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
+                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
+                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
+                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
+                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
+                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
+                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
+                    <model:Friend Name="Steve" Status="Онлайн" ImageUrl="stockprofilephoto.jpg"></model:Friend>
+                    <model:Friend Name="Алекс" Status="Оффлайн" ImageUrl="demo.png"></model:Friend>
+                    
                 </x:Array>
             </CollectionView.ItemsSource>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Friend">
-                    <Grid ColumnDefinitions="*" Background="#b2b2b2" ColumnSpacing="0" RowDefinitions="*,Auto"
+                    <Grid ColumnDefinitions="*"  ColumnSpacing="0" RowDefinitions="*,Auto"
                           Margin="5">
-                        <Rectangle Background="#ffb882" HeightRequest="100" WidthRequest="100"
-                                   HorizontalOptions="Start" VerticalOptions="Start" />
-                        <Rectangle Background="#ffdabf" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
+                        <BoxView Color="{AppThemeBinding Light=#b2b2b2 , Dark=#98918e  }" Grid.ColumnSpan="1" Grid.RowSpan="2" HorizontalOptions="Fill" VerticalOptions="Fill" CornerRadius="5"></BoxView>
+                        <BoxView  Color="{AppThemeBinding Light=#ffb882 , Dark=#685f5b  }" CornerRadius="5" HeightRequest="100" WidthRequest="100"
+                                  HorizontalOptions="Start" VerticalOptions="Start" />
+                        <BoxView  Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" CornerRadius="5" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
                                    VerticalOptions="Start" />
                         <Image Source="{Binding ImageUrl}" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75"
                                WidthRequest="75"

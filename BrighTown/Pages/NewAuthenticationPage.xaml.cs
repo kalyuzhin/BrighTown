@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using BrighTown.Models;
 
+
 namespace BrighTown.Pages;
 
 public partial class NewAuthenticationPage : ContentPage
@@ -17,6 +18,21 @@ public partial class NewAuthenticationPage : ContentPage
     {
         InitializeComponent();
         BindingContext = viewModel;
+
+
+        if (Preferences.Default.Get("theme",Application.Current.RequestedTheme.ToString() == "Dark"))
+        {
+
+            Application.Current.UserAppTheme = AppTheme.Dark;
+
+        }
+        else
+        {
+            Application.Current.UserAppTheme = AppTheme.Light;
+        }
+        
+
+
     }
 
     private async void Login(object sender, EventArgs e)

@@ -3,18 +3,20 @@
 <Shell
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BrighTown"
     xmlns:views="clr-namespace:BrighTown.Pages"
+    xmlns:model="clr-namespace:BrighTown.Models"
     x:Class="BrighTown.AppShell"
     Shell.FlyoutBehavior="Disabled"
     Shell.TabBarIsVisible="False"
     BackgroundColor="#fe7d3b">
-
+ 
     <Shell.Resources>
         <Style TargetType="TabBar">
-            <Setter Property="Shell.TabBarBackgroundColor" Value="#2c3e54" />
-            <Setter Property="Shell.TabBarUnselectedColor" Value="#fff" />
-            <Setter Property="Shell.TabBarForegroundColor" Value="#fe7d3b" />
-            <Setter Property="Shell.TabBarTitleColor" Value="#fe7d3b" />
+            <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Light=#2c3e54 , Dark=#383a3b  }"></Setter>
+            <Setter Property="Shell.TabBarUnselectedColor" Value="#fff"></Setter>
+            <Setter Property="Shell.TabBarForegroundColor" Value="#fe7d3b"></Setter>
+            <Setter Property="Shell.TabBarTitleColor" Value="#fe7d3b"></Setter>
         </Style>
     </Shell.Resources>
 
@@ -22,7 +24,7 @@
         Route="NewAuthenticationPage"
         ContentTemplate="{DataTemplate views:NewAuthenticationPage}" />
 
-    <TabBar Route="MapPage" Shell.TabBarIsVisible="True" Shell.BackgroundColor="#fe7d3b">
+    <TabBar Route="MapPage" Shell.TabBarIsVisible="True" Shell.BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}">
         <Tab Title="Карта" Icon="iconofmap.png">
             <ShellContent
                 Route="MapPage"

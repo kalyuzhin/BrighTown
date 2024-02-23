@@ -5,14 +5,16 @@
              xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
              xmlns:local="clr-namespace:BrighTown"
              x:Class="BrighTown.Pages.MapPage"
-             BackgroundColor="#d6f0fa"
+             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.NavBarIsVisible="True">
 
 
     <ContentPage.Resources>
         <local:MapViewModel x:Key="MapViewModel" />
     </ContentPage.Resources>
-
+    <Shell.SearchHandler>
+        
+    </Shell.SearchHandler>
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
             <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase"
@@ -23,17 +25,19 @@
 
     <Grid ColumnDefinitions="*,*,*,*"
           ColumnSpacing="0"
-          RowDefinitions="*"
-          RowSpacing="10">
+          RowDefinitions="Auto,*">
 
-
+        <SearchBar TextColor = "{AppThemeBinding Light=Black , Dark=White  }"   Placeholder="Поиск мест" FontFamily="RoundsBlack" HorizontalOptions="Fill"  BackgroundColor="{AppThemeBinding Light=White , Dark=Gray }" Grid.ColumnSpan="4"/>
         <esri:MapView x:Name="MainMapView"
                       Map="{Binding Map, Source={StaticResource MapViewModel}}" VerticalOptions="Fill"
                       Grid.ColumnSpan="4"
+                      Grid.Row="1"
                       GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}" />
-
-
+        
+        <Button Clicked ="ClickOnAddPlaceButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }" Text="Добавить место" TextColor="White"  Grid.ColumnSpan="4"
+                Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="End" Margin="3"></Button>
+        
     </Grid>
 
-
+       
 </ContentPage>

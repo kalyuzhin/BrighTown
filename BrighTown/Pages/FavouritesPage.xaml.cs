@@ -1,3 +1,5 @@
+using BrighTown.Models;
+
 namespace BrighTown.Pages;
 
 public partial class FavouritesPage : ContentPage
@@ -7,25 +9,32 @@ public partial class FavouritesPage : ContentPage
         InitializeComponent();
     }
 
-    //-----------������������� ������---------------------------------------------
-
-    private void ClickOnFavouritesButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
+    public static string CurrentName;
+    public static double CurrentRating;
+    public static string CurrentDescription;
+    
+    void OnFavouritesCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        Navigation.PushModalAsync(new FavouritesPage());
-    }
 
-    private void ClickOnFriendButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
-    {
-        Navigation.PushModalAsync(new FriendsPage());
-    }
+        if (FavouritesCollections.SelectedItem != null)
+        {
+            CurrentName = (e.CurrentSelection.FirstOrDefault() as Place)?.Name;
+            CurrentRating =(double)(e.CurrentSelection.FirstOrDefault() as Place)?.Rating;
+            CurrentDescription =(e.CurrentSelection.FirstOrDefault() as Place)?.Description;
+            FavouritesCollections.SelectedItem = null;
+            Routing.RegisterRoute("TakeALookOnPlace", typeof(CurrentPlaceInfoPage));
+            Shell.Current.GoToAsync("TakeALookOnPlace");
+        }
+        
+        
 
-    private void ClickOnMapButton(object sender, EventArgs e) // ��������� ������� �� ������ "�����"
-    {
-        Navigation.PushModalAsync(new MapPage());
-    }
+        
+        
+       
 
-    private void ClickOnProfileButton(object sender, EventArgs e) // ��������� ������� �� ������ "�������"
-    {
-        Navigation.PushModalAsync(new ProfilePage());
     }
+  
+    
+
+   
 }

@@ -6,4 +6,7 @@ public class Place
     public string Description { get; set; }
     public double Rating { get; set; }
     public string ImageUrl { get; set; }
+    
+    public List<string> ImagesList { get; set; }
+
 }

@@ -4,6 +4,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
              xmlns:local="clr-namespace:BrighTown"
+             xmlns:handler="clr-namespace:BrighTown.Services"
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
              x:Class="BrighTown.Pages.MapPage"
              BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.NavBarIsVisible="True">
@@ -13,7 +15,7 @@
         <local:MapViewModel x:Key="MapViewModel" />
     </ContentPage.Resources>
     <Shell.SearchHandler>
-        
+        <handler:PlacesSearchHandler Places="{}" ShowsResults="True" DisplayMemberName="Name" />
     </Shell.SearchHandler>
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
@@ -27,17 +29,21 @@
           ColumnSpacing="0"
           RowDefinitions="Auto,*">
 
-        <SearchBar TextColor = "{AppThemeBinding Light=Black , Dark=White  }"   Placeholder="Поиск мест" FontFamily="RoundsBlack" HorizontalOptions="Fill"  BackgroundColor="{AppThemeBinding Light=White , Dark=Gray }" Grid.ColumnSpan="4"/>
+        <SearchBar TextColor="{AppThemeBinding Light=Black , Dark=White  }" Placeholder="Поиск мест"
+                   FontFamily="RoundsBlack" HorizontalOptions="Fill"
+                   BackgroundColor="{AppThemeBinding Light=White , Dark=Gray }" Grid.ColumnSpan="4" />
         <esri:MapView x:Name="MainMapView"
                       Map="{Binding Map, Source={StaticResource MapViewModel}}" VerticalOptions="Fill"
                       Grid.ColumnSpan="4"
                       Grid.Row="1"
                       GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}" />
-        
-        <Button Clicked ="ClickOnAddPlaceButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }" Text="Добавить место" TextColor="White"  Grid.ColumnSpan="4"
-                Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="End" Margin="3"></Button>
-        
+
+        <Button Clicked="ClickOnAddPlaceButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
+                Text="Добавить место" TextColor="White" Grid.ColumnSpan="4"
+                Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="End" Margin="3">
+        </Button>
+
     </Grid>
 
-       
+
 </ContentPage>

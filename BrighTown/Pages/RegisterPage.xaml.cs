@@ -94,9 +94,9 @@ public partial class RegisterPage : ContentPage
 
                 var requestData = new Dictionary<string, string>
                 {
-                    { "username", Username },
+                    { "username", Username.ToLower() },
                     { "password", Password },
-                    { "email", Email }
+                    { "email", Email.ToLower() }
                 };
 
                 var content = new

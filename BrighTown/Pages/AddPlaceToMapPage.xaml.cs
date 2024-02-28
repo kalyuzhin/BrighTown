@@ -149,11 +149,11 @@ public partial class AddPlaceToMapPage : ContentPage
                     StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
 
                 var response = await httpClient.PostAsync(url, content);
-                var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<List<Place>>>();
+                var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<List<Place2>>>();
                 if (responseContent.Success)
                 {
-                    CurrentPlaceImages = GenerateImagesArray(Place_Images);
                     await Shell.Current.GoToAsync($"..");
+                    CurrentPlaceImages = GenerateImagesArray(Place_Images);
                 }
                 else
                 {

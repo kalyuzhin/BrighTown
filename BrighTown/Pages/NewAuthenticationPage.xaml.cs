@@ -66,8 +66,8 @@ public partial class NewAuthenticationPage : ContentPage
 
                 var requestData = new Dictionary<string, string>
                 {
-                    { "email", Login },
-                    { "login", Login },
+                    { "email", Login.ToLower() },
+                    { "login", Login.ToLower() },
                     { "password", Password }
                 };
 

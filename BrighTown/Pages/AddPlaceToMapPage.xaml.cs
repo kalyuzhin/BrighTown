@@ -134,7 +134,10 @@ public partial class AddPlaceToMapPage : ContentPage
 
             using (HttpClient httpClient = new HttpClient())
             {
-                var url = "http://10.0.2.2:5280/api/Places/add";
+                string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                    ? "http://10.0.2.2:5280/"
+                    : "http://localhost:5280/";
+                var url = baseUrl + "api/Places/add";
 
                 var requestData = new Dictionary<string, string>
                 {
@@ -146,10 +149,10 @@ public partial class AddPlaceToMapPage : ContentPage
                     StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
 
                 var response = await httpClient.PostAsync(url, content);
-                var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<Place>>();
+                var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<List<Place>>>();
                 if (responseContent.Success)
                 {
-                    // CurrentPlaceImages = GenerateImagesArray(Place_Images);
+                    CurrentPlaceImages = GenerateImagesArray(Place_Images);
                     await Shell.Current.GoToAsync($"..");
                 }
                 else

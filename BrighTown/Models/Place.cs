@@ -7,7 +7,6 @@ public class Place
     public string Description { get; set; } = string.Empty;
     public double Rating { get; set; } = 5;
     public string ImageUrl { get; set; }
-    
-    public List<string> ImagesList { get; set; }
 
+    public List<string> ImagesList { get; set; }
 }

@@ -59,7 +59,10 @@ public partial class NewAuthenticationPage : ContentPage
 
             using (HttpClient httpClient = new HttpClient())
             {
-                var url = "http://10.0.2.2:5280/login";
+                string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                    ? "http://10.0.2.2:5280/"
+                    : "http://localhost:5280/";
+                var url = baseUrl + "login";
 
                 var requestData = new Dictionary<string, string>
                 {

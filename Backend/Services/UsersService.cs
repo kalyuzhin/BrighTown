@@ -71,4 +71,10 @@ public class UsersService : IUsersService
             return serviceResponse;
         }
     }
+
+    public async Task<ServiceResponse<GetUserDto>> AddFriend(GetUserDto user)
+    {
+        var serviceResponse = new ServiceResponse<GetUserDto>();
+
+    }
 }

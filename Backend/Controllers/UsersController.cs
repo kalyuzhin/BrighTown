@@ -27,5 +27,11 @@ namespace Backend.Controllers
         {
             return Ok(await _usersService.Authorize(newUser));
         }
+
+        [HttpPost("/add_friend")]
+        public async Task<ActionResult<ServiceResponse<GetUserDto>>> AddFriend(GetUserDto newUser)
+        {
+            return Ok(await _usersService.AddFriend(newUser));
+        }
     }
 }

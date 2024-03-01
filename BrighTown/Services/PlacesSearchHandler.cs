@@ -31,9 +31,9 @@ public class PlacesSearchHandler : SearchHandler
         {
             try
             {
-                using (HttpClient httpClient = new HttpClient())
+                if (Places == null || Places.Count == 0)
                 {
-                    if (Places.Count == 0)
+                    using (HttpClient httpClient = new HttpClient())
                     {
                         string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
                             ? "http://10.0.2.2:5280/"
@@ -49,18 +49,19 @@ public class PlacesSearchHandler : SearchHandler
                         }
                         else
                         {
-                            Shell.Current.DisplayAlert("Error", "Not success request", "OK");
+                            await Shell.Current.DisplayAlert("Error", "Not success request", "OK");
                         }
                     }
-                    else
-                    {
-                        ItemsSource = Places.Where(p => p.Name.ToLower().Contains(newValue.ToLower())).ToList<Place2>();
-                    }
+                }
+                else
+                {
+                    ItemsSource = Places.Where(p => p.Name.ToLower().Contains(newValue.ToLower()))
+                        .ToList<Place2>();
                 }
             }
             catch (Exception ex)
             {
-                Shell.Current.DisplayAlert("Error", "Error to access API", "OK");
+                await Shell.Current.DisplayAlert("Error", "Error to access API", "OK");
             }
         }
     }

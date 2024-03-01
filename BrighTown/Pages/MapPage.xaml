@@ -15,7 +15,7 @@
         <local:MapViewModel x:Key="MapViewModel" />
     </ContentPage.Resources>
     <Shell.SearchHandler>
-        <handler:PlacesSearchHandler Places="{}" ShowsResults="True" DisplayMemberName="Name" />
+        <handler:PlacesSearchHandler ShowsResults="True" DisplayMemberName="Name" />
     </Shell.SearchHandler>
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">

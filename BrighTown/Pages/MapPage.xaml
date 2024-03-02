@@ -40,7 +40,8 @@
                       Map="{Binding Map, Source={StaticResource MapViewModel}}" VerticalOptions="Fill"
                       Grid.ColumnSpan="4"
                       Grid.Row="1"
-                      GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}" />
+                      GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}"
+                      GeoViewTapped="MainMapView_OnGeoViewTapped" />
 
         <Button Clicked="ClickOnAddPlaceButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
                 Text="Добавить место" TextColor="White" Grid.ColumnSpan="4"

@@ -1,36 +1,38 @@
-namespace BrighTown.Pages;
+using Esri.ArcGISRuntime;
+using Esri.ArcGISRuntime.Data;
+using Esri.ArcGISRuntime.Geometry;
+using Esri.ArcGISRuntime.Mapping;
+using Esri.ArcGISRuntime.Maui;
+using Esri.ArcGISRuntime.Symbology;
+using Esri.ArcGISRuntime.UI;
+using Map = Esri.ArcGISRuntime.Mapping.Map;
 
-public class PlaceSearchHandler : SearchHandler
-{
-}
+namespace BrighTown.Pages;
 
 public partial class MapPage : ContentPage
 {
+    private GeodatabaseFeatureTable _geodatabaseFeatureTable;
+    private GraphicsOverlay _graphicsOverlay;
+    private ArcGISFeature _newFeature;
+
     public MapPage()
     {
         InitializeComponent();
     }
 
-    //-----------������������� ������---------------------------------------------
-
-    private void ClickOnFavouritesButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
-    {
-        Navigation.PushModalAsync(new FavouritesPage(), true);
-    }
-
-    private void ClickOnAddPlaceButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
+    private void ClickOnAddPlaceButton(object sender, EventArgs e)
     {
         Routing.RegisterRoute("AddPlace", typeof(AddPlaceToMapPage));
         Shell.Current.GoToAsync("AddPlace");
     }
 
-    private void ClickOnMapButton(object sender, EventArgs e) // ��������� ������� �� ������ "�����"
+    private async void MainMapView_OnGeoViewTapped(object sender, GeoViewInputEventArgs e)
     {
-        Navigation.PushModalAsync(new MapPage(), true);
-    }
-
-    private void ClickOnProfileButton(object sender, EventArgs e) // ��������� ������� �� ������ "�������"
-    {
-        Navigation.PushModalAsync(new ProfilePage(), true);
+        // ArcGISFeature feature = (ArcGISFeature)_geodatabaseFeatureTable.CreateFeature();
+        // MapPoint mapPoint = (MapPoint)e.Location.NormalizeCentralMeridian();
+        // feature.Geometry = mapPoint;
+        // await _geodatabaseFeatureTable.AddFeatureAsync(feature);
+        // feature.Refresh();
+        // MainMapView.GraphicsOverlays[0].Graphics.Add(new Graphic(mapPoint));
     }
 }

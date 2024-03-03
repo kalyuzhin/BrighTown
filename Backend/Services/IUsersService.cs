@@ -7,5 +7,5 @@ public interface IUsersService
     
     Task<ServiceResponse<List<GetUserDto>>> GetAllUsers();
 
-    Task<ServiceResponse<GetUserDto>> AddFriend(GetUserDto user);
+    Task<ServiceResponse<GetUserDto>> AddFriend(UserFriendPair pair);
 }

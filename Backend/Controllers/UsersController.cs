@@ -29,13 +29,16 @@ namespace Backend.Controllers
         }
 
         [HttpPost("/add_friend")]
-        public async Task<ActionResult<ServiceResponse<GetUserDto>>> AddFriend(GetUserDto newUser)
+        public async Task<ActionResult<ServiceResponse<GetUserDto>>> AddFriend(UserFriendPair pair)
         {
-            return Ok(await _usersService.AddFriend(newUser));
+            return Ok(await _usersService.AddFriend(pair));
+        }
+        
         [HttpGet("/getallusers")]
         public async Task<ActionResult<ServiceResponse<GetUserDto>>> GetAllUsers()
         {
             return Ok(await _usersService.GetAllUsers());
+            
         }
     }
 }

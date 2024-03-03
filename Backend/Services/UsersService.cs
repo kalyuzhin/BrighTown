@@ -73,9 +73,35 @@ public class UsersService : IUsersService
         return serviceResponse;
     }
 
-    public async Task<ServiceResponse<GetUserDto>> AddFriend(GetUserDto user)
+    public async Task<ServiceResponse<GetUserDto>> AddFriend(UserFriendPair pair)
     {
         var serviceResponse = new ServiceResponse<GetUserDto>();
-
+        var db_users =  _dataContext.Users;
+        var db_friends =  _dataContext.Friends;
+        if (!db_users.ToList().Exists(u => u.Id == pair.UserId))
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "You don`t exist!";
+            return serviceResponse;
+        }
+        User? found_friend = db_users.ToList().Find(f => f.Id == pair.FriendId);
+        if (found_friend == null)
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "This user doesn`t exist";
+            return serviceResponse;
+        }
+        if (db_friends.ToList().Exists(uf => uf.UserId == pair.UserId && uf.FriendId == pair.FriendId))
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "This user is already your friend.";
+            return serviceResponse;
+        }
+        var uf_pair = new UserFriendPair();
+        uf_pair.UserId = pair.UserId; uf_pair.FriendId = pair.FriendId;
+        await db_friends.AddAsync(uf_pair);
+        await _dataContext.SaveChangesAsync();
+        serviceResponse.Data = _mapper.Map<GetUserDto>(found_friend);
+        return serviceResponse;
     }
 }

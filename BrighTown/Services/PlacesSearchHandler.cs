@@ -35,9 +35,7 @@ public class PlacesSearchHandler : SearchHandler
                 {
                     using (HttpClient httpClient = new HttpClient())
                     {
-                        string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
-                            ? "http://10.0.2.2:5280/"
-                            : "http://localhost:5280/";
+                        string baseUrl = "http://brighttown-backend.somee.com/";
                         var url = baseUrl + "api/Places/getAll";
                         var response = await httpClient.GetAsync(url);
                         var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<List<Place2>>>();
@@ -73,7 +71,8 @@ public class PlacesSearchHandler : SearchHandler
         // Let the animation complete
         await Task.Delay(1000);
 
-        await Shell.Current.GoToAsync($"{nameof(CurrentPlaceInfoPage)}");
+        Routing.RegisterRoute("TakeALookOnPlace", typeof(CurrentPlaceInfoPage));
+        await Shell.Current.GoToAsync("TakeALookOnPlace");
         // ShellNavigationState state = (App.Current.MainPage as Shell).CurrentState;
         // The following route works because route names are unique in this app.
         // await Shell.Current.GoToAsync($"{GetNavigationTarget()}?name={((Place2)item).Name}");

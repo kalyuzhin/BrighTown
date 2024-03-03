@@ -16,7 +16,7 @@ public class ClientService : IClientService
     // }
 
     private readonly IHttpClientFactory _httpClientFactory;
-    private readonly string _localHostUrl = "http://localhost:5280/api/Users/register";
+    private readonly string _localHostUrl = "localhost:5280/api/Users/register";
 
     public async Task<User> Register(RegisterModel model) //string email, string username, string password)
     {

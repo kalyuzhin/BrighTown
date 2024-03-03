@@ -87,9 +87,7 @@ public partial class RegisterPage : ContentPage
 
             using (HttpClient httpClient = new HttpClient())
             {
-                string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
-                    ? "http://10.0.2.2:5280/"
-                    : "http://localhost:5280/";
+                string baseUrl = "http://brighttown-backend.somee.com/";
                 var url = baseUrl + "register";
 
                 var requestData = new Dictionary<string, string>

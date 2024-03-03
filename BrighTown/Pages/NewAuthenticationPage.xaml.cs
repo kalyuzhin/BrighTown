@@ -1,4 +1,13 @@
 using BrighTown.ViewModels;
+using System.Text;
+using System.Threading.Tasks;
+using BrighTown.ViewModels;
+using System.Text.RegularExpressions;
+using System.Net.Http.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using BrighTown.Models;
 
 namespace BrighTown.Pages;
 
@@ -12,7 +21,10 @@ public partial class NewAuthenticationPage : ContentPage
 
     private async void Login(object sender, EventArgs e)
     {
-        if (IsBusy) return;
+        if (IsBusy)
+        {
+            return;
+        }
 
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
@@ -24,7 +36,43 @@ public partial class NewAuthenticationPage : ContentPage
         try
         {
             IsBusy = true;
-            await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+            // string firstName = FirstNameEntry.Text;
+            // string secondName = SecondNameEntry.Text;
+            string Password = PasswordEntry.Text;
+            string Login = LoginEntry.Text;
+            // var data = new
+            // {
+            //     login = Login,
+            //     password = Password,
+            // };
+
+            using (HttpClient httpClient = new HttpClient())
+            {
+                var url = "http://10.0.2.2:5280/login";
+
+                var requestData = new Dictionary<string, string>
+                {
+                    { "email", Login },
+                    { "login", Login },
+                    { "password", Password }
+                };
+
+                var content = new
+                    StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
+
+                var response = await httpClient.PostAsync(url, content);
+                var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<User>>();
+                if (responseContent.Success)
+                {
+                    App.user = responseContent.Data;
+                    await Shell.Current.DisplayAlert("Ура!", "Вход в аккаунт выполнен успешно!", "OK");
+                    await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+                }
+                else
+                {
+                    await Shell.Current.DisplayAlert("Упс!", $"{responseContent.Message}", "ОК");
+                }
+            }
             //await Shell.Current.Navigation.PushModalAsync(new MapPage());
         }
         catch (Exception ex)

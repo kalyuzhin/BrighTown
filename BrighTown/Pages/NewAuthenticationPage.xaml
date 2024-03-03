@@ -63,9 +63,10 @@
 
 
                 </Border>
-                <Button Command="{Binding LoginCommand}"
-                        Grid.Row="4" BackgroundColor="#fe7d3b" Text="Вход" TextColor="#fff" FontFamily="Rounds"
-                        CornerRadius="20" />
+                <Button
+                    Clicked="Login"
+                    Grid.Row="4" BackgroundColor="#fe7d3b" Text="Вход" TextColor="#fff" FontFamily="Rounds"
+                    CornerRadius="20" />
                 <Button Clicked="MoveToRegisterPage" Grid.Row="5"
                         BackgroundColor="#fe7d3b" Text="Регистрация с email" TextColor="#fff"
                         FontFamily="Rounds" CornerRadius="20" />

@@ -11,14 +11,14 @@ namespace Backend.Controllers
             _usersService = usersService;
         }
 
-        // [HttpPost("/user/register/{email}/{username}/{password}")]
+        // [HttpPost("/register/{email}/{username}/{password}")]
         [HttpPost("/register")]
-        public async Task<ActionResult<ServiceResponse<GetUserDto>>> Register(string username, string password, string email)
+        public async Task<ActionResult<ServiceResponse<GetUserDto>>> Register(AddUserDto newUser)
         {
-            var newUser = new AddUserDto();
-            newUser.Username = username;
-            newUser.Password = password;
-            newUser.Email = email;
+            // var newUser = new AddUserDto();
+            // newUser.Username = username;
+            // newUser.Password = password;
+            // newUser.Email = email;
             return Ok(await _usersService.Register(newUser));
         }
 
@@ -32,6 +32,10 @@ namespace Backend.Controllers
         public async Task<ActionResult<ServiceResponse<GetUserDto>>> AddFriend(GetUserDto newUser)
         {
             return Ok(await _usersService.AddFriend(newUser));
+        [HttpGet("/getallusers")]
+        public async Task<ActionResult<ServiceResponse<GetUserDto>>> GetAllUsers()
+        {
+            return Ok(await _usersService.GetAllUsers());
         }
     }
 }

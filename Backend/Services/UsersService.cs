@@ -17,12 +17,6 @@ public class UsersService : IUsersService
     {
         var serviceResponse = new ServiceResponse<GetUserDto>();
         var db = _dataContext.Users;
-        // if (db.ToList().Select(c => c.Email).Contains(newUser.Email))
-        // {
-        //     serviceResponse.Success = false;
-        //     serviceResponse.Message = "This email address is already taken!";
-        //     return serviceResponse;
-        // }
 
         if (db.ToList().Select(c => c.Username).Contains(newUser.Username))
         {
@@ -30,13 +24,13 @@ public class UsersService : IUsersService
             serviceResponse.Message = "This username is already taken!";
             return serviceResponse;
         }
-        
-        // if (db.ToList().Select(c => c.Email).Contains(newUser.Email))
-        // {
-        //     serviceResponse.Success = false;
-        //     serviceResponse.Message = "This email is already taken!";
-        //     return serviceResponse;
-        // }
+
+        if (db.ToList().Select(c => c.Email).Contains(newUser.Email))
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "This email is already taken!";
+            return serviceResponse;
+        }
 
         if (string.IsNullOrWhiteSpace(newUser.Password))
         {
@@ -51,25 +45,32 @@ public class UsersService : IUsersService
         serviceResponse.Data = _mapper.Map<GetUserDto>(user);
         return serviceResponse;
     }
-    
+
 
     public async Task<ServiceResponse<GetUserDto>> Authorize(AddUserDto request)
     {
         var serviceResponse = new ServiceResponse<GetUserDto>();
-        var db = _dataContext.Users;
+        var db = await _dataContext.Users.ToListAsync();
+        User? user = db.ToList().Find(u =>
+            u.Password == request.Password && (u.Username == request.Username || u.Email == request.Email));
 
-        User foundUser = db.ToList().FirstOrDefault(user => user.Username == request.Username && user.Password == request.Password);
-        if (foundUser == null)
+        if (user == null)
         {
             serviceResponse.Success = false;
-            serviceResponse.Message = "Incorrect username or password!";
+            serviceResponse.Message = "Wrong login or password";
             return serviceResponse;
         }
-        else
-        {
-            serviceResponse.Data = _mapper.Map<GetUserDto>(foundUser);
-            return serviceResponse;
-        }
+
+        serviceResponse.Data = _mapper.Map<GetUserDto>(user);
+        return serviceResponse;
+    }
+
+    public async Task<ServiceResponse<List<GetUserDto>>> GetAllUsers()
+    {
+        var serviceResponse = new ServiceResponse<List<GetUserDto>>();
+        var db = await _dataContext.Users.ToListAsync();
+        serviceResponse.Data = db.Select(u => _mapper.Map<GetUserDto>(u)).ToList();
+        return serviceResponse;
     }
 
     public async Task<ServiceResponse<GetUserDto>> AddFriend(GetUserDto user)

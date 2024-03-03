@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using BrighTown.Models;
 using Newtonsoft.Json;
 
 namespace BrighTown.Pages;
@@ -77,12 +78,12 @@ public partial class RegisterPage : ContentPage
             // string secondName = SecondNameEntry.Text;
             string Password = PasswordEntry.Text;
             string Email = EmailEntry.Text;
-            var data = new
-            {
-                username = Username,
-                password = Password,
-                email = Email
-            };
+            // var data = new
+            // {
+            //     username = Username,
+            //     password = Password,
+            //     email = Email
+            // };
 
             using (HttpClient httpClient = new HttpClient())
             {
@@ -99,19 +100,19 @@ public partial class RegisterPage : ContentPage
                     StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
 
                 var response = await httpClient.PostAsync(url, content);
-                if (response.IsSuccessStatusCode)
+                var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<User>>();
+                if (responseContent.Success)
                 {
-                    //Запрос успешно отправлен
+                    App.user = responseContent.Data;
+                    await Shell.Current.GoToAsync($"..");
+                    await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
+                    await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
                 }
                 else
                 {
-                    //Обработка ошибки при отправке запроса
+                    await Shell.Current.DisplayAlert("Упс!", $"{responseContent.Message}", "ОК");
                 }
             }
-
-            await Shell.Current.GoToAsync($"..");
-            await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
-            await Shell.Current.DisplayAlert("Ура!", "Вы успешно зарегистрированы!", "OK");
         }
         catch (Exception ex)
         {

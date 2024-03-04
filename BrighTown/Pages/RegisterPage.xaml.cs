@@ -54,25 +54,25 @@ public partial class RegisterPage : ContentPage
             return;
         }
 
+        if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
+        {
+            await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
+                "Повторить попытку");
+            return;
+        }
+
+        if (EmailEntry.TextColor == Colors.Red || string.IsNullOrWhiteSpace(UsernameEntry.Text) ||
+            string.IsNullOrWhiteSpace(PasswordEntry.Text) || PasswordConfirmEntry.TextColor == Colors.Red)
+        {
+            await Shell.Current.DisplayAlert("Ошибка!", "Заполните все поля корректно...", "ОК");
+            return;
+        }
+
 
         try
         {
-            
             IsBusy = true;
 
-            if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
-            {
-                await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
-                    "Повторить попытку");
-                return;
-            }
-
-            if (EmailEntry.TextColor == Colors.Red || string.IsNullOrWhiteSpace(UsernameEntry.Text) ||
-                string.IsNullOrWhiteSpace(PasswordEntry.Text) || PasswordConfirmEntry.TextColor == Colors.Red)
-            {
-                await Shell.Current.DisplayAlert("Ошибка!", "Заполните все поля корректно...", "ОК");
-                return;
-            }
 
             //Получение данных из полей ввода
             string Username = UsernameEntry.Text;

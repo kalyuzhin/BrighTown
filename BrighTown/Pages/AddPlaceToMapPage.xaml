@@ -52,7 +52,8 @@
                FontSize="Medium">
         </Label>
         <BoxView Margin="5,0" CornerRadius="5" Color="White" Grid.ColumnSpan="2" Grid.Row="2" HorizontalOptions="Fill"></BoxView>
-        <Entry TextColor="Black" x:Name="Name" Margin="5,0" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand" Grid.Row="2"
+        <Entry TextColor="Black" x:Name="Name" Margin="5,0" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand"
+               Grid.Row="2"
                Placeholder="Название" Completed="OnNameEntryCompleted" FontFamily="Rounds" HorizontalOptions="Fill">
         </Entry>
         <BoxView Margin="5,0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Fill"
@@ -63,7 +64,9 @@
             <Label TextColor="White" FontSize="Medium" x:Name="RatingValue" FontFamily="Rounds"
                    HorizontalOptions="Center">
             </Label>
-            <Slider Margin="5" Maximum="500000000" Minimum="0" ValueChanged="OnRatingValueChanged" />
+            <Slider x:Name="ratingSlider" Margin="5" Maximum="5" Minimum="1" ValueChanged="OnRatingValueChanged"
+                    MinimumTrackColor="Red"
+                    MaximumTrackColor="Gold"/>
         </VerticalStackLayout>
 
 

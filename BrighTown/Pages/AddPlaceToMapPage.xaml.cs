@@ -82,12 +82,23 @@ public partial class AddPlaceToMapPage : ContentPage
         DescriptionOfCurrentPlace = ((Entry)sender).Text;
     }
 
-    public double Rating;
+    double rating;
+    private readonly double sliderIncrement = 1;
 
     void OnRatingValueChanged(object sender, ValueChangedEventArgs args)
     {
-        RatingValue.Text = $"Оценка места: {Round(args.NewValue / 100000000)}/5";
-        Rating = Round(args.NewValue / 100000000);
+        Slider slider = (Slider)sender;
+
+        // Get the slider value relative to the minimum,
+        // needed to calculate valid values with increment.
+        double relativeValue = slider.Value - slider.Minimum;
+
+        // Check if the value is valid, based on our increment.
+        // Value is valid
+        rating = Math.Truncate(slider.Value);
+
+        // Update label text (optional)
+        RatingValue.Text = "Оценка места: " + rating.ToString();
     }
 
 
@@ -142,7 +153,10 @@ public partial class AddPlaceToMapPage : ContentPage
                 var requestData = new Dictionary<string, string>
                 {
                     { "name", Name.Text },
-                    { "description", DescriptionEntry.Text }
+                    { "rating", Math.Truncate(ratingSlider.Value).ToString() },
+                    {
+                        "description", DescriptionEntry.Text
+                    }
                 };
 
                 var content = new

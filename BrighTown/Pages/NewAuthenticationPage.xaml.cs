@@ -32,11 +32,11 @@ public partial class NewAuthenticationPage : ContentPage
 
     private async void Login(object sender, EventArgs e)
     {
+        EntryBtn.Text = "Входим...";
         if (IsBusy)
         {
             return;
         }
-
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
             await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
@@ -95,6 +95,7 @@ public partial class NewAuthenticationPage : ContentPage
         }
         finally
         {
+            EntryBtn.Text = "Вход";
             IsBusy = false;
         }
     }

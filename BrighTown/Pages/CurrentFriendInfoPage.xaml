@@ -9,7 +9,7 @@
 
             <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase"
                    Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center"
-                   Text="Информация о пользователе">
+                   Text="Пользователь">
                 <Label.Margin>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="iOS" Value="-30,0,0,0" />

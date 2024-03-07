@@ -16,14 +16,24 @@ using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Storage;
 
-
+using static BrighTown.Pages.ImageViewPage;
 namespace BrighTown.Pages;
 
 public partial class AddPlaceToMapPage : ContentPage
 {
     public ObservableCollection<Place> Place_Images { get; private set; }
 
+    void OnImageForZoomClicked(object sender, SelectionChangedEventArgs e)
+    {
 
+         if (ImagesCollection.SelectedItem != null)
+         {
+             SourceImage = (e.CurrentSelection.FirstOrDefault() as Place).ImageUrl;
+             ImagesCollection.SelectedItem = null;
+             Routing.RegisterRoute("TakeAZoom1", typeof(ImageViewPage));
+             Shell.Current.GoToAsync("TakeAZoom1");
+         }
+    }
     public AddPlaceToMapPage()
     {
         InitializeComponent();

@@ -3,7 +3,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
-             x:Class="BrighTown.Pages.CurrentFriendInfoPage">
+             x:Class="BrighTown.Pages.CurrentFriendInfoPage"
+             Shell.TabBarIsVisible="False">
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
 

@@ -27,12 +27,14 @@ public static class MauiProgram
         builder.Services.AddSingleton(Connectivity.Current);
         builder.Services.AddSingleton<NewAuthenticationViewModel>();
         builder.Services.AddSingleton<RegisterViewModel>();
+        builder.Services.AddTransient<PlaceDetailsViewModel>();
         // builder.Services.AddSingleton<AuthenticationPage>();
         builder.Services.AddSingleton<NewAuthenticationPage>();
         builder.Services.AddSingleton<MapPage>();
         builder.Services.AddSingleton<FavouritesPage>();
         builder.Services.AddSingleton<FriendsPage>();
         builder.Services.AddSingleton<ProfilePage>();
+        builder.Services.AddTransient<PlaceDetails>();
         builder.Services.AddSingleton(FolderPicker.Default);
         builder.Services.AddSingleton(FilePicker.Default);
         builder.UseArcGISRuntime(config =>

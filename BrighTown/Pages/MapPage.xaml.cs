@@ -1,3 +1,5 @@
+using System.Net.Http.Json;
+using BrighTown.Models;
 using Esri.ArcGISRuntime;
 using Esri.ArcGISRuntime.Data;
 using Esri.ArcGISRuntime.Geometry;
@@ -6,6 +8,8 @@ using Esri.ArcGISRuntime.Maui;
 using Esri.ArcGISRuntime.Symbology;
 using Esri.ArcGISRuntime.UI;
 using Map = Esri.ArcGISRuntime.Mapping.Map;
+using BrighTown.Services;
+using CommunityToolkit.Mvvm.Input;
 
 namespace BrighTown.Pages;
 
@@ -28,11 +32,8 @@ public partial class MapPage : ContentPage
 
     private async void MainMapView_OnGeoViewTapped(object sender, GeoViewInputEventArgs e)
     {
-        // ArcGISFeature feature = (ArcGISFeature)_geodatabaseFeatureTable.CreateFeature();
-        // MapPoint mapPoint = (MapPoint)e.Location.NormalizeCentralMeridian();
-        // feature.Geometry = mapPoint;
-        // await _geodatabaseFeatureTable.AddFeatureAsync(feature);
-        // feature.Refresh();
-        // MainMapView.GraphicsOverlays[0].Graphics.Add(new Graphic(mapPoint));
+        MapPoint mapPoint = (MapPoint)e.Location;
+        // MapPoint correctPoint = new MapPoint(mapPoint.X, mapPoint.Y, SpatialReferences.Wgs84);
+        // MainMapView.GraphicsOverlays[0].Graphics.Add(new Graphic(correctPoint));
     }
 }

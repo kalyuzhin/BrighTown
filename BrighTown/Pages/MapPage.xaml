@@ -5,7 +5,7 @@
              xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
              xmlns:local="clr-namespace:BrighTown"
              xmlns:handler="clr-namespace:BrighTown.Services"
-             xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
+             xmlns:viewmodels="clr-namespace:BrighTown.ViewModels"
              x:Class="BrighTown.Pages.MapPage"
              BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.NavBarIsVisible="True">
@@ -22,6 +22,8 @@
     <!-- </Shell.TitleView> -->
     <Shell.SearchHandler>
         <handler:PlacesSearchHandler SearchBoxVisibility="Expanded"
+                                     NavigationRoute="PlaceDetails"
+                                     x:Name="PlacesSearch"
                                      TextColor="{AppThemeBinding Light=#000 , Dark=#fff}" ShowsResults="True"
                                      DisplayMemberName="Name" Placeholder="Поиск мест..." FontFamily="RoundsBlack"
                                      PlaceholderColor="{AppThemeBinding Light=#000, Dark=#fff}"

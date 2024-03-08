@@ -4,7 +4,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:BrighTown.Models"
              BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
-             x:Class="BrighTown.Pages.CurrentPlaceInfoPage">
+             x:Class="BrighTown.Pages.PlaceDetails"
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
+             x:DataType="viewmodel:PlaceDetailsViewModel">
 
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
@@ -51,7 +53,7 @@
                  Grid.Row="1" CornerRadius="5">
         </BoxView>
         <Label x:Name="NameTag" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack" Grid.Row="1"
-               FontSize="Medium">
+               FontSize="Medium" Text="{Binding Place.Name}">
         </Label>
         <BoxView Margin="5,0" Grid.Row="2" HorizontalOptions="Fill"
                  Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" CornerRadius="5">
@@ -59,7 +61,7 @@
         <VerticalStackLayout Grid.Row="2" BackgroundColor="Transparent" HorizontalOptions="Fill">
 
             <Label TextColor="White" FontSize="Medium" x:Name="RatingValue" FontFamily="Rounds"
-                   HorizontalOptions="Center">
+                   HorizontalOptions="Center" Text="{Binding Place.Rating}">
             </Label>
 
         </VerticalStackLayout>
@@ -69,24 +71,27 @@
                  Grid.Row="3" CornerRadius="5">
         </BoxView>
 
-        <Label Text="описание места" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack" Grid.Row="3"
+        <Label Text="Описание места:" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack"
+               Grid.Row="3"
                FontSize="Medium">
         </Label>
         <BoxView Margin="5,0,5,50" Color="White" Grid.Row="4" CornerRadius="5"></BoxView>
         <ScrollView Grid.Row="4" Margin="0,0,0,30" BackgroundColor="Transparent">
             <StackLayout>
 
-                <Label Margin="20,5,10,5" TextColor="Black" x:Name="Descriptor" FontFamily="Rounds"></Label>
+                <Label Text="{Binding Place.Description}" Margin="20,5,10,5" TextColor="Black" x:Name="Descriptor"
+                       FontFamily="Rounds">
+                </Label>
 
             </StackLayout>
 
         </ScrollView>
 
 
-        <Button Clicked="ClickOnCloseButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
-                Text="Закрыть" TextColor="White" Grid.ColumnSpan="2"
-                Grid.Row="5" HorizontalOptions="Fill" VerticalOptions="End" Margin="3">
-        </Button>
+        <!-- <Button Clicked="ClickOnCloseButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }" -->
+        <!--         Text="Закрыть" TextColor="White" Grid.ColumnSpan="2" -->
+        <!--         Grid.Row="5" HorizontalOptions="Fill" VerticalOptions="End" Margin="3"> -->
+        <!-- </Button> -->
 
     </Grid>
 

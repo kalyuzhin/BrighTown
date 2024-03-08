@@ -27,7 +27,7 @@ public partial class AddPlaceToMapPage : ContentPage
     public AddPlaceToMapPage()
     {
         InitializeComponent();
-        RatingValue.Text = $"Оценка места: 5/5";
+        RatingValue.Text = $"Оценка места: -/5";
         Place_Images = new ObservableCollection<Place>();
 
         Place_Images.Add(new Place()
@@ -89,15 +89,24 @@ public partial class AddPlaceToMapPage : ContentPage
     {
         Slider slider = (Slider)sender;
 
-        // Get the slider value relative to the minimum,
-        // needed to calculate valid values with increment.
+
         double relativeValue = slider.Value - slider.Minimum;
 
-        // Check if the value is valid, based on our increment.
-        // Value is valid
         rating = Math.Truncate(slider.Value);
 
-        // Update label text (optional)
+        if (rating >= 4)
+        {
+            slider.ThumbColor = Colors.Green;
+        }
+        else if (rating == 3)
+        {
+            slider.ThumbColor = Colors.Gold;
+        }
+        else
+        {
+            slider.ThumbColor = Colors.Red;
+        }
+
         RatingValue.Text = "Оценка места: " + rating.ToString();
     }
 
@@ -133,15 +142,6 @@ public partial class AddPlaceToMapPage : ContentPage
         try
         {
             IsBusy = true;
-
-            // Place addedPlace = new Place()
-            // {
-            //     Name = NameOfCurrentPlace,
-            //     Description = DescriptionOfCurrentPlace,
-            //     ImagesList = CurrentPlaceImages,
-            //     Rating = Rating,
-            //     ImageUrl = "",
-            // };
 
             using (HttpClient httpClient = new HttpClient())
             {

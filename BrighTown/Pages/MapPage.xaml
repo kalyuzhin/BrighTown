@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:BrighTown"
              xmlns:handler="clr-namespace:BrighTown.Services"
              xmlns:viewmodels="clr-namespace:BrighTown.ViewModels"
+             xmlns:model="clr-namespace:BrighTown.Models"
              x:Class="BrighTown.Pages.MapPage"
              BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.NavBarIsVisible="True">
@@ -15,19 +16,55 @@
         <local:MapViewModel x:Key="MapViewModel" />
     </ContentPage.Resources>
     <!-- <Shell.TitleView> -->
-    <!--     <StackLayout HorizontalOptions="Fill" HeightRequest="50"> -->
-    <!--         <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase" -->
-    <!--                Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Карта" /> -->
-    <!--     </StackLayout> -->
+    <!-- <StackLayout HorizontalOptions="Fill" HeightRequest="50"> -->
+    <!--     <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase" -->
+    <!--            Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Карта" /> -->
+    <!-- </StackLayout> -->
     <!-- </Shell.TitleView> -->
     <Shell.SearchHandler>
         <handler:PlacesSearchHandler SearchBoxVisibility="Expanded"
                                      NavigationRoute="PlaceDetails"
                                      x:Name="PlacesSearch"
+                                     QueryIcon="magnifier.png"
                                      TextColor="{AppThemeBinding Light=#000 , Dark=#fff}" ShowsResults="True"
                                      DisplayMemberName="Name" Placeholder="Поиск мест..." FontFamily="RoundsBlack"
                                      PlaceholderColor="{AppThemeBinding Light=#000, Dark=#fff}"
-                                     BackgroundColor="{AppThemeBinding Light=#fff , Dark=Gray }" />
+                                     BackgroundColor="{AppThemeBinding Light=#fff , Dark=Gray }">
+        
+        <handler:PlacesSearchHandler.ItemTemplate>
+            <DataTemplate x:DataType="model:Place">
+                <Grid Padding="10"
+                      ColumnSpacing="5"
+                      BackgroundColor="{AppThemeBinding Light=#fff, Dark=Grey}"
+                      ColumnDefinitions="0.15*,0.85*">
+                    
+                    
+                    <BoxView HeightRequest="45"
+                             WidthRequest="45" CornerRadius="10" Color="{AppThemeBinding Light=#ffb882 , Dark=#685f5b  }" ></BoxView>
+                    <BoxView HeightRequest="40"
+                             WidthRequest="45" CornerRadius="10" Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" ></BoxView>
+                    
+                    <Image Source="{Binding ImageUrl}"
+                           HeightRequest="40"
+                           WidthRequest="40" />
+                    
+                    <VerticalStackLayout  Grid.Column="1">
+                        <Label
+                            Text="{Binding Name}"
+                            FontAttributes="Bold"
+                            TextColor="{AppThemeBinding Dark= #fff, Light=#000}"
+                            VerticalOptions="Center" 
+                            FontFamily="Rounds"/>
+                        
+                        <Image HorizontalOptions="Start" HeightRequest="30" Source="stars5.png"/>
+                    </VerticalStackLayout>
+                    
+                   
+                </Grid>
+            </DataTemplate>
+        </handler:PlacesSearchHandler.ItemTemplate>
+        </handler:PlacesSearchHandler>
+        
     </Shell.SearchHandler>
 
 

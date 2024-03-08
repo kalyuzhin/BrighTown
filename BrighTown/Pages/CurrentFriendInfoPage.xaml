@@ -3,13 +3,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
-             x:Class="BrighTown.Pages.CurrentFriendInfoPage">
+             x:Class="BrighTown.Pages.CurrentFriendInfoPage"
+             Shell.TabBarIsVisible="False">
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
 
             <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase"
                    Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center"
-                   Text="Информация о пользователе">
+                   Text="Пользователь">
                 <Label.Margin>
                     <OnPlatform x:TypeArguments="Thickness">
                         <On Platform="iOS" Value="-30,0,0,0" />

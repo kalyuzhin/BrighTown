@@ -8,7 +8,7 @@
              xmlns:mauicontrols="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
              x:DataType="viewmodel:RegisterViewModel"
              Shell.NavBarIsVisible="True"
-             BackgroundColor="#2c3e54"
+             BackgroundColor="{AppThemeBinding Light=#2c3e54 , Dark=#212324   }"
              Shell.PresentationMode="NotAnimated">
     <Shell.TitleView>
         <Label FontFamily="Rounds" FontSize="Large" TextColor="#fff" HorizontalTextAlignment="Center"
@@ -30,7 +30,7 @@
         RowSpacing="20"
         VerticalOptions="Center"
         HorizontalOptions="FillAndExpand"
-        BackgroundColor="#2c3e54">
+        BackgroundColor="{AppThemeBinding Light=#2c3e54 , Dark=#212324   }">
         <!-- <Image Source="lamp.png" VerticalOptions="StartAndExpand"  Margin="5"></Image> -->
         <Label Text="Создание Аккаунта" FontFamily="RoundsBlack" FontSize="Medium" VerticalOptions="End"
                HorizontalOptions="Center" TextColor="#fff" Grid.Row="0">
@@ -90,10 +90,10 @@
 
 
         </Border>
-        <Button Grid.Row="5" Text="Зарегистрироваться" BackgroundColor="#fe7d3b"
+        <Button x:Name="RegBtn" Grid.Row="5" Text="Зарегистрироваться" BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}"
                 Clicked="PressRegisterButton"
                 FontFamily="Rounds" TextColor="#fff"
-                CornerRadius="20" />
+                CornerRadius="10" />
         <StackLayout Grid.Row="6" HorizontalOptions="Center" VerticalOptions="End">
             <Image Source="city_sky.png"
                    VerticalOptions="End"

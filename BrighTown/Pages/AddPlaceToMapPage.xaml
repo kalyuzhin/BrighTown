@@ -4,7 +4,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:BrighTown.Models"
              x:Class="BrighTown.Pages.AddPlaceToMapPage"
-             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }">
+             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
+             Shell.TabBarIsVisible="False">
 
 
     <Shell.TitleView>
@@ -20,7 +21,7 @@
           RowSpacing="5"
           RowDefinitions="Auto,Auto,Auto,Auto,Auto,*,*">
 
-        <CollectionView x:Name="Plac"
+        <CollectionView x:Name="ImagesCollection" SelectionMode="Single" SelectionChanged="OnImageForZoomClicked"
                         ItemsSource="{Binding Place_Images}">
             <!-- <CollectionView.ItemsSource> -->
             <!--     <x:Array Type="{x:Type model:Place}"> -->

@@ -14,8 +14,14 @@ public partial class ImageViewPage : ContentPage
         InitializeComponent();
         CurrentImage.Source = SourceImage;
     }
-    
-    
+
+    async void CloseButtonClicked(object sender, EventArgs e)
+    {
+     
+        await Shell.Current.GoToAsync($"..");
+        
+        
+    }
     
     
     

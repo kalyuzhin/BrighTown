@@ -39,6 +39,7 @@ public partial class NewAuthenticationPage : ContentPage
         {
             return;
         }
+
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
             await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
@@ -61,7 +62,9 @@ public partial class NewAuthenticationPage : ContentPage
 
             using (HttpClient httpClient = new HttpClient())
             {
-                string baseUrl = "http://brighttown-backend.somee.com/";
+                string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                    ? "http://10.0.2.2:5280/"
+                    : "http://localhost:5280/";
                 var url = baseUrl + "login";
 
                 var requestData = new Dictionary<string, string>
@@ -79,17 +82,16 @@ public partial class NewAuthenticationPage : ContentPage
                 if (responseContent.Success)
                 {
                     App.user = responseContent.Data;
-                   
-                    
+
+
                     CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
                     string text = "Вход в аккаунт выполнен успешно!";
                     ToastDuration duration = ToastDuration.Short;
                     double fontSize = 14;
                     var toast = Toast.Make(text, duration, fontSize);
                     await toast.Show(cancellationTokenSource.Token);
-                    
-                    
-                    
+
+
                     await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
                     LoginEntry.Text = "";
                     PasswordEntry.Text = "";

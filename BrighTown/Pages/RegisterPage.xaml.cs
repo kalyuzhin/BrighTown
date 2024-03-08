@@ -59,7 +59,6 @@ public partial class RegisterPage : ContentPage
         {
             await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
                 "Повторить попытку");
-            IsBusy = false;
             RegBtn.Text = "Зарегистрироваться";
             return;
         }
@@ -68,7 +67,6 @@ public partial class RegisterPage : ContentPage
             string.IsNullOrWhiteSpace(PasswordEntry.Text) || PasswordConfirmEntry.TextColor == Colors.Red)
         {
             await Shell.Current.DisplayAlert("Ошибка!", "Заполните все поля корректно...", "ОК");
-            IsBusy = false;
             RegBtn.Text = "Зарегистрироваться";
             return;
         }
@@ -86,7 +84,9 @@ public partial class RegisterPage : ContentPage
 
             using (HttpClient httpClient = new HttpClient())
             {
-                string baseUrl = "http://brighttown-backend.somee.com/";
+                string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                    ? "http://10.0.2.2:5280/"
+                    : "http://localhost:5280/";
                 var url = baseUrl + "register";
 
                 var requestData = new Dictionary<string, string>

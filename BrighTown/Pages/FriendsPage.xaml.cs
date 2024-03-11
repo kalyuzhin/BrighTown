@@ -8,41 +8,25 @@ namespace BrighTown.Pages;
 
 public partial class FriendsPage : ContentPage
 {
-    
     public FriendsPage()
     {
-
         InitializeComponent();
-        
-        
     }
 
     public static string CurrentFriendName;
     public static string CurrentFriendStatus;
     public static string CurrentFriendImageUrl;
+
     void OnFriendsCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-
         if (FriendsCollections.SelectedItem != null)
         {
-            CurrentFriendName = (e.CurrentSelection.FirstOrDefault() as Friend)?.Name;
-            CurrentFriendStatus = (e.CurrentSelection.FirstOrDefault() as Friend)?.Status;
-            CurrentFriendImageUrl = (e.CurrentSelection.FirstOrDefault() as Friend)?.ImageUrl;
+            var navigation = new Dictionary<string, object>()
+            {
+                { "CurrentFriendInfoPage", FriendsCollections.SelectedItem }
+            };
             FriendsCollections.SelectedItem = null;
-            Routing.RegisterRoute("TakeALookOnFriend", typeof(CurrentFriendInfoPage));
-            Shell.Current.GoToAsync("TakeALookOnFriend");
+            Shell.Current.GoToAsync("CurrentFriendInfoPage", navigation);
         }
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

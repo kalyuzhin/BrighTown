@@ -28,6 +28,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<NewAuthenticationViewModel>();
         builder.Services.AddSingleton<RegisterViewModel>();
         builder.Services.AddTransient<PlaceDetailsViewModel>();
+        builder.Services.AddTransient<FriendDetailsViewModel>();
         // builder.Services.AddSingleton<AuthenticationPage>();
         builder.Services.AddSingleton<NewAuthenticationPage>();
         builder.Services.AddSingleton<MapPage>();
@@ -35,6 +36,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<FriendsPage>();
         builder.Services.AddSingleton<ProfilePage>();
         builder.Services.AddTransient<PlaceDetails>();
+        builder.Services.AddTransient<CurrentFriendInfoPage>();
         builder.Services.AddSingleton(FolderPicker.Default);
         builder.Services.AddSingleton(FilePicker.Default);
         builder.UseArcGISRuntime(config =>

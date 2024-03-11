@@ -23,7 +23,7 @@
           RowSpacing="5">
 
         <BoxView  CornerRadius="5" VerticalOptions="Fill" HorizontalOptions="Fill" Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" Margin="5,5,5,0" Grid.ColumnSpan="4"></BoxView>
-        <Label Text="{Binding FirstName}" FontFamily="Rounds" FontSize="Large" TextColor="White"
+        <Label Text="{Binding UserName}" FontFamily="Rounds" FontSize="Large" TextColor="White"
                HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.ColumnSpan="3">
         </Label>
         <Image Source="demo.png" HeightRequest="100" WidthRequest="100" VerticalOptions="Fill"

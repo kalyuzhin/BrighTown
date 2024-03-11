@@ -2,9 +2,9 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
+             BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324}"
              x:Class="BrighTown.Pages.CurrentFriendInfoPage"
-             Shell.TabBarIsVisible="False">
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModels">
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
 
@@ -28,38 +28,35 @@
         ColumnSpacing="5">
 
         <Image x:Name="FriendIcon" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Fill" VerticalOptions="Fill"
-               Margin="5,0,5,5">
+               Margin="5,0,5,5" Source="lamp.png">
         </Image>
 
         <BoxView Grid.ColumnSpan="2" Margin="5,0" HorizontalOptions="Fill"
                  Color="{AppThemeBinding Light=#fe7d3b , Dark=#8b8b8b}" Grid.Row="1" CornerRadius="5">
         </BoxView>
         <Label x:Name="FriendName" FontFamily="Rounds" HorizontalOptions="Center" Grid.Row="1" Grid.ColumnSpan="2"
-               FontSize="Large" TextColor="White">
+               FontSize="Large" TextColor="White" x:DataType="viewmodel:FriendDetailsViewModel" Text="{Binding Friend.UserName}">
         </Label>
 
         <BoxView Grid.ColumnSpan="2" Margin="5,0" HorizontalOptions="Fill"
                  Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" Grid.Row="2" CornerRadius="5">
         </BoxView>
         <HorizontalStackLayout Grid.ColumnSpan="2" Grid.Row="2" HorizontalOptions="Center">
-            <Label Margin="5" x:Name="FriendStatus" FontFamily="Rounds" TextColor="White" FontSize="Medium"></Label>
-            <BoxView Margin="5" x:Name="StatusColor" HeightRequest="15" WidthRequest="15" CornerRadius="30"></BoxView>
-
+            <!-- <Label Margin="5" x:Name="FriendStatus" FontFamily="Rounds" TextColor="White" FontSize="Medium"></Label> -->
+            <!-- <BoxView Margin="5" x:Name="StatusColor" HeightRequest="15" WidthRequest="15" CornerRadius="30"></BoxView> -->
         </HorizontalStackLayout>
 
         <Button x:Name="AddFriendButton" Margin="5,0" Grid.Row="3" FontFamily="Rounds"
-                TextColor="{AppThemeBinding Light=#ffffff , Dark=#000000  }">
-        </Button>
-        <Button x:Name="DeleteFriendButton" Margin="5,0" Grid.Row="3" Grid.Column="1" TextColor="White"
-                BackgroundColor="Red" Text="Удалить из друзей" FontFamily="Rounds">
-        </Button>
+                TextColor="{AppThemeBinding Light=#ffffff , Dark=#000000}" Text="Подписаться"
+                Clicked="AddFriendButton_OnClicked" />
+        <!-- <Button x:Name="DeleteFriendButton" Margin="5,0" Grid.Row="3" Grid.Column="1" TextColor="White" -->
+        <!--         BackgroundColor="Red" Text="Удалить из друзей" FontFamily="Rounds"> -->
+        <!-- </Button> -->
 
-        <Button Clicked="ClickOnCloseButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
-                Text="Закрыть" TextColor="White" Grid.ColumnSpan="2"
-                Grid.Row="4" HorizontalOptions="Fill" VerticalOptions="End" Margin="3">
-        </Button>
-
-
+        <!-- <Button Clicked="ClickOnCloseButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }" -->
+        <!--         Text="Закрыть" TextColor="White" Grid.ColumnSpan="2" -->
+        <!--         Grid.Row="4" HorizontalOptions="Fill" VerticalOptions="End" Margin="3"> -->
+        <!-- </Button> -->
     </Grid>
 
 

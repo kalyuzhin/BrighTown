@@ -33,12 +33,17 @@ namespace Backend.Controllers
         {
             return Ok(await _usersService.AddFriend(pair));
         }
-        
+
         [HttpGet("/getallusers")]
         public async Task<ActionResult<ServiceResponse<GetUserDto>>> GetAllUsers()
         {
             return Ok(await _usersService.GetAllUsers());
-            
+        }
+
+        [HttpPost("/getfriends")]
+        public async Task<ActionResult<ServiceResponse<List<GetUserDto>>>> GetFriends(int id)
+        {
+            return Ok(await _usersService.GetFriends(id));
         }
     }
 }

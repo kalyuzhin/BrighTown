@@ -109,4 +109,24 @@ public class UsersService : IUsersService
         serviceResponse.Message = "Success";
         return serviceResponse;
     }
+
+    public async Task<ServiceResponse<List<GetUserDto>>> GetFriends(int id)
+    {
+        var serviceResponse = new ServiceResponse<List<GetUserDto>>();
+        serviceResponse.Data = new List<GetUserDto>();
+        var db_users = _dataContext.Users.Select(u => _mapper.Map<GetUserDto>(u)).ToList();
+        var db_friends = _dataContext.Friends.Where(p => p.UserId == id).ToList();
+        foreach (var friend in db_friends)
+        {
+            var result = db_users.Where(u => u.Id == friend.FriendId).ToList().Count == 1
+                ? db_users.Where(u => u.Id == friend.FriendId).ToList()[0]
+                : null;
+            if (result != null)
+            {
+                serviceResponse.Data.Add(result);
+            }
+        }
+
+        return serviceResponse;
+    }
 }

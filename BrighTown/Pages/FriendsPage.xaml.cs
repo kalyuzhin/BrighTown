@@ -13,10 +13,6 @@ public partial class FriendsPage : ContentPage
         InitializeComponent();
     }
 
-    public static string CurrentFriendName;
-    public static string CurrentFriendStatus;
-    public static string CurrentFriendImageUrl;
-
     void OnFriendsCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         if (FriendsCollections.SelectedItem != null)

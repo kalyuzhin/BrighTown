@@ -21,7 +21,8 @@ public partial class NewAuthenticationViewModel : BaseViewModel
     private async Task DisplayRegisterPopUp()
     {
         if (IsBusy) return;
-
+        
+        
         if (_connectivity.NetworkAccess != NetworkAccess.Internet)
         {
             await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",

@@ -13,10 +13,11 @@ public partial class ProfilePage : ContentPage
         Routing.RegisterRoute("OpenSettings", typeof(SettingsPage));
         Shell.Current.GoToAsync("OpenSettings");
     }
-   
+
 
     private void ClickOnExitButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
     {
+        App.user = null;
         Shell.Current.GoToAsync($"//{nameof(NewAuthenticationPage)}");
     }
 }

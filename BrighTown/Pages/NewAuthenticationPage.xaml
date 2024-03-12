@@ -63,10 +63,10 @@
 
 
                 </Border>
-                <Button
+                <Button x:Name="EntryBtn"
                     Clicked="Login"
                     Grid.Row="4" Text="Вход" TextColor="#fff" FontFamily="Rounds" BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}"
-                    CornerRadius="20"/>
+                    CornerRadius="10"/>
                 <Button Clicked="MoveToRegisterPage" Grid.Row="5"
                         BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}" Text="Регистрация с email" TextColor="#fff"
                         FontFamily="Rounds" CornerRadius="10" />

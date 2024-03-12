@@ -17,11 +17,30 @@ namespace BrighTown.Services;
 public class PlacesSearchHandler : SearchHandler
 {
     public List<Place2> Places { get; set; }
-    public Type SelectedItemNavigationTarget { get; set; }
+    public string NavigationRoute { get; set; }
+
+    protected override void OnFocused()
+    {
+        base.OnFocused();
+
+        UpdateField();
+    }
+
 
     protected override async void OnQueryChanged(string oldValue, string newValue)
     {
         base.OnQueryChanged(oldValue, newValue);
+        
+        using (HttpClient httpClient = new HttpClient())
+        {
+            string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                ? "http://10.0.2.2:5280/"
+                : "http://localhost:5280/";
+            var url = baseUrl + "api/Places/getAll";
+            var response = await httpClient.GetAsync(url);
+            var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<List<Place2>>>();
+            Places = responseContent.Data;
+        }
 
         if (string.IsNullOrWhiteSpace(newValue))
         {
@@ -29,40 +48,29 @@ public class PlacesSearchHandler : SearchHandler
         }
         else
         {
-            try
+            ItemsSource = Places.Where(p => p.Name.ToLower().Contains(newValue.ToLower()))
+                .ToList<Place2>();
+        }
+    }
+
+    public async void UpdateField()
+    {
+        try
+        {
+            using (HttpClient httpClient = new HttpClient())
             {
-                if (Places == null || Places.Count == 0)
-                {
-                    using (HttpClient httpClient = new HttpClient())
-                    {
-                        string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
-                            ? "http://10.0.2.2:5280/"
-                            : "http://localhost:5280/";
-                        var url = baseUrl + "api/Places/getAll";
-                        var response = await httpClient.GetAsync(url);
-                        var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<List<Place2>>>();
-                        Places = responseContent.Data;
-                        if (responseContent.Success)
-                        {
-                            ItemsSource = Places.Where(p => p.Name.ToLower().Contains(newValue.ToLower()))
-                                .ToList<Place2>();
-                        }
-                        else
-                        {
-                            await Shell.Current.DisplayAlert("Error", "Not success request", "OK");
-                        }
-                    }
-                }
-                else
-                {
-                    ItemsSource = Places.Where(p => p.Name.ToLower().Contains(newValue.ToLower()))
-                        .ToList<Place2>();
-                }
+                string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                    ? "http://10.0.2.2:5280/"
+                    : "http://localhost:5280/";
+                var url = baseUrl + "api/Places/getAll";
+                var response = await httpClient.GetAsync(url);
+                var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<List<Place2>>>();
+                Places = responseContent.Data;
             }
-            catch (Exception ex)
-            {
-                await Shell.Current.DisplayAlert("Error", "Error to access API", "OK");
-            }
+        }
+        catch (Exception ex)
+        {
+            await Shell.Current.DisplayAlert("Error", "Something went wrong...", "OK");
         }
     }
 
@@ -70,12 +78,12 @@ public class PlacesSearchHandler : SearchHandler
     {
         base.OnItemSelected(item);
 
-        // Let the animation complete
-        await Task.Delay(1000);
+        // await Task.Delay(1000);
 
-        await Shell.Current.GoToAsync($"{nameof(CurrentPlaceInfoPage)}");
-        // ShellNavigationState state = (App.Current.MainPage as Shell).CurrentState;
-        // The following route works because route names are unique in this app.
-        // await Shell.Current.GoToAsync($"{GetNavigationTarget()}?name={((Place2)item).Name}");
+        var navigation = new Dictionary<string, object>()
+        {
+            { "PlaceDetails", item }
+        };
+        await Shell.Current.GoToAsync(NavigationRoute, navigation);
     }
 }

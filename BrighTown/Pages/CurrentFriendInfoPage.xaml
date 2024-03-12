@@ -8,6 +8,13 @@
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
 
+        <StackLayout.TranslationX>
+            <OnPlatform x:TypeArguments="x:Double">
+                <On Platform="iOS" Value="2" />
+                <On Platform="Android" Value="2" />
+            </OnPlatform>
+        </StackLayout.TranslationX>
+
             <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase"
                    Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center"
                    Text="Пользователь">

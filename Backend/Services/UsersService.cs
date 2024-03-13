@@ -1,3 +1,4 @@
+using Backend.Dtos.Pairs;
 using Backend.Models;
 
 namespace Backend.Services;
@@ -73,11 +74,19 @@ public class UsersService : IUsersService
         return serviceResponse;
     }
 
-    public async Task<ServiceResponse<GetUserDto>> AddFriend(UserFriendPair pair)
+    public async Task<ServiceResponse<GetUserDto>> AddFriend(AddFriendDto pair)
     {
         var serviceResponse = new ServiceResponse<GetUserDto>();
         var db_users = _dataContext.Users;
         var db_friends = _dataContext.Friends;
+
+        if (pair.FriendId == pair.UserId)
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "You cannot add yourself";
+            return serviceResponse;
+        }
+
         if (!db_users.ToList().Exists(u => u.Id == pair.UserId))
         {
             serviceResponse.Success = false;

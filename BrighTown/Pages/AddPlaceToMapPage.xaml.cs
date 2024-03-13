@@ -15,8 +15,8 @@ using BrighTown.Models;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Storage;
-
 using static BrighTown.Pages.ImageViewPage;
+
 namespace BrighTown.Pages;
 
 public partial class AddPlaceToMapPage : ContentPage
@@ -25,15 +25,15 @@ public partial class AddPlaceToMapPage : ContentPage
 
     void OnImageForZoomClicked(object sender, SelectionChangedEventArgs e)
     {
-
-         if (ImagesCollection.SelectedItem != null)
-         {
-             SourceImage = (e.CurrentSelection.FirstOrDefault() as Place).ImageUrl;
-             ImagesCollection.SelectedItem = null;
-             Routing.RegisterRoute("TakeAZoom1", typeof(ImageViewPage));
-             Shell.Current.GoToAsync("TakeAZoom1");
-         }
+        if (ImagesCollection.SelectedItem != null)
+        {
+            SourceImage = (e.CurrentSelection.FirstOrDefault() as Place).ImageUrl;
+            ImagesCollection.SelectedItem = null;
+            Routing.RegisterRoute("TakeAZoom1", typeof(ImageViewPage));
+            Shell.Current.GoToAsync("TakeAZoom1");
+        }
     }
+
     public AddPlaceToMapPage()
     {
         InitializeComponent();
@@ -155,7 +155,9 @@ public partial class AddPlaceToMapPage : ContentPage
 
             using (HttpClient httpClient = new HttpClient())
             {
-                string baseUrl = "http://brighttown-backend.somee.com/";
+                string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                    ? "http://10.0.2.2:5280/"
+                    : "http://localhost:5280/";
                 var url = baseUrl + "api/Places/add";
 
                 var requestData = new Dictionary<string, string>

@@ -1,3 +1,5 @@
+using Backend.Dtos.Pairs;
+
 namespace Backend.Services;
 
 public class PlacesService : IPlacesService
@@ -53,6 +55,63 @@ public class PlacesService : IPlacesService
         await db.AddAsync(place);
         await _dataContext.SaveChangesAsync();
         serviceResponse.Data = await db.Select(c => _mapper.Map<GetPlaceRequestDto>(c)).ToListAsync();
+        return serviceResponse;
+    }
+
+    public async Task<ServiceResponse<GetPlaceRequestDto>> AddPlaceToFavourites(AddFavouritePlaceDto pair)
+    {
+        var serviceResponse = new ServiceResponse<GetPlaceRequestDto>();
+        User? user = _dataContext.Users.FirstOrDefault(u => u.Id == pair.UserId);
+        if (user == null)
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "User doesn't exist";
+            return serviceResponse;
+        }
+
+        Place? place = _dataContext.Places.FirstOrDefault(p => p.Id == pair.PlaceId);
+        if (place == null)
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "Place doesn't exist";
+            return serviceResponse;
+        }
+
+        var match = _dataContext.FavPlaces.FirstOrDefault(p => (p.UserId == user.Id) && (p.PlaceId == place.Id));
+        if (match != null)
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "You already add this place to favourites";
+            return serviceResponse;
+        }
+
+        var db = _dataContext.FavPlaces;
+        await db.AddAsync(_mapper.Map<PlacesFavouritesPair>(pair));
+        await _dataContext.SaveChangesAsync();
+        serviceResponse.Data = _mapper.Map<GetPlaceRequestDto>(place);
+        return serviceResponse;
+    }
+
+    public async Task<ServiceResponse<List<GetPlaceRequestDto>>> GetFavourites(int userId)
+    {
+        var serviceResponse = new ServiceResponse<List<GetPlaceRequestDto>>();
+        var db_user = _dataContext.Users;
+        if (db_user.FirstOrDefault(u => u.Id == userId) == null)
+        {
+            serviceResponse.Success = false;
+            serviceResponse.Message = "User doesn't exist";
+            return serviceResponse;
+        }
+
+        var places = await _dataContext.Places.ToListAsync();
+        var ids = await _dataContext.FavPlaces.Where(p => p.UserId == userId).ToListAsync();
+        serviceResponse.Data = new List<GetPlaceRequestDto>();
+        foreach (var id in ids)
+        {
+            var place = places.FirstOrDefault(p => p.Id == id.PlaceId);
+            serviceResponse.Data.Add(_mapper.Map<GetPlaceRequestDto>(place));
+        }
+
         return serviceResponse;
     }
 }

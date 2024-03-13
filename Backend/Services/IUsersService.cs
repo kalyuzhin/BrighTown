@@ -1,3 +1,5 @@
+using Backend.Dtos.Pairs;
+
 namespace Backend.Services;
 
 public interface IUsersService
@@ -7,7 +9,7 @@ public interface IUsersService
 
     Task<ServiceResponse<List<GetUserDto>>> GetAllUsers();
 
-    Task<ServiceResponse<GetUserDto>> AddFriend(UserFriendPair pair);
+    Task<ServiceResponse<GetUserDto>> AddFriend(AddFriendDto pair);
 
     Task<ServiceResponse<List<GetUserDto>>> GetFriends(int id);
 }

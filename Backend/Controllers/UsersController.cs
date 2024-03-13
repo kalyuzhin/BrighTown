@@ -1,3 +1,5 @@
+using Backend.Dtos.Pairs;
+
 namespace Backend.Controllers
 {
     [Route("api/[controller]")]
@@ -29,7 +31,7 @@ namespace Backend.Controllers
         }
 
         [HttpPost("/add_friend")]
-        public async Task<ActionResult<ServiceResponse<GetUserDto>>> AddFriend(UserFriendPair pair)
+        public async Task<ActionResult<ServiceResponse<GetUserDto>>> AddFriend(AddFriendDto pair)
         {
             return Ok(await _usersService.AddFriend(pair));
         }

@@ -34,59 +34,59 @@
           RowDefinitions="*"
           RowSpacing="10">
 
+        <!-- <RefreshView IsRefreshing="True" Refreshing="RefreshView_OnRefreshing"> -->
+            <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4" SelectionMode="Single"
+                            SelectionChanged="OnFriendsCollectionViewSelectionChanged"
+                            VerticalOptions="FillAndExpand"
+                            x:Name="FriendsCollections">
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type model:User}">
+                        <model:User Id="3" UserName="Steve" />
+                        <model:User Id="642" UserName="Steve" />
+                        <model:User Id="2228" UserName="Тестовый челик" />
+                        <model:User Id="1337" UserName="Тестовый челик" />
+                        <model:User Id="2" UserName="Тестовый челик" />
+                        <model:User UserName="Тестовый челик" />
+                        <model:User UserName="Тестовый челик" />
+                        <model:User UserName="Тестовый челик" />
+                        <model:User UserName="Тестовый челик" />
+                        <model:User UserName="Тестовый челик" />
+                        <model:User UserName="Steve" />
+                        <model:User UserName="Алекс" />
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:User">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="0" RowDefinitions="*,Auto"
+                              Margin="5">
+                            <BoxView Color="{AppThemeBinding Light=#b2b2b2 , Dark=#98918e  }"
+                                     Grid.ColumnSpan="1"
+                                     Grid.RowSpan="2" HorizontalOptions="Fill" VerticalOptions="Fill"
+                                     CornerRadius="5">
+                            </BoxView>
+                            <BoxView Color="{AppThemeBinding Light=#ffb882 , Dark=#685f5b  }" CornerRadius="5"
+                                     HeightRequest="100" WidthRequest="100"
+                                     HorizontalOptions="Start" VerticalOptions="Start" />
+                            <BoxView Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" CornerRadius="5"
+                                     HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
+                                     VerticalOptions="Start" />
+                            <!-- <Image Source="{Binding }" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75" -->
+                            <!--        WidthRequest="75" -->
+                            <!--        Margin="12" HorizontalOptions="Start" /> -->
+                            <Label Text="{Binding UserName}" FontFamily="RoundsBlack" FontSize="Medium"
+                                   HorizontalOptions="Start"
+                                   Margin="120,10,0,0" />
+                            <!-- <Label Text="{Binding SecondName}" FontFamily="RoundsBlack" FontSize="Medium" -->
+                            <!--        HorizontalOptions="Start" -->
+                            <!--        Margin="120,10,0,0" /> -->
+                            <!-- <Label Text="{Binding Status}" FontFamily="RoundsBlack" FontSize="Micro" Grid.ColumnSpan="3" -->
+                            <!--        Margin="120,50,0,0" HorizontalOptions="Start" /> -->
 
-        <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4" SelectionMode="Single"
-                        SelectionChanged="OnFriendsCollectionViewSelectionChanged"
-                        VerticalOptions="FillAndExpand"
-                        x:Name="FriendsCollections">
-            <CollectionView.ItemsSource>
-                <x:Array Type="{x:Type model:User}">
-                    <model:User Id="3" UserName="Steve" />
-                    <model:User Id="642" UserName="Steve" />
-                    <model:User Id="2228" UserName="Тестовый челик" />
-                    <model:User Id="1337" UserName="Тестовый челик" />
-                    <model:User Id="2" UserName="Тестовый челик" />
-                    <model:User UserName="Тестовый челик" />
-                    <model:User UserName="Тестовый челик" />
-                    <model:User UserName="Тестовый челик" />
-                    <model:User UserName="Тестовый челик" />
-                    <model:User UserName="Тестовый челик" />
-                    <model:User UserName="Steve" />
-                    <model:User UserName="Алекс" />
-                </x:Array>
-            </CollectionView.ItemsSource>
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="model:User">
-                    <Grid ColumnDefinitions="*" ColumnSpacing="0" RowDefinitions="*,Auto"
-                          Margin="5">
-                        <BoxView Color="{AppThemeBinding Light=#b2b2b2 , Dark=#98918e  }"
-                                 Grid.ColumnSpan="1"
-                                 Grid.RowSpan="2" HorizontalOptions="Fill" VerticalOptions="Fill"
-                                 CornerRadius="5">
-                        </BoxView>
-                        <BoxView Color="{AppThemeBinding Light=#ffb882 , Dark=#685f5b  }" CornerRadius="5"
-                                 HeightRequest="100" WidthRequest="100"
-                                 HorizontalOptions="Start" VerticalOptions="Start" />
-                        <BoxView Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" CornerRadius="5"
-                                 HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
-                                 VerticalOptions="Start" />
-                        <!-- <Image Source="{Binding }" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75" -->
-                        <!--        WidthRequest="75" -->
-                        <!--        Margin="12" HorizontalOptions="Start" /> -->
-                        <Label Text="{Binding UserName}" FontFamily="RoundsBlack" FontSize="Medium"
-                               HorizontalOptions="Start"
-                               Margin="120,10,0,0" />
-                        <!-- <Label Text="{Binding SecondName}" FontFamily="RoundsBlack" FontSize="Medium" -->
-                        <!--        HorizontalOptions="Start" -->
-                        <!--        Margin="120,10,0,0" /> -->
-                        <!-- <Label Text="{Binding Status}" FontFamily="RoundsBlack" FontSize="Micro" Grid.ColumnSpan="3" -->
-                        <!--        Margin="120,50,0,0" HorizontalOptions="Start" /> -->
-
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        <!-- </RefreshView> -->
 
     </Grid>
 

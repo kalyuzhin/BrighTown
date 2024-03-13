@@ -5,8 +5,8 @@
              xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
              xmlns:local="clr-namespace:BrighTown"
              xmlns:handler="clr-namespace:BrighTown.Services"
-             xmlns:viewmodels="clr-namespace:BrighTown.ViewModels"
              xmlns:model="clr-namespace:BrighTown.Models"
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
              x:Class="BrighTown.Pages.MapPage"
              BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.NavBarIsVisible="True">
@@ -22,9 +22,9 @@
     <!-- </StackLayout> -->
     <!-- </Shell.TitleView> -->
     <Shell.SearchHandler>
-        <handler:PlacesSearchHandler SearchBoxVisibility="Expanded"
-                                     NavigationRoute="PlaceDetails"
-                                     x:Name="PlacesSearch"
+        
+        <handler:PlacesSearchHandler SearchBoxVisibility="Expanded" 
+                                     
                                      QueryIcon="magnifier.png"
                                      TextColor="{AppThemeBinding Light=#000 , Dark=#fff}" ShowsResults="True"
                                      DisplayMemberName="Name" Placeholder="Поиск мест..." FontFamily="RoundsBlack"
@@ -68,24 +68,32 @@
     </Shell.SearchHandler>
 
 
-    <Grid ColumnDefinitions="*,*,*,*"
+    <Grid ColumnDefinitions="*"
           ColumnSpacing="0"
-          RowDefinitions="Auto,*">
+          RowDefinitions="*">
 
         <!-- <SearchBar TextColor="{AppThemeBinding Light=Black , Dark=White  }" Placeholder="Поиск мест" -->
         <!--            FontFamily="RoundsBlack" HorizontalOptions="Fill" -->
         <!--            BackgroundColor="{AppThemeBinding Light=White , Dark=Gray }" Grid.ColumnSpan="4" /> -->
         <esri:MapView x:Name="MainMapView"
                       Map="{Binding Map, Source={StaticResource MapViewModel}}" VerticalOptions="Fill"
-                      Grid.ColumnSpan="4"
-                      Grid.Row="1"
-                      GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}"
-                      GeoViewTapped="MainMapView_OnGeoViewTapped" />
-
-        <Button Clicked="ClickOnAddPlaceButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
-                Text="Добавить место" TextColor="White" Grid.ColumnSpan="4"
-                Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="End" Margin="3">
-        </Button>
+                      GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}" />
+    
+        <Frame VerticalOptions="End" CornerRadius="5" Padding="2" BorderColor="Transparent" BackgroundColor="{AppThemeBinding Light=#2c3e54 , Dark=#212324   }" HorizontalOptions="Fill" Margin="5" x:Name="AddingPlacePopUp">
+            <VerticalStackLayout Padding="5,5,5,5">
+                <Button Clicked="ClickOnCloseButton" BackgroundColor="Transparent"
+                        Text="×" FontSize="30" TextColor="White" HorizontalOptions="End"></Button>
+                <Label x:Name="CoordiantesLabel" HorizontalOptions="Center" Margin="0,0,0,10" Text="Координаты: 0 0 0" FontSize="16" TextColor="White" FontFamily="Rounds"></Label>
+                
+                <Button Clicked="ClickOnAddPlaceButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
+                        Text="Добавить место" TextColor="White"
+                        HorizontalOptions="Fill">
+                </Button>
+                
+            </VerticalStackLayout>
+            
+        </Frame>
+      
 
     </Grid>
 

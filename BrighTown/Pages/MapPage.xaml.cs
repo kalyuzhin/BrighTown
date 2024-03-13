@@ -23,7 +23,10 @@ public partial class MapPage : ContentPage
         Routing.RegisterRoute("AddPlace", typeof(AddPlaceToMapPage));
         Shell.Current.GoToAsync("AddPlace");
     }
-
+    private void ClickOnCloseButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
+    {
+        AddingPlacePopUp.IsVisible = false;
+    }
     private void ClickOnMapButton(object sender, EventArgs e) // ��������� ������� �� ������ "�����"
     {
         Navigation.PushModalAsync(new MapPage(), true);

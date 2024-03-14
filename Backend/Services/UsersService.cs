@@ -136,6 +136,11 @@ public class UsersService : IUsersService
             }
         }
 
+        if (serviceResponse.Data.Count == 0)
+        {
+            serviceResponse.Message = "У вас нет друзей :(";
+        }
+
         return serviceResponse;
     }
 }

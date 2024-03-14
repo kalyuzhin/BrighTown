@@ -13,7 +13,8 @@
 
 
     <ContentPage.Resources>
-        <local:MapViewModel x:Key="MapViewModel" />
+        <local:MapViewModel x:Key="MapViewModel"/>
+        
     </ContentPage.Resources>
     <!-- <Shell.TitleView> -->
     <!-- <StackLayout HorizontalOptions="Fill" HeightRequest="50"> -->
@@ -77,13 +78,18 @@
         <!--            BackgroundColor="{AppThemeBinding Light=White , Dark=Gray }" Grid.ColumnSpan="4" /> -->
         <esri:MapView x:Name="MainMapView"
                       Map="{Binding Map, Source={StaticResource MapViewModel}}" VerticalOptions="Fill"
-                      GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}" />
+                      GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource MapViewModel}}"
+                      GeoViewHolding="MainMapView_GeoViewHolding"/>
     
-        <Frame VerticalOptions="End" CornerRadius="5" Padding="2" BorderColor="Transparent" BackgroundColor="{AppThemeBinding Light=#2c3e54 , Dark=#212324   }" HorizontalOptions="Fill" Margin="5" x:Name="AddingPlacePopUp">
+        <Frame VerticalOptions="End" CornerRadius="5" Padding="2" BorderColor="Transparent" BackgroundColor="{AppThemeBinding Light=#2c3e54 , Dark=#212324   }" 
+               HorizontalOptions="Fill" Margin="5" x:Name="AddingPlacePopUp" IsVisible="false">
             <VerticalStackLayout Padding="5,5,5,5">
                 <Button Clicked="ClickOnCloseButton" BackgroundColor="Transparent"
                         Text="×" FontSize="30" TextColor="White" HorizontalOptions="End"></Button>
-                <Label x:Name="CoordiantesLabel" HorizontalOptions="Center" Margin="0,0,0,10" Text="Координаты: 0 0 0" FontSize="16" TextColor="White" FontFamily="Rounds"></Label>
+                <Label x:Name="CoordiantesLabel" HorizontalOptions="Center" Margin="0,0,0,10"
+                       FontSize="16" TextColor="White" FontFamily="Rounds"
+                       Text="Координаты: 0, 0">
+                </Label>
                 
                 <Button Clicked="ClickOnAddPlaceButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
                         Text="Добавить место" TextColor="White"

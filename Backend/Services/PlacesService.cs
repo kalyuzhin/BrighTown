@@ -49,6 +49,7 @@ public class PlacesService : IPlacesService
 
         //place.Id = db.Count == 0 ? 1 : db.Max(c => c.Id) + 1;
         //db.Add(place);
+        //ѕочему идет увеличение Id таким способом
         place.Id = db.ToList().Select(c => c.Id).DefaultIfEmpty(0).Max() + 1;
         await db.AddAsync(place);
         await _dataContext.SaveChangesAsync();

@@ -21,6 +21,8 @@ namespace BrighTown.Pages;
 
 public partial class AddPlaceToMapPage : ContentPage
 {
+    //Почему Place? Возможно стоит в завести объект Place
+    //В список ImagesUrl добавлять адреса изображений и все остальные поля заполнять постепенно
     public ObservableCollection<Place> Place_Images { get; private set; }
 
     void OnImageForZoomClicked(object sender, SelectionChangedEventArgs e)
@@ -34,10 +36,11 @@ public partial class AddPlaceToMapPage : ContentPage
              Shell.Current.GoToAsync("TakeAZoom1");
          }
     }
+    //Опять же, почему добавляются новые места
     public AddPlaceToMapPage()
     {
         InitializeComponent();
-        RatingValue.Text = $"Оценка места: -/5";
+        RatingValue.Text = $"Оценка места: 5";
         Place_Images = new ObservableCollection<Place>();
 
         Place_Images.Add(new Place()
@@ -120,7 +123,7 @@ public partial class AddPlaceToMapPage : ContentPage
         RatingValue.Text = "Оценка места: " + rating.ToString();
     }
 
-
+    //Что это за списки
     public List<string> CurrentPlaceImages;
 
     public List<string>
@@ -174,6 +177,7 @@ public partial class AddPlaceToMapPage : ContentPage
                 var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<List<Place2>>>();
                 if (responseContent.Success)
                 {
+                    //Что это 
                     await Shell.Current.GoToAsync($"..");
                     CurrentPlaceImages = GenerateImagesArray(Place_Images);
                 }

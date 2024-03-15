@@ -67,8 +67,7 @@
         <RefreshView x:DataType="viewmodel:FriendsListViewModel"
                      Grid.ColumnSpan="4"
                      x:Name="RefreshView"
-                     Refreshing="RefreshView_OnRefreshing"
-                     >
+                     Refreshing="RefreshView_OnRefreshing">
             <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4" SelectionMode="Single"
                             SelectionChanged="OnFriendsCollectionViewSelectionChanged"
                             VerticalOptions="FillAndExpand"
@@ -76,8 +75,10 @@
                             ItemsSource="{Binding Users}">
                 <CollectionView.EmptyView>
                     <Grid RowDefinitions="*,*">
-                        <Label Grid.Row="0" TextColor="{AppThemeBinding Light=#000, Dark=#fff}" Text="Пусто..." />
-                        <Label x:Name="EmptyViewLabel" Grid.Row="1" TextColor="{AppThemeBinding Light=#000, Dark=#fff}"
+                        <Label FontSize="Large" Grid.Row="0" TextColor="{AppThemeBinding Light=#000, Dark=#fff}"
+                               Text="Пусто..." />
+                        <Label FontSize="Large" x:Name="EmptyViewLabel" Grid.Row="1"
+                               TextColor="{AppThemeBinding Light=#000, Dark=#fff}"
                                Text="Потяните, чтобы обновить список..." />
                     </Grid>
                 </CollectionView.EmptyView>

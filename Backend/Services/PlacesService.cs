@@ -112,6 +112,11 @@ public class PlacesService : IPlacesService
             serviceResponse.Data.Add(_mapper.Map<GetPlaceRequestDto>(place));
         }
 
+        if (serviceResponse.Data.Count == 0)
+        {
+            serviceResponse.Message = "Вы еще не добавили ни одного места.";
+        }
+
         return serviceResponse;
     }
 }

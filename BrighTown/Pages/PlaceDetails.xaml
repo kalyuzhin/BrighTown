@@ -88,12 +88,12 @@
             </StackLayout>
 
         </ScrollView>
+        
 
-
-        <!-- <Button Clicked="ClickOnCloseButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }" -->
-        <!--         Text="Закрыть" TextColor="White" Grid.ColumnSpan="2" -->
-        <!--         Grid.Row="5" HorizontalOptions="Fill" VerticalOptions="End" Margin="3"> -->
-        <!-- </Button> -->
+        <Button Clicked="Button_OnClicked" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
+                Text="Добавить в избранное" TextColor="White" Grid.ColumnSpan="2"
+                Grid.Row="5" HorizontalOptions="Fill" VerticalOptions="End" Margin="3" x:Name="AddButton">
+        </Button>
 
     </Grid>
 

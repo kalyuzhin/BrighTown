@@ -50,9 +50,10 @@
         <Button x:Name="AddFriendButton" Margin="5,0" Grid.Row="3" FontFamily="Rounds"
                 TextColor="{AppThemeBinding Light=#ffffff , Dark=#000000}" Text="Подписаться"
                 Clicked="AddFriendButton_OnClicked" />
-        <!-- <Button x:Name="DeleteFriendButton" Margin="5,0" Grid.Row="3" Grid.Column="1" TextColor="White" -->
-        <!--         BackgroundColor="Red" Text="Удалить из друзей" FontFamily="Rounds"> -->
-        <!-- </Button> -->
+        <Button x:Name="DeleteFriendButton" Margin="5,0" Grid.Row="3" Grid.Column="1" TextColor="White"
+                BackgroundColor="Red" Text="Отписаться" FontFamily="Rounds"
+                Clicked="DeleteFriendButton_OnClicked">
+        </Button>
 
         <!-- <Button Clicked="ClickOnCloseButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }" -->
         <!--         Text="Закрыть" TextColor="White" Grid.ColumnSpan="2" -->

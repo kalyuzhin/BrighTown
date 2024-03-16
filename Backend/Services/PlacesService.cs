@@ -119,4 +119,23 @@ public class PlacesService : IPlacesService
 
         return serviceResponse;
     }
+
+    public async Task<ServiceResponse<bool>> DeleteFavourite(AddFavouritePlaceDto pair)
+    {
+        var serviceResponse = new ServiceResponse<bool>();
+        serviceResponse.Data = false;
+
+        var match = _dataContext.FavPlaces.FirstOrDefault(p => p.PlaceId == pair.PlaceId && p.UserId == pair.UserId);
+        if (match == null)
+        {
+            serviceResponse.Message = "You don't save this place yet";
+            return serviceResponse;
+        }
+
+        _dataContext.FavPlaces.Remove(match);
+        await _dataContext.SaveChangesAsync();
+
+        serviceResponse.Data = true;
+        return serviceResponse;
+    }
 }

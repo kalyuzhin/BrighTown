@@ -6,7 +6,7 @@
              BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              x:Class="BrighTown.Pages.PlaceDetails"
              xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
-             
+
              x:DataType="viewmodel:PlaceDetailsViewModel">
 
     <Shell.TitleView>
@@ -24,12 +24,13 @@
             </Label>
         </StackLayout>
     </Shell.TitleView>
-    <Grid ColumnDefinitions="*"
+    <Grid ColumnDefinitions="*,*"
           ColumnSpacing="0"
           RowSpacing="5"
           RowDefinitions="Auto,Auto,Auto,Auto,*">
 
         <CollectionView SelectionMode="Single"
+                        Grid.ColumnSpan="2"
                         SelectionChanged="OnImageForZoomClicked" x:Name="ImagesCollection">
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type model:Place}">
@@ -52,15 +53,15 @@
 
 
         <BoxView Margin="5,0" HorizontalOptions="Fill" Color="{AppThemeBinding Light=#fe7d3b , Dark=#8b8b8b}"
-                 Grid.Row="1" CornerRadius="5">
+                 Grid.Row="1" CornerRadius="5" Grid.ColumnSpan="2">
         </BoxView>
         <Label x:Name="NameTag" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack" Grid.Row="1"
-               FontSize="Medium" Text="{Binding Place.Name}">
+               FontSize="Medium" Text="{Binding Place.Name}" Grid.ColumnSpan="2">
         </Label>
         <BoxView Margin="5,0" Grid.Row="2" HorizontalOptions="Fill"
-                 Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" CornerRadius="5">
+                 Color="{AppThemeBinding Light=#fbbf93 , Dark=#8b8b8b}" CornerRadius="5" Grid.ColumnSpan="2">
         </BoxView>
-        <VerticalStackLayout Grid.Row="2" BackgroundColor="Transparent" HorizontalOptions="Fill">
+        <VerticalStackLayout Grid.Row="2" BackgroundColor="Transparent" HorizontalOptions="Fill" Grid.ColumnSpan="2">
 
             <Label TextColor="White" FontSize="Medium" x:Name="RatingValue" FontFamily="Rounds"
                    HorizontalOptions="Center" Text="{Binding Place.Rating}">
@@ -70,15 +71,15 @@
 
 
         <BoxView Margin="5,0" HorizontalOptions="Fill" Color="{AppThemeBinding Light=#fe7d3b , Dark=#8b8b8b}"
-                 Grid.Row="3" CornerRadius="5">
+                 Grid.Row="3" CornerRadius="5" Grid.ColumnSpan="2">
         </BoxView>
 
         <Label Text="Описание места:" TextColor="White" HorizontalOptions="Center" FontFamily="RoundsBlack"
                Grid.Row="3"
-               FontSize="Medium">
+               FontSize="Medium" Grid.ColumnSpan="2">
         </Label>
-        <BoxView Margin="5,0,5,50" Color="White" Grid.Row="4" CornerRadius="5"></BoxView>
-        <ScrollView Grid.Row="4" Margin="0,0,0,30" BackgroundColor="Transparent">
+        <BoxView Margin="5,0,5,50" Color="White" Grid.Row="4" CornerRadius="5" Grid.ColumnSpan="2"/>
+        <ScrollView Grid.Row="4" Margin="0,0,0,30" BackgroundColor="Transparent" Grid.ColumnSpan="2">
             <StackLayout>
 
                 <Label Text="{Binding Place.Description}" Margin="20,5,10,5" TextColor="Black" x:Name="Descriptor"
@@ -88,11 +89,15 @@
             </StackLayout>
 
         </ScrollView>
-        
+
 
         <Button Clicked="Button_OnClicked" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
-                Text="Добавить в избранное" TextColor="White" Grid.ColumnSpan="2"
-                Grid.Row="5" HorizontalOptions="Fill" VerticalOptions="End" Margin="3" x:Name="AddButton">
+                Text="Сохранить" TextColor="White"
+                Grid.Row="5" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="End" Margin="3" x:Name="AddButton">
+        </Button>
+        <Button Clicked="RemoveButton_OnClicked" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"
+                Text="Удалить" TextColor="White"
+                Grid.Row="5" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="End" Margin="3" x:Name="RemoveButton">
         </Button>
 
     </Grid>

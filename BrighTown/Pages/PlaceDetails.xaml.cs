@@ -66,4 +66,62 @@ public partial class PlaceDetails : ContentPage
             }
         }
     }
+
+    private async void RemoveButton_OnClicked(object sender, EventArgs e)
+    {
+        if (IsBusy)
+        {
+            return;
+        }
+
+        if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
+        {
+            await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
+                "Повторить попытку");
+            return;
+        }
+
+        try
+        {
+            IsBusy = true;
+
+            var viewModel = BindingContext as PlaceDetailsViewModel;
+
+            using (HttpClient httpClient = new HttpClient())
+            {
+                string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                    ? "http://10.0.2.2:5280/"
+                    : "http://localhost:5280/";
+                var url = baseUrl + "deletefavourites";
+
+                var requestData = new Dictionary<string, int>
+                {
+                    { "userId", App.user.Id },
+                    { "placeId", viewModel.Place.Id }
+                };
+
+                var content = new
+                    StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8, "application/json");
+
+                var response = await httpClient.PutAsync(url, content);
+                var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<bool>>();
+                if (responseContent.Success)
+                {
+                    await Shell.Current.DisplayAlert("", $"{responseContent.Message}", "OK");
+                }
+                else
+                {
+                    await Shell.Current.DisplayAlert("Упс!", $"{responseContent.Message}", "ОК");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            await Shell.Current.DisplayAlert("Упс!", "К сожалению произошла ошибка...", "ОК");
+        }
+        finally
+        {
+            IsBusy = false;
+        }
+    }
 }

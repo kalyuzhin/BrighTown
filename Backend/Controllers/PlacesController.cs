@@ -43,5 +43,11 @@ namespace Backend.Controllers
         {
             return Ok(await _placesService.GetFavourites(id));
         }
+
+        [HttpPut("/deletefavourites")]
+        public async Task<ActionResult<ServiceResponse<bool>>> DeleteFavourites(AddFavouritePlaceDto pair)
+        {
+            return Ok(await _placesService.DeleteFavourite(pair));
+        }
     }
 }

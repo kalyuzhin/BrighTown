@@ -13,4 +13,6 @@ public interface IPlacesService
     Task<ServiceResponse<GetPlaceRequestDto>> AddPlaceToFavourites(AddFavouritePlaceDto pair);
 
     Task<ServiceResponse<List<GetPlaceRequestDto>>> GetFavourites(int userId);
+
+    Task<ServiceResponse<bool>> DeleteFavourite(AddFavouritePlaceDto pair);
 }

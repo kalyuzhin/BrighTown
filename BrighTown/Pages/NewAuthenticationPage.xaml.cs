@@ -8,6 +8,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using BrighTown.Models;
+using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
 
 
 namespace BrighTown.Pages;
@@ -32,6 +34,7 @@ public partial class NewAuthenticationPage : ContentPage
 
     private async void Login(object sender, EventArgs e)
     {
+        EntryBtn.Text = "Входим...";
         if (IsBusy)
         {
             return;
@@ -67,7 +70,7 @@ public partial class NewAuthenticationPage : ContentPage
                 var requestData = new Dictionary<string, string>
                 {
                     { "email", Login.ToLower() },
-                    { "login", Login.ToLower() },
+                    { "username", Login.ToLower() },
                     { "password", Password }
                 };
 
@@ -79,7 +82,16 @@ public partial class NewAuthenticationPage : ContentPage
                 if (responseContent.Success)
                 {
                     App.user = responseContent.Data;
-                    await Shell.Current.DisplayAlert("Ура!", "Вход в аккаунт выполнен успешно!", "OK");
+
+
+                    CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+                    string text = "Вход в аккаунт выполнен успешно!";
+                    ToastDuration duration = ToastDuration.Short;
+                    double fontSize = 14;
+                    var toast = Toast.Make(text, duration, fontSize);
+                    await toast.Show(cancellationTokenSource.Token);
+
+
                     await Shell.Current.GoToAsync($"//{nameof(MapPage)}");
                     LoginEntry.Text = "";
                     PasswordEntry.Text = "";
@@ -97,6 +109,7 @@ public partial class NewAuthenticationPage : ContentPage
         }
         finally
         {
+            EntryBtn.Text = "Вход";
             IsBusy = false;
         }
     }

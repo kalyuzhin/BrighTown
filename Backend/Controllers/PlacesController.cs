@@ -1,3 +1,5 @@
+using Backend.Dtos.Pairs;
+
 namespace Backend.Controllers
 {
     [Route("api/[controller]")]
@@ -27,6 +29,19 @@ namespace Backend.Controllers
         public async Task<ActionResult<ServiceResponse<List<GetPlaceRequestDto>>>> AddPlace(AddPlaceResponseDto place)
         {
             return Ok(await _placesService.AddPlace(place));
+        }
+
+        [HttpPost("addtofavourites")]
+        public async Task<ActionResult<ServiceResponse<GetPlaceRequestDto>>> AddPlaceToFavourites(
+            AddFavouritePlaceDto pair)
+        {
+            return Ok(await _placesService.AddPlaceToFavourites(pair));
+        }
+
+        [HttpPost("getfavourites")]
+        public async Task<ActionResult<ServiceResponse<List<GetPlaceRequestDto>>>> GetFavourites(int id)
+        {
+            return Ok(await _placesService.GetFavourites(id));
         }
     }
 }

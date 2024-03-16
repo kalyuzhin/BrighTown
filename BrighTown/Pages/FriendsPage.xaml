@@ -4,16 +4,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:BrighTown.Models"
              x:Class="BrighTown.Pages.FriendsPage"
+             xmlns:handler="clr-namespace:BrighTown.SearchHandlers"
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
              BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.NavBarIsVisible="True">
 
-    <Shell.TitleView>
-        <StackLayout HorizontalOptions="Fill" HeightRequest="50">
+    <!-- <Shell.TitleView> -->
+    <!--     <StackLayout HorizontalOptions="Fill" HeightRequest="50"> -->
+    <!-- -->
+    <!--         <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase" -->
+    <!--                Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Друзья" /> -->
+    <!--     </StackLayout> -->
+    <!-- </Shell.TitleView> -->
+    <Shell.SearchHandler>
+        <handler:FriendsSearchHandler SearchBoxVisibility="Expanded"
+                                      NavigationRoute="CurrentFriendInfoPage"
+                                      x:Name="FriendsSearch"
+                                      QueryIcon="magnifier.png"
+                                      TextColor="{AppThemeBinding Light=#000 , Dark=#fff}" ShowsResults="True"
+                                      DisplayMemberName="UserName" Placeholder="Введите имя пользователя..."
+                                      FontFamily="RoundsBlack"
+                                      PlaceholderColor="{AppThemeBinding Light=#000, Dark=#fff}"
+                                      BackgroundColor="{AppThemeBinding Light=#fff , Dark=Gray }">
+            <handler:FriendsSearchHandler.ItemTemplate>
+                <DataTemplate x:DataType="model:User">
+                    <Grid Padding="10"
+                          ColumnSpacing="5"
+                          BackgroundColor="{AppThemeBinding Light=#fff, Dark=Grey}"
+                          ColumnDefinitions="0.15*,0.85*">
+                        <BoxView HeightRequest="45"
+                                 WidthRequest="45" CornerRadius="10"
+                                 Color="{AppThemeBinding Light=#ffb882 , Dark=#685f5b  }" />
+                        <BoxView HeightRequest="40"
+                                 WidthRequest="45" CornerRadius="10"
+                                 Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" />
+                        <Image Source="demo.png"
+                               HeightRequest="40"
+                               WidthRequest="40" />
+                        <VerticalStackLayout Grid.Column="1">
+                            <Label
+                                Text="{Binding UserName}"
+                                FontAttributes="Bold"
+                                TextColor="{AppThemeBinding Dark= #fff, Light=#000}"
+                                VerticalOptions="Center"
+                                FontFamily="Rounds" />
 
-            <Label FontFamily="Rounds" HorizontalTextAlignment="Center" TextTransform="Uppercase"
-                   Margin="0,10,0,0" FontSize="Large" TextColor="#fff" VerticalTextAlignment="Center" Text="Друзья" />
-        </StackLayout>
-    </Shell.TitleView>
+                            <Image HorizontalOptions="Start" HeightRequest="30" Source="stars5.png" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </DataTemplate>
+            </handler:FriendsSearchHandler.ItemTemplate>
+        </handler:FriendsSearchHandler>
+    </Shell.SearchHandler>
+
 
     <Grid ColumnDefinitions="*,*,*,*"
 
@@ -21,49 +64,66 @@
           RowDefinitions="*"
           RowSpacing="10">
 
-
-        <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4"  SelectionMode="Single"
-                        SelectionChanged="OnFriendsCollectionViewSelectionChanged" VerticalOptions="FillAndExpand" x:Name="FriendsCollections">
-            <CollectionView.ItemsSource>
-                <x:Array Type="{x:Type model:Friend}">
-                    <model:Friend Name="Steve" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
-                    <model:Friend Name="Steve" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
-                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
-                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
-                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
-                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
-                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
-                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
-                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
-                    <model:Friend Name="Тестовый челик" Status="Онлайн" ImageUrl="demo.png"></model:Friend>
-                    <model:Friend Name="Steve" Status="Онлайн" ImageUrl="stockprofilephoto.jpg"></model:Friend>
-                    <model:Friend Name="Алекс" Status="Оффлайн" ImageUrl="demo.png"></model:Friend>
-                    
-                </x:Array>
-            </CollectionView.ItemsSource>
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="model:Friend">
-                    <Grid ColumnDefinitions="*"  ColumnSpacing="0" RowDefinitions="*,Auto"
-                          Margin="5">
-                        <BoxView Color="{AppThemeBinding Light=#b2b2b2 , Dark=#98918e  }" Grid.ColumnSpan="1" Grid.RowSpan="2" HorizontalOptions="Fill" VerticalOptions="Fill" CornerRadius="5"></BoxView>
-                        <BoxView  Color="{AppThemeBinding Light=#ffb882 , Dark=#685f5b  }" CornerRadius="5" HeightRequest="100" WidthRequest="100"
-                                  HorizontalOptions="Start" VerticalOptions="Start" />
-                        <BoxView  Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" CornerRadius="5" HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
-                                   VerticalOptions="Start" />
-                        <Image Source="{Binding ImageUrl}" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75"
-                               WidthRequest="75"
-                               Margin="12" HorizontalOptions="Start" />
-                        <Label Text="{Binding Name}" FontFamily="RoundsBlack" FontSize="Medium"
-                               HorizontalOptions="Start"
-                               Margin="120,10,0,0" />
-                        <Label Text="{Binding Status}" FontFamily="RoundsBlack" FontSize="Micro" Grid.ColumnSpan="3"
-                               Margin="120,50,0,0" HorizontalOptions="Start" />
-
+        <RefreshView x:DataType="viewmodel:FriendsListViewModel"
+                     Grid.ColumnSpan="4"
+                     x:Name="RefreshView"
+                     Refreshing="RefreshView_OnRefreshing">
+            <CollectionView HorizontalOptions="FillAndExpand" Grid.ColumnSpan="4" SelectionMode="Single"
+                            SelectionChanged="OnFriendsCollectionViewSelectionChanged"
+                            VerticalOptions="FillAndExpand"
+                            x:Name="FriendsCollections"
+                            ItemsSource="{Binding Users}">
+                <CollectionView.EmptyView>
+                    <Grid RowDefinitions="*,*">
+                        <Label FontSize="Large" Grid.Row="0" TextColor="{AppThemeBinding Light=#000, Dark=#fff}"
+                               Text="Пусто..." />
+                        <Label FontSize="Large" x:Name="EmptyViewLabel" Grid.Row="1"
+                               TextColor="{AppThemeBinding Light=#000, Dark=#fff}"
+                               Text="Потяните, чтобы обновить список..." />
                     </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-
+                </CollectionView.EmptyView>
+                <!-- <CollectionView.ItemsSource> -->
+                <!-- <x:Array Type="{x:Type model:User}"> -->
+                <!-- <model:User Id="3" UserName="Steve" /> -->
+                <!-- <model:User Id="642" UserName="Steve" /> -->
+                <!-- <model:User Id="2228" UserName="Тестовый челик" /> -->
+                <!-- <model:User Id="1337" UserName="Тестовый челик" /> -->
+                <!-- <model:User Id="2" UserName="Тестовый челик" /> -->
+                <!-- <model:User UserName="Тестовый челик" /> -->
+                <!-- <model:User UserName="Тестовый челик" /> -->
+                <!-- <model:User UserName="Тестовый челик" /> -->
+                <!-- <model:User UserName="Тестовый челик" /> -->
+                <!-- <model:User UserName="Тестовый челик" /> -->
+                <!-- <model:User UserName="Steve" /> -->
+                <!-- <model:User UserName="Алекс" /> -->
+                <!-- </x:Array> -->
+                <!-- </CollectionView.ItemsSource> -->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:User">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="0" RowDefinitions="*,Auto"
+                              Margin="5">
+                            <BoxView Color="{AppThemeBinding Light=#b2b2b2 , Dark=#98918e  }"
+                                     Grid.ColumnSpan="1"
+                                     Grid.RowSpan="2" HorizontalOptions="Fill" VerticalOptions="Fill"
+                                     CornerRadius="5">
+                            </BoxView>
+                            <BoxView Color="{AppThemeBinding Light=#ffb882 , Dark=#685f5b  }" CornerRadius="5"
+                                     HeightRequest="100" WidthRequest="100"
+                                     HorizontalOptions="Start" VerticalOptions="Start" />
+                            <BoxView Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" CornerRadius="5"
+                                     HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
+                                     VerticalOptions="Start" />
+                            <Image Source="demo.png" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75"
+                                   WidthRequest="75"
+                                   Margin="12" HorizontalOptions="Start" />
+                            <Label Text="{Binding UserName}" FontFamily="RoundsBlack" FontSize="Medium"
+                                   HorizontalOptions="Start"
+                                   Margin="120,10,0,0" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
 
     </Grid>
 

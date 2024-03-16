@@ -109,8 +109,6 @@ internal class MapViewModel : INotifyPropertyChanged
 
         var mapCenterPoint = new MapPoint(39.709612, 47.240004, SpatialReferences.Wgs84);
         Map.InitialViewpoint = new Viewpoint(mapCenterPoint, 100000);
-
-
     }
 }
 //         private void CreateGraphics()

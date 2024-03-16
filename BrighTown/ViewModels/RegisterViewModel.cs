@@ -12,7 +12,7 @@ public partial class RegisterViewModel : BaseViewModel
 
     //[ObservableProperty] private string _email;
     [ObservableProperty] private RegisterModel _registerModel;
-    private readonly IClientService _clientService = new ClientService();
+    // private readonly IClientService _clientService = new ClientService();
 
 
     [RelayCommand]
@@ -34,9 +34,9 @@ public partial class RegisterViewModel : BaseViewModel
             if (!string.IsNullOrWhiteSpace(_registerModel.Password) &&
                 !string.IsNullOrWhiteSpace(_registerModel.Username))
             {
-                User user = await _clientService.Register(_registerModel); //Email, Username, Password);
+                 // User user = await _clientService.Register(_registerModel); //Email, Username, Password);
                 // if (Preferences)
-                App.user = user;
+                // App.user = user;
                 await Shell.Current.GoToAsync(nameof(MapPage));
             }
         }

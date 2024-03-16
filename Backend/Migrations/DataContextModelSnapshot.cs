@@ -60,6 +60,19 @@ namespace Backend.Migrations
 
                     b.ToTable("Users");
                 });
+
+            //modelBuilder.Entity("Backend.Models.Friend", b =>
+            //{
+            //    b.Property<int>("UserID")
+            //        .IsRequired()
+            //        .HasColumnType("INTEGER");
+
+            //    b.Property<string>("FriendID")
+            //        .IsRequired()
+            //        .HasColumnType("INTEGER");
+            //    b.HasMany("Backend.Models.User").WithMany("Backend.Models.User");
+            //});
+            
 #pragma warning restore 612, 618
         }
     }

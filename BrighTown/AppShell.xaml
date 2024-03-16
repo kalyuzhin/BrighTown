@@ -9,22 +9,24 @@
     x:Class="BrighTown.AppShell"
     Shell.FlyoutBehavior="Disabled"
     Shell.TabBarIsVisible="False"
-    BackgroundColor="#fe7d3b">
- 
+    BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}">
+
     <Shell.Resources>
         <Style TargetType="TabBar">
             <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Light=#2c3e54 , Dark=#383a3b  }"></Setter>
             <Setter Property="Shell.TabBarUnselectedColor" Value="#fff"></Setter>
-            <Setter Property="Shell.TabBarForegroundColor" Value="#fe7d3b"></Setter>
-            <Setter Property="Shell.TabBarTitleColor" Value="#fe7d3b"></Setter>
+            <Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Light= #fe7d3b, Dark=#fe7d3b}"></Setter>
+            <Setter Property="Shell.TabBarTitleColor" Value="{AppThemeBinding Light= #fe7d3b, Dark=#fe7d3b}"></Setter>
         </Style>
     </Shell.Resources>
 
     <ShellContent
         Route="NewAuthenticationPage"
+        x:Name="LoginPage"
         ContentTemplate="{DataTemplate views:NewAuthenticationPage}" />
 
-    <TabBar Route="MapPage" Shell.TabBarIsVisible="True" Shell.BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}">
+    <TabBar x:Name="MainPage" Route="MapPage" Shell.TabBarIsVisible="True"
+            Shell.BackgroundColor="{AppThemeBinding Light= #fe7d3b, Dark=#515354}">
         <Tab Title="Карта" Icon="iconofmap.png">
             <ShellContent
                 Route="MapPage"
@@ -35,7 +37,7 @@
                 Route="FavouritesPage"
                 ContentTemplate="{DataTemplate views:FavouritesPage}" />
         </Tab>
-        <Tab Title="Друзья" Icon="friendsicon.png">
+        <Tab Title="Подписки" Icon="friendsicon.png">
             <ShellContent
                 Route="FriendsPage"
                 ContentTemplate="{DataTemplate views:FriendsPage}" />

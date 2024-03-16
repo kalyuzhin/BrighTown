@@ -15,7 +15,7 @@ using BrighTown.Models;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Storage;
-
+using static BrighTown.Pages.ImageViewPage;
 
 namespace BrighTown.Pages;
 
@@ -23,11 +23,21 @@ public partial class AddPlaceToMapPage : ContentPage
 {
     public ObservableCollection<Place> Place_Images { get; private set; }
 
+    void OnImageForZoomClicked(object sender, SelectionChangedEventArgs e)
+    {
+        if (ImagesCollection.SelectedItem != null)
+        {
+            SourceImage = (e.CurrentSelection.FirstOrDefault() as Place).ImageUrl;
+            ImagesCollection.SelectedItem = null;
+            Routing.RegisterRoute("TakeAZoom1", typeof(ImageViewPage));
+            Shell.Current.GoToAsync("TakeAZoom1");
+        }
+    }
 
     public AddPlaceToMapPage()
     {
         InitializeComponent();
-        RatingValue.Text = $"Оценка места: 5/5";
+        RatingValue.Text = $"Оценка места: -/5";
         Place_Images = new ObservableCollection<Place>();
 
         Place_Images.Add(new Place()
@@ -82,12 +92,32 @@ public partial class AddPlaceToMapPage : ContentPage
         DescriptionOfCurrentPlace = ((Entry)sender).Text;
     }
 
-    public double Rating;
+    double rating;
+    private readonly double sliderIncrement = 1;
 
     void OnRatingValueChanged(object sender, ValueChangedEventArgs args)
     {
-        RatingValue.Text = $"Оценка места: {Round(args.NewValue / 100000000)}/5";
-        Rating = Round(args.NewValue / 100000000);
+        Slider slider = (Slider)sender;
+
+
+        double relativeValue = slider.Value - slider.Minimum;
+
+        rating = Math.Truncate(slider.Value);
+
+        if (rating >= 4)
+        {
+            slider.ThumbColor = Colors.Green;
+        }
+        else if (rating == 3)
+        {
+            slider.ThumbColor = Colors.Gold;
+        }
+        else
+        {
+            slider.ThumbColor = Colors.Red;
+        }
+
+        RatingValue.Text = "Оценка места: " + rating.ToString();
     }
 
 
@@ -123,15 +153,6 @@ public partial class AddPlaceToMapPage : ContentPage
         {
             IsBusy = true;
 
-            // Place addedPlace = new Place()
-            // {
-            //     Name = NameOfCurrentPlace,
-            //     Description = DescriptionOfCurrentPlace,
-            //     ImagesList = CurrentPlaceImages,
-            //     Rating = Rating,
-            //     ImageUrl = "",
-            // };
-
             using (HttpClient httpClient = new HttpClient())
             {
                 string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
@@ -142,7 +163,10 @@ public partial class AddPlaceToMapPage : ContentPage
                 var requestData = new Dictionary<string, string>
                 {
                     { "name", Name.Text },
-                    { "description", DescriptionEntry.Text }
+                    { "rating", Math.Truncate(ratingSlider.Value).ToString() },
+                    {
+                        "description", DescriptionEntry.Text
+                    }
                 };
 
                 var content = new

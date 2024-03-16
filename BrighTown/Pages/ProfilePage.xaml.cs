@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace BrighTown.Pages;
 
 public partial class ProfilePage : ContentPage
@@ -13,10 +15,11 @@ public partial class ProfilePage : ContentPage
         Routing.RegisterRoute("OpenSettings", typeof(SettingsPage));
         Shell.Current.GoToAsync("OpenSettings");
     }
-   
 
-    private void ClickOnExitButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
+
+    private async void ClickOnExitButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
     {
-        Shell.Current.GoToAsync($"//{nameof(NewAuthenticationPage)}");
+        App.user = null;
+        await Shell.Current.GoToAsync($"//{nameof(NewAuthenticationPage)}");
     }
 }

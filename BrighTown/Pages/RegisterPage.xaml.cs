@@ -49,17 +49,17 @@ public partial class RegisterPage : ContentPage
 
     async void PressRegisterButton(object sender, EventArgs e)
     {
+        RegBtn.Text = "Создаем аккаунт...";
         if (IsBusy)
         {
             return;
         }
 
-        IsBusy = true;
-
         if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
         {
             await Shell.Current.DisplayAlert("Упс!", "К сожалению вы не подключены к интернету...",
                 "Повторить попытку");
+            RegBtn.Text = "Зарегистрироваться";
             return;
         }
 
@@ -67,23 +67,20 @@ public partial class RegisterPage : ContentPage
             string.IsNullOrWhiteSpace(PasswordEntry.Text) || PasswordConfirmEntry.TextColor == Colors.Red)
         {
             await Shell.Current.DisplayAlert("Ошибка!", "Заполните все поля корректно...", "ОК");
+            RegBtn.Text = "Зарегистрироваться";
             return;
         }
 
+
         try
         {
+            IsBusy = true;
+
+
             //Получение данных из полей ввода
             string Username = UsernameEntry.Text;
-            // string firstName = FirstNameEntry.Text;
-            // string secondName = SecondNameEntry.Text;
             string Password = PasswordEntry.Text;
             string Email = EmailEntry.Text;
-            // var data = new
-            // {
-            //     username = Username,
-            //     password = Password,
-            //     email = Email
-            // };
 
             using (HttpClient httpClient = new HttpClient())
             {
@@ -124,6 +121,7 @@ public partial class RegisterPage : ContentPage
         finally
         {
             IsBusy = false;
+            RegBtn.Text = "Зарегистрироваться";
         }
     }
 }

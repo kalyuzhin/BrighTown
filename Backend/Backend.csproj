@@ -23,4 +23,12 @@
       <Folder Include="Controllers\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="publish\web.config" />
+      <_ContentIncludedByDefault Remove="publish\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="publish\appsettings.json" />
+      <_ContentIncludedByDefault Remove="publish\Backend.deps.json" />
+      <_ContentIncludedByDefault Remove="publish\Backend.runtimeconfig.json" />
+    </ItemGroup>
+
 </Project>

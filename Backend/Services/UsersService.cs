@@ -143,4 +143,39 @@ public class UsersService : IUsersService
 
         return serviceResponse;
     }
+
+    public async Task<ServiceResponse<bool>> DeleteFriend(AddFriendDto pair)
+    {
+        var serviceResponse = new ServiceResponse<bool>();
+        serviceResponse.Data = false;
+        var db_users = _dataContext.Users.FirstOrDefault(u => u.Id == pair.FriendId);
+        var db_frineds =
+            _dataContext.Friends.FirstOrDefault(p => (p.UserId == pair.UserId) && (p.FriendId == pair.FriendId));
+        if (db_users == null)
+        {
+            serviceResponse.Message = "User doesn't exist";
+            return serviceResponse;
+        }
+
+        if (db_frineds == null)
+        {
+            serviceResponse.Message = "You are not a friends!!!";
+            return serviceResponse;
+        }
+
+        if (_dataContext.Users.FirstOrDefault(u => u.Id == pair.UserId) == null)
+        {
+            serviceResponse.Message = "You don't exist";
+            return serviceResponse;
+        }
+
+        // UserFriendPair ufp = _mapper.Map<UserFriendPair>(pair);
+        UserFriendPair ufp =
+            _dataContext.Friends.FirstOrDefault(p => p.FriendId == pair.FriendId && p.UserId == pair.UserId);
+        _dataContext.Friends.Remove(ufp);
+        await _dataContext.SaveChangesAsync();
+        serviceResponse.Data = true;
+
+        return serviceResponse;
+    }
 }

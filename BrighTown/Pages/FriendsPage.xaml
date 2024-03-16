@@ -38,9 +38,9 @@
                         <BoxView HeightRequest="40"
                                  WidthRequest="45" CornerRadius="10"
                                  Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" />
-                        <!-- <Image Source="{Binding ImageUrl}" -->
-                        <!--        HeightRequest="40" -->
-                        <!--        WidthRequest="40" /> -->
+                        <Image Source="demo.png"
+                               HeightRequest="40"
+                               WidthRequest="40" />
                         <VerticalStackLayout Grid.Column="1">
                             <Label
                                 Text="{Binding UserName}"
@@ -113,9 +113,9 @@
                             <BoxView Color="{AppThemeBinding Light=#ffdabf , Dark=#807774  }" CornerRadius="5"
                                      HeightRequest="90" WidthRequest="100" HorizontalOptions="Start"
                                      VerticalOptions="Start" />
-                            <!-- <Image Source="{Binding }" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75" -->
-                            <!--        WidthRequest="75" -->
-                            <!--        Margin="12" HorizontalOptions="Start" /> -->
+                            <Image Source="demo.png" Grid.Column="0" Grid.RowSpan="2" HeightRequest="75"
+                                   WidthRequest="75"
+                                   Margin="12" HorizontalOptions="Start" />
                             <Label Text="{Binding UserName}" FontFamily="RoundsBlack" FontSize="Medium"
                                    HorizontalOptions="Start"
                                    Margin="120,10,0,0" />

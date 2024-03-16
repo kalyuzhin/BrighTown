@@ -12,4 +12,6 @@ public interface IUsersService
     Task<ServiceResponse<GetUserDto>> AddFriend(AddFriendDto pair);
 
     Task<ServiceResponse<List<GetUserDto>>> GetFriends(int id);
+
+    Task<ServiceResponse<bool>> DeleteFriend(AddFriendDto pair);
 }

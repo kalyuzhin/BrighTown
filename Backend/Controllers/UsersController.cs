@@ -47,5 +47,11 @@ namespace Backend.Controllers
         {
             return Ok(await _usersService.GetFriends(id));
         }
+
+        [HttpDelete("/deletefriend")]
+        public async Task<ActionResult<ServiceResponse<bool>>> DeleteFriend(AddFriendDto pair)
+        {
+            return Ok(await _usersService.DeleteFriend(pair));
+        }
     }
 }

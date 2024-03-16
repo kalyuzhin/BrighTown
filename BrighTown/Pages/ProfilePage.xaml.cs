@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace BrighTown.Pages;
 
 public partial class ProfilePage : ContentPage
@@ -15,9 +17,9 @@ public partial class ProfilePage : ContentPage
     }
 
 
-    private void ClickOnExitButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
+    private async void ClickOnExitButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
     {
         App.user = null;
-        Shell.Current.GoToAsync($"//{nameof(NewAuthenticationPage)}");
+        await Shell.Current.GoToAsync($"//{nameof(NewAuthenticationPage)}");
     }
 }

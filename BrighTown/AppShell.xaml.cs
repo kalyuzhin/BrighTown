@@ -8,6 +8,7 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
 
+        // Routing.RegisterRoute(nameof(NewAuthenticationPage), typeof(NewAuthenticationPage));
         Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
         Routing.RegisterRoute(nameof(MapPage), typeof(MapPage));
         Routing.RegisterRoute(nameof(PlaceDetails), typeof(PlaceDetails));

@@ -26,28 +26,18 @@
                             SelectionMode="Single"
                             SelectionChanged="OnFavouritesCollectionViewSelectionChanged">
                 <CollectionView.EmptyView>
-                    <Label x:Name="EmptyViewLabel" Text="Потяните, чтобы обновить..." FontSize="Large"
-                           TextColor="{AppThemeBinding Light=#000,Dark=#fff}" />
+                    <VerticalStackLayout VerticalOptions="End" HorizontalOptions="Center">
+                            
+                        <Label FontSize="12" x:Name="EmptyViewLabel" 
+                                   
+                               FontFamily="Rounds"
+                                   
+                               TextColor="{AppThemeBinding Light=#000, Dark=#fff}"
+                               Text="Потяните, чтобы обновить список..." />
+                        <Image HorizontalOptions="Center" HeightRequest="50" Source="{AppThemeBinding Dark= downvectordarktheme.png Light = downvectorlighttheme.png}"></Image>
+                            
+                    </VerticalStackLayout>
                 </CollectionView.EmptyView>
-                <!-- <CollectionView.ItemsSource> -->
-                <!--     <x:Array Type="{x:Type model:Place2}"> -->
-                <!--         <model:Place2 Name="TestPlace2" Description="Discripte this" ImageUrl="demo_place.png" -->
-                <!--                       Rating="4.0" /> -->
-                <!--         <model:Place2 Name="TestPlace3" Description="Discripte this" ImageUrl="demo_place.png" -->
-                <!--                       Rating="4.0" /> -->
-                <!--         <model:Place2 Name="TestPlace4" Description="Discripte this" ImageUrl="demo_place.png" -->
-                <!--                       Rating="5.0" /> -->
-                <!--         <model:Place2 Name="TestPlace5" Description="Discripte this" ImageUrl="demo_place.png" -->
-                <!--                       Rating="4.0" /> -->
-                <!--         <model:Place2 Name="TestPlace" Description="Discripte this" ImageUrl="demo_place.png" -->
-                <!--                       Rating="2.0" /> -->
-                <!--         <model:Place2 Name="TestPlace" Description="Discripte this place" ImageUrl="demo_place.png" -->
-                <!--                       Rating="1.0" /> -->
-                <!--         <model:Place2 Name="TestPlace" Description="Discripte this" ImageUrl="demo_place.png" -->
-                <!--                       Rating="3.0" /> -->
-                <!-- -->
-                <!--     </x:Array> -->
-                <!-- </CollectionView.ItemsSource> -->
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Place2">
                         <Grid ColumnDefinitions="*" ColumnSpacing="5" RowDefinitions="*,Auto"

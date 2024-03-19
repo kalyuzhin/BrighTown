@@ -117,7 +117,7 @@ public partial class AddPlaceToMapPage : ContentPage
             slider.ThumbColor = Colors.Red;
         }
 
-        RatingValue.Text = "Оценка места: " + rating.ToString();
+        RatingValue.Text = $"Оценка места:  {rating.ToString()}/5";
     }
 
 

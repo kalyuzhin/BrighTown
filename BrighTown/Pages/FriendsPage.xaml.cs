@@ -47,10 +47,10 @@ public partial class FriendsPage : ContentPage
             url += App.user.Id;
             var response = await httpClient.PostAsync(url, content);
             var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<List<User>>>();
-            if (responseContent.Data.Count == 0)
-            {
-                EmptyViewLabel.Text = responseContent.Message;
-            }
+            // if (responseContent.Data.Count == 0)
+            // {
+            //     EmptyViewLabel.Text = responseContent.Message;
+            // }
 
             FriendsCollections.ItemsSource = responseContent.Data.ToObservableCollection();
             RefreshView.IsRefreshing = false;

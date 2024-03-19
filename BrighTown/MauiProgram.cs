@@ -34,7 +34,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<MapPage>();
         builder.Services.AddSingleton<FavouritesPage>();
         builder.Services.AddSingleton<FriendsPage>();
-        builder.Services.AddSingleton<ProfilePage>();
+        builder.Services.AddTransient<ProfilePage>();
         builder.Services.AddTransient<PlaceDetails>();
         builder.Services.AddTransient<CurrentFriendInfoPage>();
         builder.Services.AddSingleton(FolderPicker.Default);

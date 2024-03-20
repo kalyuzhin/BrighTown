@@ -14,7 +14,9 @@
 
     <ContentPage.Resources>
         <local:MapViewModel x:Key="MapViewModel"/>
-        
+        <!--<x:Double x:Key="Latitude"></x:Double> --><!--Широта--><!--
+        <x:Double x:Key="Longitude"></x:Double> --><!--Долгота-->
+        <!--<x:Coords x:Key="Coordinates" Latitude="0" Longitude="0"/>-->
     </ContentPage.Resources>
     <!-- <Shell.TitleView> -->
     <!-- <StackLayout HorizontalOptions="Fill" HeightRequest="50"> -->
@@ -87,8 +89,13 @@
                 <Button Clicked="ClickOnCloseButton" BackgroundColor="Transparent"
                         Text="×" FontSize="30" TextColor="White" HorizontalOptions="End"></Button>
                 <Label x:Name="CoordiantesLabel" HorizontalOptions="Center" Margin="0,0,0,10"
-                       FontSize="16" TextColor="White" FontFamily="Rounds"
-                       Text="Координаты: 0, 0">
+                       FontSize="16" TextColor="White" FontFamily="Rounds">
+                    <Label.Text>
+                        <MultiBinding StringFormat="Координаты {0}, {1}">
+                            <Binding Source="{StaticResource MapViewModel}" Path="Latitude"/>
+                            <Binding Source="{StaticResource MapViewModel}" Path="Longitude"/>
+                        </MultiBinding>
+                    </Label.Text>
                 </Label>
                 
                 <Button Clicked="ClickOnAddPlaceButton" BackgroundColor="{AppThemeBinding Light=#fe7d3b , Dark=#878889  }"

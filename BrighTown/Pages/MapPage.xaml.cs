@@ -8,9 +8,10 @@ public class PlaceSearchHandler : SearchHandler
 
 public partial class MapPage : ContentPage
 {
+    MapViewModel mvm;
     public MapPage()
     {
-        InitializeComponent();
+        InitializeComponent(); 
     }
 
     //-----------������������� ������---------------------------------------------
@@ -20,10 +21,13 @@ public partial class MapPage : ContentPage
         Navigation.PushModalAsync(new FavouritesPage(), true);
     }
 
-    private void ClickOnAddPlaceButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
+    async private void ClickOnAddPlaceButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
     {
-        Routing.RegisterRoute("AddPlace", typeof(AddPlaceToMapPage));
-        Shell.Current.GoToAsync("AddPlace");
+        //Routing.RegisterRoute("AddPlace", typeof(AddPlaceToMapPage));
+        //Shell.Current.GoToAsync("AddPlace");
+        MapViewModel mvm = (MapViewModel)Resources["MapViewModel"];
+        var path = $"{nameof(AddPlaceToMapPage)}?latitude={mvm.Latitude}&longitude={mvm.Longitude}";
+        await Shell.Current.GoToAsync($"{nameof(AddPlaceToMapPage)}?latitude={mvm.Latitude}&longitude={mvm.Longitude}");
     }
     private void ClickOnCloseButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
     {
@@ -46,8 +50,11 @@ public partial class MapPage : ContentPage
         //Получение широты и долготы
         double latitude = mapPoint.Y; //широта
         double longitude = mapPoint.X; //долгота
-        CoordiantesLabel.Text = $"Кооридинаты: {latitude}, {longitude}";
+        MapViewModel mvm = (MapViewModel)Resources["MapViewModel"];
+        mvm.Latitude = latitude; mvm.Longitude = longitude;
+        //CoordiantesLabel.Text = $"Кооридинаты: {latitude}, {longitude}";
         Console.WriteLine($"Кооридинаты: {latitude}, {longitude}");
         AddingPlacePopUp.IsVisible = true;
+
     }
 }

@@ -12,5 +12,6 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(MapPage), typeof(MapPage));
         Routing.RegisterRoute(nameof(PlaceDetails), typeof(PlaceDetails));
         Routing.RegisterRoute(nameof(CurrentFriendInfoPage), typeof(CurrentFriendInfoPage));
+        Routing.RegisterRoute(nameof(AddPlaceToMapPage), typeof(AddPlaceToMapPage));
     }
 }

@@ -15,8 +15,12 @@ using BrighTown.Models;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Storage;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 using static BrighTown.Pages.ImageViewPage;
+using System.Web;
+using BrighTown.ViewModels;
+
 namespace BrighTown.Pages;
 
 public partial class AddPlaceToMapPage : ContentPage
@@ -24,10 +28,11 @@ public partial class AddPlaceToMapPage : ContentPage
     //Почему Place? Возможно стоит в завести объект Place
     //В список ImagesUrl добавлять адреса изображений и все остальные поля заполнять постепенно
     public ObservableCollection<Place> Place_Images { get; private set; }
+    //AddPlaceToMapPage mvm;
+    //public Place2 place = new Place2();
 
     void OnImageForZoomClicked(object sender, SelectionChangedEventArgs e)
     {
-
          if (ImagesCollection.SelectedItem != null)
          {
              SourceImage = (e.CurrentSelection.FirstOrDefault() as Place).ImageUrl;
@@ -37,9 +42,13 @@ public partial class AddPlaceToMapPage : ContentPage
          }
     }
     //Опять же, почему добавляются новые места
-    public AddPlaceToMapPage()
+    public AddPlaceToMapPage(AddPlaceToMapPageViewModel vm)
     {
+        
         InitializeComponent();
+        BindingContext = vm;
+
+        DescriptionEntry.Text = $"{vm.Latitude}, {vm.Longitude}";
         RatingValue.Text = $"Оценка места: 5";
         Place_Images = new ObservableCollection<Place>();
 

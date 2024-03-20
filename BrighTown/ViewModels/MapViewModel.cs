@@ -21,6 +21,33 @@ internal class MapViewModel : INotifyPropertyChanged
 {
     private GraphicsOverlayCollection? _graphicsOverlays;
     private Map _map;
+    private double _latitude;
+    public double Latitude
+    {
+        get { return _latitude; }
+        set
+        {
+            if (_latitude != value)
+            {
+                _latitude = value;
+                OnPropertyChanged(nameof(Latitude));
+            }
+        }
+    }
+
+    private double _longitude;
+    public double Longitude
+    {
+        get { return _longitude; }
+        set
+        {
+            if (_longitude != value)
+            {
+                _longitude = value;
+                OnPropertyChanged(nameof(Longitude));
+            }
+        }
+    }
 
     public MapViewModel()
     {

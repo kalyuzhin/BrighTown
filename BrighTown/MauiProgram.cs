@@ -30,6 +30,9 @@ public static class MauiProgram
         builder.Services.AddTransient<PlaceDetailsViewModel>();
         builder.Services.AddTransient<FriendDetailsViewModel>();
         // builder.Services.AddSingleton<AuthenticationPage>();
+        //2 AddPlaceToMapPage добавил я, Никита
+        builder.Services.AddTransient<AddPlaceToMapPage>();
+        builder.Services.AddTransient<AddPlaceToMapPageViewModel>();
         builder.Services.AddSingleton<NewAuthenticationPage>();
         builder.Services.AddSingleton<MapPage>();
         builder.Services.AddSingleton<FavouritesPage>();

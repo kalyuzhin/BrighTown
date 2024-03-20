@@ -4,9 +4,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:BrighTown.Models"
              x:Class="BrighTown.Pages.AddPlaceToMapPage"
+             xmlns:viewmodel="clr-namespace:BrighTown.ViewModels"
+             x:DataType="viewmodel:AddPlaceToMapPageViewModel"
              BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }"
              Shell.TabBarIsVisible="False">
-
 
     <Shell.TitleView>
         <StackLayout HorizontalOptions="Fill" HeightRequest="50">
@@ -22,7 +23,8 @@
           RowDefinitions="Auto,Auto,Auto,Auto,Auto,*,*">
 
         <CollectionView x:Name="ImagesCollection" SelectionMode="Single" SelectionChanged="OnImageForZoomClicked"
-                        ItemsSource="{Binding Place_Images}">
+                        >
+            <!--ItemsSource="{Binding Place_Images}"-->
             <!-- <CollectionView.ItemsSource> -->
             <!--     <x:Array Type="{x:Type model:Place}"> -->
             <!--         <model:Place ImageUrl="demo_place.png"></model:Place> -->

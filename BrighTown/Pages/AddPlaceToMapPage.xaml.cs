@@ -29,8 +29,8 @@ public partial class AddPlaceToMapPage : ContentPage
         {
             SourceImage = (e.CurrentSelection.FirstOrDefault() as Place).ImageUrl;
             ImagesCollection.SelectedItem = null;
-            Routing.RegisterRoute("TakeAZoom1", typeof(ImageViewPage));
-            Shell.Current.GoToAsync("TakeAZoom1");
+          
+            Shell.Current.GoToAsync("TakeAZoom");
         }
     }
 

@@ -21,9 +21,7 @@ public partial class PlaceDetails : ContentPage
         InitializeComponent();
         BindingContext = placeDetailsViewModel;
 
-        // RatingValue.Text = $"Оценка: {CurrentRating}/5";
-        // Descriptor.Text = CurrentDescription;
-        // NameTag.Text = CurrentName;
+        
     }
 
     // void ClickOnCloseButton(object sender, EventArgs e)
@@ -36,9 +34,14 @@ public partial class PlaceDetails : ContentPage
         if (ImagesCollection.SelectedItem != null)
         {
             SourceImage = (e.CurrentSelection.FirstOrDefault() as Place).ImageUrl;
+           
+            
+            
             ImagesCollection.SelectedItem = null;
-            Routing.RegisterRoute("TakeAZoom", typeof(ImageViewPage));
-            Shell.Current.GoToAsync("TakeAZoom");
+           
+            
+            
+            Shell.Current.GoToAsync($"TakeAZoom");
         }
     }
 

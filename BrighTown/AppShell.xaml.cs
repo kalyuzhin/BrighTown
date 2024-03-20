@@ -9,6 +9,9 @@ public partial class AppShell : Shell
         InitializeComponent();
 
         // Routing.RegisterRoute(nameof(NewAuthenticationPage), typeof(NewAuthenticationPage));
+        Routing.RegisterRoute("AddPlace", typeof(AddPlaceToMapPage));
+        Routing.RegisterRoute("TakeAZoom",typeof(ImageViewPage));
+        Routing.RegisterRoute("OpenSettings", typeof(SettingsPage));
         Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
         Routing.RegisterRoute(nameof(MapPage), typeof(MapPage));
         Routing.RegisterRoute(nameof(PlaceDetails), typeof(PlaceDetails));

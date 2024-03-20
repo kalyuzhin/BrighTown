@@ -29,9 +29,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<RegisterViewModel>();
         builder.Services.AddTransient<PlaceDetailsViewModel>();
         builder.Services.AddTransient<FriendDetailsViewModel>();
-        // builder.Services.AddSingleton<AuthenticationPage>();
         builder.Services.AddSingleton<NewAuthenticationPage>();
-        builder.Services.AddSingleton<MapPage>();
+        builder.Services.AddTransient<MapPage>();
         builder.Services.AddSingleton<FavouritesPage>();
         builder.Services.AddSingleton<FriendsPage>();
         builder.Services.AddTransient<ProfilePage>();

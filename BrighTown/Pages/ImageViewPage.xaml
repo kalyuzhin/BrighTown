@@ -13,7 +13,7 @@
         <viewModels:PinchToZoomContainer HorizontalOptions="Fill" VerticalOptions="Center">
             <Image x:Name="CurrentImage"></Image>
         </viewModels:PinchToZoomContainer>
-        
+
     </VerticalStackLayout>
     
     

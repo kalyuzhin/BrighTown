@@ -1,3 +1,4 @@
+using BrighTown.Models;
 using Esri.ArcGISRuntime.Geometry;
 
 namespace BrighTown.Pages;
@@ -9,9 +10,10 @@ public class PlaceSearchHandler : SearchHandler
 public partial class MapPage : ContentPage
 {
     MapViewModel mvm;
+
     public MapPage()
     {
-        InitializeComponent(); 
+        InitializeComponent();
     }
 
     //-----------������������� ������---------------------------------------------
@@ -21,18 +23,27 @@ public partial class MapPage : ContentPage
         Navigation.PushModalAsync(new FavouritesPage(), true);
     }
 
-    async private void ClickOnAddPlaceButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
+    private async void ClickOnAddPlaceButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
     {
         //Routing.RegisterRoute("AddPlace", typeof(AddPlaceToMapPage));
         //Shell.Current.GoToAsync("AddPlace");
         MapViewModel mvm = (MapViewModel)Resources["MapViewModel"];
-        var path = $"{nameof(AddPlaceToMapPage)}?latitude={mvm.Latitude}&longitude={mvm.Longitude}";
-        await Shell.Current.GoToAsync($"{nameof(AddPlaceToMapPage)}?latitude={mvm.Latitude}&longitude={mvm.Longitude}");
+        Place2 place = new Place2();
+        place.Longitude = mvm.Longitude;
+        place.Latitude = mvm.Latitude;
+        var nav = new Dictionary<string, object>()
+        {
+            { "AddPlaceToMapPage", place }
+        };
+        var path = $"{nameof(AddPlaceToMapPage)}?lat={mvm.Latitude}&long={mvm.Longitude}";
+        await Shell.Current.GoToAsync(nameof(AddPlaceToMapPage), nav);
     }
+
     private void ClickOnCloseButton(object sender, EventArgs e) // ��������� ������� �� ������ "������"
     {
         AddingPlacePopUp.IsVisible = false;
     }
+
     private void ClickOnMapButton(object sender, EventArgs e) // ��������� ������� �� ������ "�����"
     {
         Navigation.PushModalAsync(new MapPage(), true);
@@ -51,10 +62,10 @@ public partial class MapPage : ContentPage
         double latitude = mapPoint.Y; //широта
         double longitude = mapPoint.X; //долгота
         MapViewModel mvm = (MapViewModel)Resources["MapViewModel"];
-        mvm.Latitude = latitude; mvm.Longitude = longitude;
+        mvm.Latitude = latitude;
+        mvm.Longitude = longitude;
         //CoordiantesLabel.Text = $"Кооридинаты: {latitude}, {longitude}";
         Console.WriteLine($"Кооридинаты: {latitude}, {longitude}");
         AddingPlacePopUp.IsVisible = true;
-
     }
 }

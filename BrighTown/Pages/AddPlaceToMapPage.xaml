@@ -22,8 +22,7 @@
           RowSpacing="5"
           RowDefinitions="Auto,Auto,Auto,Auto,Auto,*,*">
 
-        <CollectionView x:Name="ImagesCollection" SelectionMode="Single" SelectionChanged="OnImageForZoomClicked"
-                        >
+        <CollectionView x:Name="ImagesCollection" SelectionMode="Single" SelectionChanged="OnImageForZoomClicked">
             <!--ItemsSource="{Binding Place_Images}"-->
             <!-- <CollectionView.ItemsSource> -->
             <!--     <x:Array Type="{x:Type model:Place}"> -->
@@ -37,7 +36,7 @@
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Place">
-                    <Image Margin="0,10" HeightRequest="100" WidthRequest="100" Source="{Binding ImageUrl }"></Image>
+                    <!-- <Image Margin="0,10" HeightRequest="100" WidthRequest="100" Source="{Binding ImageUrl }"/> -->
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
@@ -83,7 +82,7 @@
         <BoxView Margin="5,0" CornerRadius="5" Color="White" Grid.ColumnSpan="2" Grid.Row="5" HorizontalOptions="Fill"></BoxView>
         <Editor Margin="5,0" TextColor="Black" Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand"
                 Placeholder="Опишите место..." Completed="OnDiscriptionEntryCompleted" FontFamily="Rounds"
-                HorizontalOptions="Fill" x:Name="DescriptionEntry">
+                HorizontalOptions="Fill" x:Name="DescriptionEntry" Text="{Binding Place.Latitude}">
         </Editor>
 
 

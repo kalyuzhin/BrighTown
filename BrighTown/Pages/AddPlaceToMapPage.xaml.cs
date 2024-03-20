@@ -16,7 +16,6 @@ using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Storage;
 using CommunityToolkit.Mvvm.ComponentModel;
-
 using static BrighTown.Pages.ImageViewPage;
 using System.Web;
 using BrighTown.ViewModels;
@@ -33,22 +32,24 @@ public partial class AddPlaceToMapPage : ContentPage
 
     void OnImageForZoomClicked(object sender, SelectionChangedEventArgs e)
     {
-         if (ImagesCollection.SelectedItem != null)
-         {
-             SourceImage = (e.CurrentSelection.FirstOrDefault() as Place).ImageUrl;
-             ImagesCollection.SelectedItem = null;
-             Routing.RegisterRoute("TakeAZoom1", typeof(ImageViewPage));
-             Shell.Current.GoToAsync("TakeAZoom1");
-         }
+        if (ImagesCollection.SelectedItem != null)
+        {
+            SourceImage = (e.CurrentSelection.FirstOrDefault() as Place).ImageUrl;
+            ImagesCollection.SelectedItem = null;
+            Routing.RegisterRoute("TakeAZoom1", typeof(ImageViewPage));
+            Shell.Current.GoToAsync("TakeAZoom1");
+        }
     }
+
     //Опять же, почему добавляются новые места
     public AddPlaceToMapPage(AddPlaceToMapPageViewModel vm)
     {
-        
         InitializeComponent();
         BindingContext = vm;
 
-        DescriptionEntry.Text = $"{vm.Latitude}, {vm.Longitude}";
+        // var view = BindingContext as AddPlaceToMapPageViewModel;
+
+        // DescriptionEntry.Text = $"{view.Place.Latitude}, {view.Place.Longitude}";
         RatingValue.Text = $"Оценка места: 5";
         Place_Images = new ObservableCollection<Place>();
 
@@ -64,7 +65,6 @@ public partial class AddPlaceToMapPage : ContentPage
         {
             ImageUrl = "demo_place.png",
         });
-        BindingContext = this;
     }
 
     private async void PickPhoto_Clicked(object sender, EventArgs e)
@@ -164,6 +164,8 @@ public partial class AddPlaceToMapPage : ContentPage
         try
         {
             IsBusy = true;
+
+            var vm = BindingContext as AddPlaceToMapPageViewModel;
 
             using (HttpClient httpClient = new HttpClient())
             {

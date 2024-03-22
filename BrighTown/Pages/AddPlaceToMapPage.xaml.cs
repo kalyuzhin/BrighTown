@@ -57,25 +57,37 @@ public partial class AddPlaceToMapPage : ContentPage
 
     private async void PickPhoto_Clicked(object sender, EventArgs e)
     {
-        FileResult result = await FilePicker.PickAsync(new PickOptions
-        {
-            PickerTitle = "Pick a Photo",
-            FileTypes = FilePickerFileType.Images
-        });
+        // FileResult result = await FilePicker.PickAsync(new PickOptions
+        // {
+        //     PickerTitle = "Pick a Photo",
+        //     FileTypes = FilePickerFileType.Images
+        // });
+        //
+        // // for debugging:  result.FullPath - path of uploaded image
+        //
+        // if (Place_Images.Count(y => y.ImageUrl == "demo_place.png") == 3)
+        // {
+        //     Place_Images.Clear();
+        // }
+        //
+        // Place_Images.Add(new Place()
+        // {
+        //     ImageUrl = result.FullPath,
+        // });
+        //
+        // BindingContext = this;
 
-        // for debugging:  result.FullPath - path of uploaded image
-
-        if (Place_Images.Count(y => y.ImageUrl == "demo_place.png") == 3)
+        var image = await MediaPicker.PickPhotoAsync();
+        using (HttpClient httpClient = new HttpClient())
         {
-            Place_Images.Clear();
+            MultipartFormDataContent form = new MultipartFormDataContent();
+            form.Add(new StreamContent(await image.OpenReadAsync()), image.FileName, image.FileName);
+            string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                ? "http://10.0.2.2:5280/"
+                : "http://localhost:5280/";
+            var url = baseUrl + "uploadimages";
+            var request = await httpClient.PostAsync(url, form);
         }
-
-        Place_Images.Add(new Place()
-        {
-            ImageUrl = result.FullPath,
-        });
-
-        BindingContext = this;
     }
 
     public static string NameOfCurrentPlace;

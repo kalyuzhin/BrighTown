@@ -1,4 +1,7 @@
 using Backend.Dtos.Pairs;
+using System.IO;
+using Dropbox.Api;
+using Dropbox.Api.Files;
 
 namespace Backend.Controllers
 {
@@ -48,6 +51,35 @@ namespace Backend.Controllers
         public async Task<ActionResult<ServiceResponse<bool>>> DeleteFavourites(AddFavouritePlaceDto pair)
         {
             return Ok(await _placesService.DeleteFavourite(pair));
+        }
+
+        [HttpPost("/uploadimages")]
+        public async Task<ActionResult<ServiceResponse<bool>>> UploadImages()
+        {
+            var files = HttpContext.Request.Form.Files;
+            string Token;
+            using (StreamReader sr = new StreamReader(System.IO.File.Open("config.txt", FileMode.Open)))
+            {
+                Token = await sr.ReadToEndAsync();
+                Token.Trim();
+            }
+
+            using (var dbx = new DropboxClient(Token))
+            {
+                foreach (var file in files)
+                {
+                    using (MemoryStream memoryStream = new MemoryStream())
+                    {
+                        await file.CopyToAsync(memoryStream);
+                        await dbx.Files.UploadAsync("/Images", WriteMode.Overwrite.Instance,
+                            body: memoryStream);
+                        // System.IO.File.WriteAllBytes(Path.Combine(Directory.GetCurrentDirectory(), "Images"),
+                        //     memoryStream.ToArray());
+                    }
+                }
+            }
+
+            return Ok();
         }
     }
 }

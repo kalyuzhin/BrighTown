@@ -1,4 +1,6 @@
-﻿namespace BrighTown.Pages;
+﻿using BrighTown.Models;
+
+namespace BrighTown.Pages;
 
 public partial class SettingsPage : ContentPage
 {
@@ -28,7 +30,16 @@ public partial class SettingsPage : ContentPage
         }
     }
 
-
+    private void ClickOnChangeEmailButton(object sender, EventArgs e)
+    {
+     //   var email =  DisplayPromptAsync("Электронная почта", "Введите адрес:", "OK", "Отмена");
+    //    App.user.Email = email.ToString();
+    }
+    private void ClickOnChangeNameButton(object sender, EventArgs e)
+    {
+      //  var name =  DisplayPromptAsync("Изменить имя пользователя", "Введите новое имя:", "OK", "Отмена");
+     //  App.user.UserName = name.ToString();
+    }
     private void ClickOnSettingsButton(object sender, EventArgs e) // ��������� ������� �� ������ "���������"
     {
         Shell.Current.GoToAsync("..");

@@ -121,7 +121,7 @@ public partial class NewAuthenticationPage : ContentPage
         try
         {
             IsBusy = true;
-            Routing.RegisterRoute("RegisterPage", typeof(RegisterPage));
+            
             await Shell.Current.GoToAsync($"{nameof(RegisterPage)}");
             //await Shell.Current.Navigation.PushModalAsync(new MapPage());
         }

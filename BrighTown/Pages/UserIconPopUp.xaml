@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               x:Class="BrighTown.Pages.UserIconPopUp"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               CanBeDismissedByTappingOutsideOfPopup="True"
+               VerticalOptions="Center"
+               Color="Transparent"
+               HorizontalOptions="Center">
+  <Border BackgroundColor="{AppThemeBinding Light=#d6f0fa , Dark=#212324  }" HeightRequest="400" VerticalOptions="Fill" Margin="10"   Stroke="Transparent">
+      <Border.StrokeShape>
+          <RoundRectangle CornerRadius="5"/>
+      </Border.StrokeShape>
+      <Grid RowDefinitions="Auto,*" HorizontalOptions="Fill" VerticalOptions="Fill" >
+          <BoxView CornerRadius="5" HorizontalOptions="Fill" VerticalOptions="Fill" Color="{AppThemeBinding Light= #fe7d3b, Dark=#515354}"></BoxView>
+          <Button TextColor="White" Clicked="ClickedOnCloseButton" Text="×" FontSize="16" BackgroundColor="Transparent" VerticalOptions="Start" HorizontalOptions="End" ></Button>
+       
+          <CollectionView x:Name="IconSelector" Grid.Row="1" SelectionMode="Single" Margin="5,0,5,30" ItemsLayout="VerticalGrid,4" >
+              <CollectionView.ItemsSource>
+                  <x:Array Type="{x:Type x:String}">
+                      <x:String>exa.png</x:String> 
+                      <x:String>exb.png</x:String> 
+                      <x:String>exc.png</x:String> 
+                      <x:String>exd.png</x:String> 
+                      <x:String>exe.png</x:String> 
+                      <x:String>exf.png</x:String> 
+                      <x:String>exg.png</x:String> 
+                      <x:String>exh.png</x:String> 
+                      <x:String>exi.png</x:String> 
+                      <x:String>exj.png</x:String> 
+                      <x:String>exc.png</x:String> 
+                      <x:String>exk.png</x:String> 
+                      <x:String>exl.png</x:String> 
+                      <x:String>exo.png</x:String> 
+                      <x:String>exm.png</x:String> 
+                      <x:String>exn.png</x:String> 
+                      <x:String>exp.png</x:String> 
+                      <x:String>exq.png</x:String> 
+                      <x:String>exr.png</x:String> 
+                      <x:String>exs.png</x:String> 
+                      <x:String>ext.png</x:String> 
+                      <x:String>exu.png</x:String> 
+                      <x:String>exv.png</x:String> 
+                      <x:String>exw.png</x:String> 
+                      <x:String>exx.png</x:String> 
+                      <x:String>exy.png</x:String> 
+                      <x:String>exz.png</x:String> 
+                      <x:String>ex.png</x:String> 
+                      
+                  </x:Array>
+              </CollectionView.ItemsSource>
+              
+              <CollectionView.ItemTemplate>
+                 <DataTemplate>
+                     <Image VerticalOptions="Fill" HorizontalOptions="Fill" Source="{Binding}"></Image>
+                 </DataTemplate>
+                 
+             </CollectionView.ItemTemplate>
+             
+              
+          </CollectionView>
+          
+          <Button Text="Установить аватар" TextColor="White" FontFamily="Rounds" BackgroundColor="{AppThemeBinding Light=#2c3e54 , Dark=#878889  }"  Grid.RowSpan="2" Clicked="ClickedOnCloseButton" HorizontalOptions="Fill" Margin="5" VerticalOptions="End"></Button>
+          
+      </Grid>
+  </Border>
+</toolkit:Popup>

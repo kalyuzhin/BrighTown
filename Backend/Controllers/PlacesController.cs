@@ -71,10 +71,9 @@ namespace Backend.Controllers
                     using (MemoryStream memoryStream = new MemoryStream())
                     {
                         await file.CopyToAsync(memoryStream);
-                        await dbx.Files.UploadAsync("/Images", WriteMode.Overwrite.Instance,
+                        memoryStream.Seek(0, SeekOrigin.Begin);
+                        await dbx.Files.UploadAsync("/Images/" + file.FileName, WriteMode.Overwrite.Instance,
                             body: memoryStream);
-                        // System.IO.File.WriteAllBytes(Path.Combine(Directory.GetCurrentDirectory(), "Images"),
-                        //     memoryStream.ToArray());
                     }
                 }
             }

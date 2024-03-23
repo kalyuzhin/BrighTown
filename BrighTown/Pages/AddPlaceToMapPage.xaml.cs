@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -15,6 +16,8 @@ using BrighTown.Models;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Storage;
+using Dropbox.Api;
+using Dropbox.Api.Files;
 using static BrighTown.Pages.ImageViewPage;
 
 namespace BrighTown.Pages;
@@ -22,6 +25,7 @@ namespace BrighTown.Pages;
 public partial class AddPlaceToMapPage : ContentPage
 {
     public ObservableCollection<Place> Place_Images { get; private set; }
+    public ObservableCollection<string> Place_Images_Urls { get; set; }
 
     void OnImageForZoomClicked(object sender, SelectionChangedEventArgs e)
     {
@@ -52,6 +56,7 @@ public partial class AddPlaceToMapPage : ContentPage
         {
             ImageUrl = "demo_place.png",
         });
+
         BindingContext = this;
     }
 
@@ -78,16 +83,64 @@ public partial class AddPlaceToMapPage : ContentPage
         // BindingContext = this;
 
         var image = await MediaPicker.PickPhotoAsync();
-        using (HttpClient httpClient = new HttpClient())
+        if (Place_Images.Where(p => p.ImageUrl == "demo_place.png").Count() == 3)
         {
-            MultipartFormDataContent form = new MultipartFormDataContent();
-            form.Add(new StreamContent(await image.OpenReadAsync()), image.FileName, image.FileName);
-            string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
-                ? "http://10.0.2.2:5280/"
-                : "http://localhost:5280/";
-            var url = baseUrl + "uploadimages";
-            var request = await httpClient.PostAsync(url, form);
+            Place_Images.Clear();
         }
+
+        if (Place_Images.FirstOrDefault(p => p.ImageUrl == image.FullPath) == null)
+        {
+            Place_Images.Add(new Place()
+            {
+                ImageUrl = image.FullPath
+            });
+        }
+        else
+        {
+            return;
+        }
+
+
+        try
+        {
+            string Token = "";
+            using (var dbx = new DropboxClient(Token))
+            {
+                var file = File.ReadAllBytes(image.FullPath);
+                using (var memory = new MemoryStream(file))
+                {
+                    memory.Seek(0, SeekOrigin.Begin);
+                    var uploaded = await dbx.Files.UploadAsync("/Images/" + image.FileName,
+                        WriteMode.Overwrite.Instance,
+                        body: memory);
+                }
+            }
+
+            // using (HttpClient httpClient = new HttpClient())
+            // {
+            //     MultipartFormDataContent form = new MultipartFormDataContent();
+            //     form.Add(new StreamContent(await image.OpenReadAsync()), image.FileName, image.FileName);
+            //     string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+            //         ? "http://10.0.2.2:5280/"
+            //         : "http://localhost:5280/";
+            //     var url = baseUrl + "uploadimages";
+            //     var request = await httpClient.PostAsync(url, form);
+            //     if (request.StatusCode == HttpStatusCode.OK)
+            //     {
+            //         await Shell.Current.DisplayAlert("Nice", "Nice", "Nice");
+            //     }
+            //     else
+            //     {
+            //         await Shell.Current.DisplayAlert("Not nice", "not nice", "OK");
+            //     }
+            // }
+        }
+        catch (Exception ex)
+        {
+            await Shell.Current.DisplayAlert("Error", $"{ex}", "OK");
+        }
+
+        BindingContext = this;
     }
 
     public static string NameOfCurrentPlace;

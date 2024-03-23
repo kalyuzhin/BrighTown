@@ -6,16 +6,21 @@
              xmlns:viewModels="clr-namespace:BrighTown.ViewModels"
              x:Class="BrighTown.Pages.ImageViewPage"
              Shell.TabBarIsVisible="False"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="True">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="True" IsEnabled="True" />
+    </Shell.BackButtonBehavior>
 
     <VerticalStackLayout>
-        <Button x:Name="CloseButton" Clicked="CloseButtonClicked" Text="*" HorizontalOptions="End" VerticalOptions="Start" WidthRequest="50" HeightRequest="50" TextColor="White" BackgroundColor="Transparent"></Button>
+        <!-- <Button x:Name="CloseButton" Clicked="CloseButtonClicked" Text="*" HorizontalOptions="End" -->
+        <!--         VerticalOptions="Start" WidthRequest="50" HeightRequest="50" TextColor="White" -->
+        <!--         BackgroundColor="Transparent"> -->
+        <!-- </Button> -->
         <viewModels:PinchToZoomContainer HorizontalOptions="Fill" VerticalOptions="Center">
             <Image x:Name="CurrentImage"></Image>
         </viewModels:PinchToZoomContainer>
-        
+
     </VerticalStackLayout>
-    
-    
-    
+
+
 </ContentPage>

@@ -33,7 +33,8 @@ public partial class MapPage : ContentPage
         place.Latitude = mvm.Latitude;
         var nav = new Dictionary<string, object>()
         {
-            { "AddPlaceToMapPage", place }
+            { "AddPlaceToMapPage", place },
+            { "MapViewModel", mvm }
         };
         var path = $"{nameof(AddPlaceToMapPage)}?lat={mvm.Latitude}&long={mvm.Longitude}";
         await Shell.Current.GoToAsync(nameof(AddPlaceToMapPage), nav);

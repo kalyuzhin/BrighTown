@@ -34,6 +34,7 @@ public static class MauiProgram
         //2 AddPlaceToMapPage добавил я, Никита
         builder.Services.AddSingleton<NewAuthenticationPage>();
         builder.Services.AddSingleton<MapPage>();
+        builder.Services.AddSingleton<MapViewModel>();
         builder.Services.AddSingleton<FavouritesPage>();
         builder.Services.AddSingleton<FriendsPage>();
         builder.Services.AddSingleton<ProfilePage>();

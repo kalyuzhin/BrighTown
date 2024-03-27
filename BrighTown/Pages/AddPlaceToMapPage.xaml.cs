@@ -169,16 +169,18 @@ public partial class AddPlaceToMapPage : ContentPage
 
             using (HttpClient httpClient = new HttpClient())
             {
-                string baseUrl = "http://brighttown-backend.somee.com/";
+                string baseUrl = DeviceInfo.Platform == DevicePlatform.Android
+                    ? "http://10.0.2.2:5280/"
+                    : "http://localhost:5280/";
                 var url = baseUrl + "api/Places/add";
 
                 var requestData = new Dictionary<string, string>
                 {
                     { "name", Name.Text },
+                    { "description", DescriptionEntry.Text },
                     { "rating", Math.Truncate(ratingSlider.Value).ToString() },
-                    {
-                        "description", DescriptionEntry.Text
-                    }
+                    { "latitude", vm.Place.Latitude.ToString() },
+                    { "longitude", vm.Place.Longitude.ToString() }
                 };
 
                 var content = new
@@ -188,8 +190,9 @@ public partial class AddPlaceToMapPage : ContentPage
                 var responseContent = await response.Content.ReadFromJsonAsync<ServiceResponse<List<Place2>>>();
                 if (responseContent.Success)
                 {
-                    //Что это 
+                    //MapViewModel mvm = (MapViewModel)Resources["MapViewModel"];
                     await Shell.Current.GoToAsync($"..");
+                    vm.MapViewModel.Places.Add(responseContent.Data.Last());
                     CurrentPlaceImages = GenerateImagesArray(Place_Images);
                 }
                 else

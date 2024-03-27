@@ -14,13 +14,37 @@ using Esri.ArcGISRuntime.Symbology;
 using Esri.ArcGISRuntime.UI;
 using Color = System.Drawing.Color;
 using Map = Esri.ArcGISRuntime.Mapping.Map;
+using System.Collections.ObjectModel;
+using BrighTown.Models;
+using System.Collections.Specialized;
+//using static Android.Provider.Telephony;
 
 namespace BrighTown;
 
-internal class MapViewModel : INotifyPropertyChanged
+public class MapViewModel : INotifyPropertyChanged
 {
     private GraphicsOverlayCollection? _graphicsOverlays;
+    public GraphicsOverlayCollection? GraphicsOverlays
+    {
+        get => _graphicsOverlays;
+        set
+        {
+            _graphicsOverlays = value;
+            OnPropertyChanged();
+        }
+    }
+
     private Map _map;
+    public Map Map
+    {
+        get => _map;
+        set
+        {
+            _map = value;
+            OnPropertyChanged();
+        }
+    }
+    public ObservableCollection<Place2> Places = new ObservableCollection<Place2>();
     private double _latitude;
     public double Latitude
     {
@@ -53,33 +77,46 @@ internal class MapViewModel : INotifyPropertyChanged
     {
         SetupMap();
         CreateGraphics();
+        Places.CollectionChanged += DrawPoint;
     }
 
-    public Map Map
-    {
-        get => _map;
-        set
-        {
-            _map = value;
-            OnPropertyChanged();
-        }
-    }
-
-    public GraphicsOverlayCollection? GraphicsOverlays
-    {
-        get => _graphicsOverlays;
-        set
-        {
-            _graphicsOverlays = value;
-            OnPropertyChanged();
-        }
-    }
+    
 
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    public void DrawPoint(object? sender, NotifyCollectionChangedEventArgs e)
+    {
+        if (e.Action == NotifyCollectionChangedAction.Add)
+        {
+            var pointSymbol = new SimpleMarkerSymbol
+            {
+                Style = SimpleMarkerSymbolStyle.Circle,
+                Color = Color.Orange,
+                Size = 20.0
+            };
+
+            // Add an outline to the symbol.
+            pointSymbol.Outline = new SimpleLineSymbol
+            {
+                Style = SimpleLineSymbolStyle.Solid,
+                Color = Color.Blue,
+                Width = 2.0
+            };
+            Place2 new_place = e.NewItems?[0] as Place2;
+            var point = new MapPoint(new_place.Longitude, new_place.Latitude, SpatialReferences.Wgs84);
+            //Create a point graphic with the geometry and symbol.
+            var pointGraphic = new Graphic(point, pointSymbol);
+
+            GraphicsOverlays.First().Graphics.Add(pointGraphic);
+            //OnPropertyChanged();
+            // Add the point graphic to graphics overlay.
+
+        }
     }
 
 
@@ -106,36 +143,42 @@ internal class MapViewModel : INotifyPropertyChanged
 
 
         // Create a point geometry.
-        var MMCS = new MapPoint(39.628649, 47.216686, SpatialReferences.Wgs84);
+        //var MMCS = new MapPoint(39.628649, 47.216686, SpatialReferences.Wgs84);
 
 
-        // Create a symbol to define how the point is displayed.
-        var pointSymbol = new SimpleMarkerSymbol
-        {
-            Style = SimpleMarkerSymbolStyle.Circle,
-            Color = Color.Orange,
-            Size = 20.0
-        };
+        //// Create a symbol to define how the point is displayed.
+        //var pointSymbol = new SimpleMarkerSymbol
+        //{
+        //    Style = SimpleMarkerSymbolStyle.Circle,
+        //    Color = Color.Orange,
+        //    Size = 20.0
+        //};
 
-        // Add an outline to the symbol.
-        pointSymbol.Outline = new SimpleLineSymbol
-        {
-            Style = SimpleLineSymbolStyle.Solid,
-            Color = Color.Blue,
-            Width = 2.0
-        };
+        //// Add an outline to the symbol.
+        //pointSymbol.Outline = new SimpleLineSymbol
+        //{
+        //    Style = SimpleLineSymbolStyle.Solid,
+        //    Color = Color.Blue,
+        //    Width = 2.0
+        //};
 
-        if (Application.Current.RequestedTheme.ToString() == "Dark")
-        {
-            Map = new Map(BasemapStyle.OSMDarkGray);
-        }
-        else
-        {
-            Map = new Map(BasemapStyle.OSMStandard);
-        }
+        //if (Application.Current.RequestedTheme.ToString() == "Dark")
+        //{
+        //    Map = new Map(BasemapStyle.OSMDarkGray);
+        //}
+        //else
+        //{
+        //    Map = new Map(BasemapStyle.OSMStandard);
+        //}
 
-        var mapCenterPoint = new MapPoint(39.709612, 47.240004, SpatialReferences.Wgs84);
-        Map.InitialViewpoint = new Viewpoint(mapCenterPoint, 100000);
+        //var mapCenterPoint = new MapPoint(39.709612, 47.240004, SpatialReferences.Wgs84);
+        //Map.InitialViewpoint = new Viewpoint(mapCenterPoint, 100000);
+
+        ////Create a point graphic with the geometry and symbol.
+        //var pointGraphic = new Graphic(MMCS, pointSymbol);
+
+        //// Add the point graphic to graphics overlay.
+        //MapGraphicsOverlay.Graphics.Add(pointGraphic);
     }
 }
 //         private void CreateGraphics()

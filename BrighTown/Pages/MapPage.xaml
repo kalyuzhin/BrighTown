@@ -14,9 +14,6 @@
 
     <ContentPage.Resources>
         <local:MapViewModel x:Key="MapViewModel"/>
-        <!--<x:Double x:Key="Latitude"></x:Double> --><!--Широта--><!--
-        <x:Double x:Key="Longitude"></x:Double> --><!--Долгота-->
-        <!--<x:Coords x:Key="Coordinates" Latitude="0" Longitude="0"/>-->
     </ContentPage.Resources>
     <!-- <Shell.TitleView> -->
     <!-- <StackLayout HorizontalOptions="Fill" HeightRequest="50"> -->
